@@ -1,0 +1,77 @@
+\documentclass[a4,11pt]{article}
+\usepackage{geometry}
+\geometry{a4paper, top=20mm, left=20mm, right=20mm, bottom=15mm}
+\pagenumbering{gobble}
+\setlength\parindent{0pt}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{multicol} % Spalten
+\usepackage{color} % Farben
+\usepackage[hyphens]{url} % Internetadresse (mit automatischer Trennung)
+\usepackage{enumitem} % Aufzählungen
+
+
+
+
+% Mathesymbole
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{bm} % fette Schrift in Matheumgebung
+
+
+% Bilder
+\usepackage{caption}
+\usepackage{graphicx, wrapfig}
+\usepackage{subcaption} % Bilder in Gruppe einzeln benennen
+
+\usepackage[
+labelfont=bf,        % Tabelle x: Abbildung y: ist jetzt fett
+font=small,          % Schrift etwas kleiner als Dokument
+width=0.9\textwidth, % maximale Breite einer Caption schmaler
+]{caption}
+
+\begin{document}
+\section*{Hermizität}
+	Der Lagrangian muss am Ende immer hermitesch sein. Rechenregeln
+\begin{align*}
+	(\gamma_0)^2 = 1 \quad&\quad (\gamma_5)^2 = 1 \\
+	\gamma_0\gamma_0\mu = -\gamma_\mu\gamma_0 \quad&\quad\gamma_5\gamma_\mu = -\gamma_\mu\gamma_5 \\
+	(\gamma_0)^\dagger = \gamma_0 \ ,\quad(\gamma_i)^\dagger = -\gamma_i \quad&\quad(\gamma_5)^\dagger = \gamma_5 \\
+	\gamma_0\gamma_\mu\gamma_0 = (\gamma_\mu)^\dagger \quad&\quad\gamma_0\gamma_5\gamma_0 = -\gamma_5 \\
+	\bar{q} &= q^\dagger\gamma_0 \\
+	q^\dagger &= \bar{q}\gamma_0 \\
+	\bar{q}^\dagger &= \gamma_0 q
+\end{align*}
+Es soll gelten:
+\begin{align*}
+	\mathcal{L}^\dagger
+	&= \sum_{n,q} \left(\hat{C}^{(6)}_{n,q}\right)^*\left(R^{(6)}_{n,q}\right)^\dagger \overset{!}{=} \sum_{n,q} \hat{C}^{(6)}_{n,q}R^{(6)}_{n,q} = \mathcal{L}
+\end{align*}
+Die $R^{(6)}$ sind hermitesch. Das heißt die Koeffizienten $\hat{C}^{(6)}_{n,q}$
+\begin{align*}
+	\hat{C}_{1u} &= \sum_{i,j} \frac{\delta_{ij}\delta_{iu}}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ 
+	C_{2ij} + C_{3ij}\right) \\
+	\hat{C}_{1s} &= \sum_{i,j}\frac{1}{2}\left(- V_{id}^*V_{jd}C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ V_{id}^*V_{jd}C_{2ij}+ \delta_{ij}\delta_{id}C_{4ij}\right) \\
+	\hat{C}_{1d} &= \sum_{i,j}\frac{1}{2}\left(- V_{is}^*V_{js}C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ V_{is}^*V_{js}C_{2ij}+ \delta_{ij}\delta_{is}C_{4ij}\right) \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\hat{C}_{2u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}+ 
+	C_{6ij} + C_{7ij}\right) \\
+	\hat{C}_{2d} &= \sum_{i,j}\frac{1}{2}\left(- V_{id}^*V_{jd}\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} + C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right) \\
+	\hat{C}_{2s} &= \sum_{i,j}\frac{1}{2}\left(- V_{is}^*V_{js}\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} + C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right) \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\hat{C}_{3u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(- C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} - C_{2ij} + C_{3ij}\right) \\
+	\hat{C}_{3d} &= \sum_{i,j}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} V_{id}^*V_{jd} - V_{id}^*V_{jd}C_{2ij} + \delta_{ij}\delta_{id}C_{4ij}\right) \\
+	\hat{C}_{3s} &= \sum_{i,j}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} V_{is}^*V_{js} - V_{is}^*V_{js}C_{2ij} + \delta_{ij}\delta_{is}C_{4ij}\right) \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\hat{C}_{4u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(-\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} - C_{6ij} + C_{7ij}\right) \\
+	\hat{C}_{4d} &= \sum_{i,j}\frac{1}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}V_{id}^*V_{jd} - C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right) \\
+	\hat{C}_{4s} &= \sum_{i,j}\frac{1}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}V_{is}^*V_{js} - C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right)
+\end{align*}
+müssen reell sein. Da das aber nur 8 Gleichungen für 42 Unbekannte sind ist das ungünstig. \\
+In der anderen Basis sähe das so aus (wenn $\tau$ mit $\gamma_\mu$ und $\gamma_5$ vertauscht):
+\begin{align*}
+	\mathcal{L}^\dagger = \sum_{n,i,j}C_{nij}^*\left(Q^{(6)}_{nij}\right)^\dagger = \sum_{n,i,j}C_{nij}^*Q^{(6)}_{nji} \overset{!}{=} \sum_{n,i,j}C_{nij}Q^{(6)}_{nij} = \mathcal{L} \quad.
+\end{align*}
+Frage: Kann man da wirklich sagen, dass $C_{nij}^* = C_{nji}$?
+\end{document}

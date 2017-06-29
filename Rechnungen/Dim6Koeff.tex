@@ -1,0 +1,45 @@
+\documentclass[a4,11pt]{article}
+\usepackage{geometry}
+\geometry{a4paper, landscape, top=20mm, left=20mm, right=20mm, bottom=15mm}
+\pagenumbering{gobble}
+\setlength\parindent{0pt}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{multicol} % Spalten
+\usepackage{color} % Farben
+\usepackage[hyphens]{url} % Internetadresse (mit automatischer Trennung)
+\usepackage{enumitem} % Aufzählungen
+
+
+
+
+% Mathesymbole
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{bm} % fette Schrift in Matheumgebung
+
+
+% Bilder
+\usepackage{caption}
+\usepackage{graphicx, wrapfig}
+\usepackage{subcaption} % Bilder in Gruppe einzeln benennen
+
+\usepackage[
+labelfont=bf,        % Tabelle x: Abbildung y: ist jetzt fett
+font=small,          % Schrift etwas kleiner als Dokument
+width=0.9\textwidth, % maximale Breite einer Caption schmaler
+]{caption}
+
+\begin{document}
+\section{Operatoren}
+\input{OperatorenDim6.tex}
+\section{Kürzen der $Q^{(6)}$: Nur u,d,s und diagonale Terme}
+\input{KurzenDim6.tex}
+\section{Umschreiben der $Q^{(6)}$ von $q_L,q_R$ in $q$}
+\input{UmschreibenQLQRDim6.tex}
+\section{Umschreiben der $Q^{(6)}$ in $R^{(6)}$}
+\input{UmschreibenDim6.tex}
+\section{Ausrechnen der Koeffizienten}
+\input{KoeffizientenAusrechnenDim6.tex}
+\end{document}

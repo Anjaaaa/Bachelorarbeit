@@ -1,0 +1,35 @@
+$Q_{1ij}^{(6)},Q_{2ij}^{(6)},Q_{5ij}^{(6)},Q_{6ij}^{(6)}$ können zusammen ausgerechnet werden, mit $q_L^{id} = V_{id}d_L+V_{is}s_L+V_{ib}b_L$:
+\begin{align*}
+	Q_L^iAQ_L^j &= \begin{pmatrix}
+		\bar{q}_L^{iu} \\ \bar{q}_L^{id}
+	\end{pmatrix}
+	A \begin{pmatrix}
+		q_L^{ju} \\ q_L^{jd}
+	\end{pmatrix} \\
+	&= \bar{q}_L^{iu}Aq_L^{ju} + \bar{q}_L^{id}Aq_L^{jd} \\
+	&= \bar{q}_L^{iu}Aq_L^{ju} + (V_{id}^*\bar{d}_L + V_{is}^*\bar{s}_L+V_{ib}^*\bar{b}_L)A(V_{jd}d_L+V_{js}s_L+V_{jb}b_L) \\
+	\tilde{Q}_1 = \tilde{Q}_5 &\approx \bar{q}_L^{iu}\gamma^\mu \frac{1}{2}q_L^{ju}\delta_{3a}
+	+ (V_{id}^*\bar{d}_L + V_{is}^*\bar{s}_L+V_{ib}^*\bar{b}_L)\gamma^\mu \frac{-1}{2}(V_{jd}d_L+V_{js}s_L+V_{jb}b_L)\delta_{3a} \\
+	&\approx \bar{u}_L\gamma^\mu \frac{1}{2}u_L\delta_{ij}\delta_{iu}\delta_{3a}
+	 - \frac{1}{2}(V_{id}^*V_{jd}\bar{d}_L\gamma^\mu d_L + V_{is}^*V_{js}\bar{s}_L\gamma^\mu s_L)\delta_{3a} \\
+%
+	\tilde{Q}_2 = \tilde{Q}_6 &\approx \bar{q}_L^{iu}\gamma_\mu q_L^{ju}\delta_{ij} + V_{id}^*V_{jd}\bar{d}_L\gamma_\mu d_L + V_{is}^*V_{js}\bar{s}_L\gamma_\mu s_L \\
+	&= \bar{u}_L\gamma_\mu u_L\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}\bar{d}_L\gamma_\mu d_L + V_{is}^*V_{js}\bar{s}_L\gamma_\mu s_L \\
+	\tilde{Q}_3 = \tilde{Q}_7 &= \bar{q}_R^{iu}\gamma^\mu q_R^{ju} \\
+	&\approx \bar{q}_R^{iu}\gamma^\mu q_R^{ju}\delta_{ij} \\
+	&= \bar{u}_R\gamma^\mu u_R\delta_{ij}\delta_{iu} \\
+	\tilde{Q}_4 = \tilde{Q}_8 &= \bar{q}_R^{id}\gamma^\mu q_R^{jd} \\
+	&\approx \bar{d}_R\gamma^\mu d_R\delta_{ij}\delta_{id} + \bar{s}_R\gamma^\mu s_R\delta_{ij}\delta_{is}
+\end{align*}
+Das heißt, dass einige der Koeffizienten automatisch 0 sind. Nämlich alle
+\begin{align*}
+	&C_{3ij} \quad\text{außer}\quad C_{311} \\
+	&C_{4ij} \quad\text{außer}\quad C_{411},C_{422} \\
+	&C_{7ij} \quad\text{außer}\quad C_{711} \\
+	&C_{8ij} \quad\text{außer}\quad C_{811},C_{822} \quad.
+\end{align*}
+Für den Vorfaktor gilt
+\begin{align*}
+	(\bar{\chi}A\tilde{\tau}^a\chi) = \tau_{0}(\bar{\chi}_0A\chi_0)
+\end{align*}
+mit $\tau_{0}=0$, falls $a$ nicht der richtige Index ist.

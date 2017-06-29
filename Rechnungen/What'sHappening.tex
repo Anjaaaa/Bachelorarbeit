@@ -1,0 +1,71 @@
+\documentclass[a4,11pt]{article}
+\usepackage{geometry}
+\geometry{a4paper, top=30mm, left=25mm, right=25mm, bottom=25mm}
+\pagenumbering{gobble}
+\setlength\parindent{0pt}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{multicol} % Spalten
+\usepackage{color} % Farben
+\usepackage[hyphens]{url} % Internetadresse (mit automatischer Trennung)
+\usepackage{enumitem} % Aufzählungen
+
+
+
+
+% Mathesymbole
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{bm} % fette Schrift in Matheumgebung
+
+
+% Bilder
+\usepackage{caption}
+\usepackage{graphicx, wrapfig}
+\usepackage{subcaption} % Bilder in Gruppe einzeln benennen
+
+\usepackage[
+labelfont=bf,        % Tabelle x: Abbildung y: ist jetzt fett
+font=small,          % Schrift etwas kleiner als Dokument
+width=0.9\textwidth, % maximale Breite einer Caption schmaler
+]{caption}
+	\title{What's Happening?}
+\begin{document}
+	\maketitle
+	\section{Nicht-Relativistische Koeffizienten für Nukleonen berechnen}
+Siehe Bachelorarbeit/RechnungKoeffizienten
+	\subsection{CKM-Matrix einbauen}
+Man nimmt die chiralen Operatoren $Q$ aus Bachelorarbeit/Literatur/dm\_flavor\_ckm.pdf und baut bei den linkshändigen down-type Quarks die CKM-Matrix ein. Das passiert so:
+\begin{align*}
+	Q_L^i =	\begin{pmatrix} u_L^i \\ d_L^i \end{pmatrix} \ , \quad\text{mit }
+			\begin{pmatrix} u_L^1 \\ u_L^2 \\ u_L^3 \end{pmatrix}
+		  = \begin{pmatrix} u_L \\ c_L \\ t_L \end{pmatrix}\ , \quad 
+		    \begin{pmatrix} d_L^1 \\ d_L^2 \\ d_L^3 \end{pmatrix}
+		  = \begin{pmatrix} d_L \\ s_L \\ b_L \end{pmatrix}
+\end{align*}
+Der Einbau der CKM-Matrix geht so:
+\begin{align*}
+	\begin{pmatrix} d_L \\ s_L \\ b_L \end{pmatrix}
+	&\rightarrow V_\text{CKM}\begin{pmatrix} d_L \\ s_L \\ b_L \end{pmatrix}
+	= \begin{pmatrix}
+		V_{1d}d_L + V_{1s}s_L + V_{1b}b_L \\
+		V_{2d}d_L + V_{2s}s_L + V_{2b}b_L \\
+		V_{3d}d_L + V_{3s}s_L + V_{3b}b_L
+	\end{pmatrix} \\
+	\Rightarrow d_L^i &\rightarrow V_{id}d_L + V_{is}s_L + V_{ib}b_L
+\end{align*}
+	\subsection{Operator-Basis-Wechsel ($Q\rightarrow R$)}
+Die rechts- bzw. linkshändigen Quarks aus Bachelorarbeit/Literatur/dm\_flavor\_ckm.pdf werden als
+\begin{align*}
+	q_L = \frac{1-\gamma_5}{2}q \quad \text{bzw.} \quad q_R = \frac{1+\gamma_5}{2}q
+\end{align*}
+geschrieben und die Operatoren ausmultipliziert. Man stellt dann den Lagrangian $\mathcal{L} = \sum C_iQ_i$ mit den chiralen Operatoren $Q$, setzt die umgeformten Ausdrücke aus und gruppiert nach den Operatoren $R$ (aus Bachelorarbeit/Literatur/ChiralEffectiveTheoryofDarkMatterDirectDetection.pdf) um die Koeffizienten in der neuen Basis $R$ zu erhalten 
+\begin{align*}
+	\mathcal{L} = \sum C_iQ_i = \sum D_jR_j \ .
+\end{align*}
+	\subsection{Übergang zu nicht-relativistischen Nukleonen}
+Die Koeffizienten $\{ c_{NR}^p, c_{NR}^n \}$ können mit den Formeln in Anhang A berechnet werden.
+	\section{Streuraten}
+Die Streuraten können mit dem Mathematica Programm dmformfactor berechnet werden. Man muss noch beachten, dass die Lagrangians hermitesch sind.
+\end{document}

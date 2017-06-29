@@ -1,0 +1,42 @@
+\begin{align*}
+	\mathcal{L}_Q^{(6)} = \sum_{k,i,j} C_{kij}Q_{kij}^{(6)} \overset{!}{=} \sum_{l,m}D_{lm}R_{lm}^{(6)} = \mathcal{L}_R^{(6)}
+\end{align*}
+\begin{align*}
+	\mathcal{L}_Q^{(6)} &= \sum_{k,i,j} C_{kij}Q_{kij}^{(6)} \\
+	&= \sum_{i,j} C_{1ij}(\frac{\delta_{3a}\tau_{0}}{4}(R_{1u}^{(6)}\delta_{ij}\delta_{iu}
+	- V_{id}^*V_{jd}R_{1d}^{(6)} - V_{is}^*V_{js}R_{1s}^{(6)}) -\frac{\delta_{3a}\tau_{0}}{4} (R_{3u}^{(6)}\delta_{ij}\delta_{iu}
+	- V_{id}^*V_{jd}R_{3d}^{(6)} - V_{is}^*V_{js}R_{3s}^{(6)})) \\
+	&\quad+ C_{2ij}(\frac{1}{2}(
+	R_{1u}^{(6)}\delta_{iu}\delta_{ij}-R_{3u}^{(6)}\delta_{iu}\delta_{ij}) + \frac{1}{2}(V_{id}^*V_{jd}R_{1d}^{(6)} - V_{id}^*V_{jd}R_{3d}^{(6)}
+	+ V_{is}^*V_{js}R_{1s}^{(6)} - V_{is}^*V_{js}R_{3s}^{(6)})) \\
+	&\quad+ C_{3ij}(\frac{1}{2}(R_{1u}^{(6)}\delta_{ij}\delta_{iu} + R_{3u}^{(6)}\delta_{ij}\delta_{iu})) \\
+	&\quad+ C_{4ij}(\frac{1}{2}(R_{1d}^{(6)}\delta_{ij}\delta_{id} + R_{3d}^{(6)}\delta_{ij}\delta_{id} + R_{1s}^{(6)}\delta_{ij}\delta_{is} + R_{3s}^{(6)}\delta_{ij}\delta_{is})) \\
+	&\quad+ C_{5ij}(\frac{\delta_{3a}\tau_{0}}{4}(R_{2u}^{(6)}\delta_{ij}\delta_{iu}
+	- V_{id}^*V_{jd}R_{2d}^{(6)} - V_{is}^*V_{js}R_{2s}^{(6)}) -\frac{\delta_{3a}\tau_{0}}{4} (R_{4u}^{(6)}\delta_{ij}\delta_{iu}
+	- V_{id}^*V_{jd}R_{4d}^{(6)} - V_{is}^*V_{js}R_{4s}^{(6)})) \\
+	&\quad+ C_{6ij}(\frac{1}{2}(
+	R_{2u}^{(6)}\delta_{iu}\delta_{ij}-R_{4u}^{(6)}\delta_{iu}\delta_{ij}) + \frac{1}{2}(V_{id}^*V_{jd}R_{2d}^{(6)} - V_{id}^*V_{jd}R_{4d}^{(6)}
+	+ V_{is}^*V_{js}R_{2s}^{(6)} - V_{is}^*V_{js}R_{4s}^{(6)})) \\
+	&\quad+ C_{7ij}(\frac{1}{2}(R_{2u}^{(6)}\delta_{ij}\delta_{iu} + R_{4u}^{(6)}\delta_{ij}\delta_{iu})) \\
+	&\quad+ C_{8ij}(\frac{1}{2}(R_{2d}^{(6)}\delta_{ij}\delta_{id} + R_{4d}^{(6)}\delta_{ij}\delta_{id} + R_{2s}^{(6)}\delta_{ij}\delta_{is} + R_{4s}^{(6)}\delta_{ij}\delta_{is}))
+\end{align*}
+\begin{align*}
+	&= \sum_{i,j} \\
+	&+ R_{1u}^{(6)}\frac{\delta_{ij}\delta_{iu}}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ 
+	C_{2ij} + C_{3ij}\right) \\
+	&+ R_{1d}^{(6)}\frac{1}{2}\left(- V_{id}^*V_{jd}C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ V_{id}^*V_{jd}C_{2ij}+ \delta_{ij}\delta_{id}C_{4ij}\right) \\
+	&+ R_{1s}^{(6)}\frac{1}{2}\left(- V_{is}^*V_{js}C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ V_{is}^*V_{js}C_{2ij}+ \delta_{ij}\delta_{is}C_{4ij}\right) \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	&+ R_{2u}^{(6)}\frac{\delta_{ij}\delta_{iu}}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}+ 
+	C_{6ij} + C_{7ij}\right) \\
+	&+ R_{2d}^{(6)}\frac{1}{2}\left(- V_{id}^*V_{jd}\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} + C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right) \\
+	&+ R_{2s}^{(6)}\frac{1}{2}\left(- V_{is}^*V_{js}\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} + C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right) \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	&+ R_{3u}^{(6)}\frac{\delta_{ij}\delta_{iu}}{2}\left(- C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} - C_{2ij} + C_{3ij}\right) \\
+	&+ R_{3d}^{(6)}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} V_{id}^*V_{jd} - V_{id}^*V_{jd}C_{2ij} + \delta_{ij}\delta_{id}C_{4ij}\right) \\
+	&+ R_{3s}^{(6)}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} V_{is}^*V_{js} - V_{is}^*V_{js}C_{2ij} + \delta_{ij}\delta_{is}C_{4ij}\right) \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	&+ R_{4u}^{(6)}\frac{\delta_{ij}\delta_{iu}}{2}\left(-\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} - C_{6ij} + C_{7ij}\right) \\
+	&+ R_{4d}^{(6)}\frac{1}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}V_{id}^*V_{jd} - C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right) \\
+	&+ R_{4s}^{(6)}\frac{1}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}V_{is}^*V_{js} - C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right) \\	
+\end{align*}
