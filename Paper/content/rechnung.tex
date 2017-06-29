@@ -1,5 +1,4 @@
-\section{Chiral Effective Theory of Dark Matter Direct Detection}
-The model in \cite{ChiralEFT} bases on a set of dimension-five, -six, and -seven operators. We restrict our calculations to the dimension-six operators, which are
+In this chapter we include the flavour mixing into an existing formalism. We use the model described in \cite{ChiralEFT}. It provides a framework to calculate cross sections for the direct detection of dark matter. The model bases on a set of dimension-five, -six, and -seven operators. We restrict our calculations to the dimension-six operators, which are
 \begin{align}\label{eq:normal}
 	R_{1,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu q) && &R_{3,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu\gamma_5q)\notag \\
 	R_{2,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu q) &&	&R_{4,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu\gamma_5q) \ .
@@ -28,7 +27,7 @@ Including the CKM matrix in the fromalism follows these steps:
 	\item Write down the entire interaction lagrangian in terms of \eqref{eq:normal} and \eqref{eq:chiral} and compare the coefficients.
 \end{enumerate}
 
-\subsection{Including the Flavour Mixing}
+\section{Including the Flavour Mixing}
 The inclusion of the CKM matrix only affects the chiral operators $Q_{1ij},Q_{2ij},Q_{5ij},Q_{6ij}$. The quark part of the interaction with flavour mixing is therefore
 \begin{align*}
 	\bar{Q}_L^i\gamma^\mu Q_L^j &= \begin{pmatrix}
@@ -59,7 +58,7 @@ for $Q_{1ij}, Q_{5ij}$. For simplicity we only keep the light quarks $u,d,s$ and
 	\bar{d}_R^i\gamma^\mu d_R^j &\approx \bar{d}_R\gamma^\mu d_R\delta_{ij}\delta_{id} + \bar{s}_R\gamma^\mu s_R\delta_{ij}\delta_{is} \ .
 \end{align}
 
-\subsection{Replacing Chiral Particle Functions}
+\section{Replacing Chiral Particle Functions}
 The next step is rewriting the chiral particle functions in terms of the normal particle functions using the projection operators $P_L,P_R$. This leads us to
 \begin{align}
 	\bar{Q}_L^i\gamma^\mu\tau^a Q_L^j =&\frac{1}{4}(\bar{u}\gamma^\mu u\delta_{ij}\delta_{iu}\delta_{3a}
@@ -101,7 +100,7 @@ At this point we can express the chiral operators in terms of the original opera
 \end{align}
 The operators $Q_{5ij}-Q_{8ij}$ can be obtained from $Q_{1ij}-Q_{4ij}$ by replacing $R_{1q}\leftrightarrow R_{2q}$ and $R_{3q}\leftrightarrow R_{4q}$.
 
-\subsection{Comparing Coefficients}
+\section{Comparing Coefficients}
 Our final step is expressing the coefficients $K_{l,q}$ of the original operators $R_{l,q}$ in \eqref{eq:normal} in terms of the coefficients $C_{lij}$ of the chiral operators $Q_{lij}$ in \eqref{eq:chiral}. To get there we look at the overall interaction. The interaction cannot depend on the representation of particle functions we choose, either normal or chiral, therefore
 \begin{align}
 	\sum_{l,q} K_{l,q}R_{l,q} \overset{!}{=} \sum_{l,i,j}C_{lij}Q_{lij} \ .

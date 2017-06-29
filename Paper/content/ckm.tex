@@ -1,29 +1,149 @@
-\todo{Evtl. Bilder für direct vs. indirect detection.}
-
-In this chapter we include the flavour mixing into an existing formalism. We use the model described in \cite{ChiralEFT}. It provides a framework to calculate cross sections for the direct detection of dark matter. Before doing the calculations, we explain the theoretical foundations of the flavour mixing mechanism.
-
-\section{The Flavour Mixing Mechanism}
 \cite[Chapter 20]{Peskin}
-\cite[Chapter 1]{Tevatron}
-\subsection{Cabibbo / Historical}
-The origins of the flavour mixing go back to the 1960s, when there were strong contradictions in the weak decays. The Italian physicist Cabibbo resolved them by proposing that the lefthanded (because it only concerned weak decays) down-type quarks (down and strange at the time) mix in their flavours.
-\subsection{Theoretical Derivation}
-In other words: The quark mass eigenstates are not equal to the flavour eigenstates. Maskawa and Kobayashi later expanded the idea to three quark generations. The CKM matrix $V_{CKM}$ describes the mixing mathematically:
-\begin{align}
-	\begin{pmatrix}
-	d_L \\ s_L \\ b_L
-	\end{pmatrix}_\text{mixed} = \underbrace{\begin{pmatrix}
-	V_{ud} & V_{us} & V_{ub} \\
-	V_{cd} & V_{cs} & V_{cb} \\
-	V_{td} & V_{ts} & V_{tb}
-	\end{pmatrix}}_{V_{CKM}}\cdot\begin{pmatrix}
-	d_L \\ s_L \\ b_L
-	\end{pmatrix}_\text{pure} \ .
-\end{align}
-The CKM matrix is complex and unitary. Its complex values are the source of CP violations. Note that rotating the down-type quarks is an arbitrary choice, mixing the up-type quarks would be equally right.
+\cite[Chapter 1.2.1]{Tevatron}
+The origins of the flavour mixing go back to the 1960s, when Italian physicist Cabibbo resolved anomalies in weak decay data by proposing a flavour mixing of lefthanded down-type quarks. Later in 1973, Kobayaski and Maskawa extended this idea to three quark generation to explain CP violation. On a theoretical level the flavour mixing arises from the fact that the fermion mass eigenstates do not necessarily equal the flavour eigenstates. In the course of this chapter we introduce the Glashow-Weinberg-Salam Model of electroweak interaction and derive how the fermions gain their masses and why this leads to flavour mixing.
 
-\todo{Hier könnten noch mehr good-to-know Infos über die CKM matrix stehen.}
-\subsection{Peskin \& Schroeder}
+\section{The Glashow-Weinberg-Salam Model}
+The Glashow-Weinberg-Salam model is a gauge theory with gauge group $SU(2)\times U(1)$. Therefore we need four gauge bosons, $A^1,A^2,A^3$ for $SU(2)$ and $B$ for $U(1)$. The covariant derivative of a field $\Psi$ that couples to all of the gauge bosons is then
+\begin{align}
+	D_\mu\Psi = \left(\partial_\mu-ig\sum_{a=1}^{3}A_\mu^a\tau^a-iY_\Psi g'B_\mu\right)\Psi \ ,
+\end{align}
+where $\tau^a =\sfrac{\sigma^a}{2}$ with the Pauli matrices $\sigma^a$, $g,g'$ are the coupling constants, and $Y_\Psi$ is the charge under $U(1)$.
+\subsection{The Higgs Mechanism and the Gauge Bosons of the Electroweak Unification}
+We consider a complex scalar field $\Phi$ that interacts with itself through a potential
+\begin{align}
+	V(\Phi) = -\mu^2\Phi^\dagger\Phi + \frac{\lambda}{2}(\Phi^\dagger\Phi)^2 \ , \quad \mu^2 > 0 \ .
+\end{align}
+If $\lambda>0$, the minimum of this potential occurs at
+\begin{align}
+	\langle\Phi\rangle = \Phi_0 =  \sqrt{\frac{\mu^2}{\lambda}} \ .
+\end{align}
+This is the vacuum expectation value of $\Phi$.
+
+\subsubsection{$SU(2)$}
+We add a $SU(2)$ gauge field coupled to $\Phi$, so $\Phi$ is a doublet $(\Phi_1,\Phi_2)$ with covariant derivative
+\begin{align}
+	D_\mu\Phi = (\partial_\mu - ig\sum_{a=1}^3A_\mu^a\tau^a)\Phi \ ,
+\end{align}
+where $\tau^a$ are the generators of $SU(2)$. In this case there is an infinite number of vacuum expection values for $\Phi$ arranged in a circle. We are free to choose one, and we make the simple choice
+\begin{align}
+	\langle\Phi\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 0 \\ v \end{pmatrix} \ .
+\end{align}
+Note that by choosing one vacuum value, we break the symmetry.
+
+
+The kinetic energy of $\Phi$ is
+\begin{align}
+	(D_\mu\Phi)^2 = &\frac{1}{2}(\partial_\mu v)(\partial^\mu v)\notag \\
+	- &ig(\partial^\mu\begin{pmatrix} 0 & v \end{pmatrix}) \left(\sum_{a=1}^3A_\mu^a\tau^a\begin{pmatrix} 0 \\ v \end{pmatrix}\right)\notag \\
+	- &\frac{1}{2}g^2\begin{pmatrix} 0 & v \end{pmatrix}\sum_{a,b=1}^{3}\tau^a\tau^b\begin{pmatrix} 0 \\ v \end{pmatrix}A_\mu^aA^{b\mu} \ .
+\end{align}
+Using the relation $\{\tau^a,\tau^b\}=\sfrac{1}{2}\cdot\delta_{ab}$, we can simplify the last expression to get
+\begin{align}
+	- \frac{1}{2}g^2\begin{pmatrix} 0 & v \end{pmatrix}\sum_{a,b=1}^{3}\tau^a\tau^b\begin{pmatrix} 0 \\ v \end{pmatrix}A_\mu^aA^{b\mu} &= - \frac{g^2v^2}{8}\sum_{a=1}^{3}A_\mu^aA^{a\mu} \ ,
+\end{align}
+which is a mass term $\mathcal{L}_m = -\frac{1}{2}m_A^2A_\mu A^\mu$ that assigns the mass $m_A = \frac{gv}{2}$ to all three gauge bosons.
+
+\subsubsection{$SU(2)\times U(1)$}
+We expand the system with an additional $U(1)$ symmetry with gauge boson $B$. The field $\Phi$ has a charge $Y_\Phi$ under $U(1)$. The new covariant derivative is
+\begin{align}
+	D_\mu\Phi = \left(\partial_\mu - ig\sum_{a=1}^3A_\mu^a\tau^2 - iY_\Phi g'B_\mu\right)\Phi \ .
+\end{align}
+Again, we examine the kinetic term
+\begin{align}
+	(D_\mu\Phi)^2 = &\frac{1}{2}(\partial_\mu v)(\partial^\mu v)\notag \\
+	- &\frac{1}{2}i\left(\partial^\mu\begin{pmatrix} 0 & v \end{pmatrix}\right) \left(g\sum_{a=1}^3A_\mu^a\tau^2 + Y_\Phi g'B_\mu\right)\begin{pmatrix} 0 \\ v \end{pmatrix}\notag \\
+	- &\frac{1}{2}\begin{pmatrix} 0 & v \end{pmatrix}
+	\left(g^2\sum_{a,b=1}^3A_\mu^aA^{b\mu}\tau^a\tau^b + 2gg'Y_\Phi\sum_{a=1}^3A_\mu^a\tau^aB^\mu + Y_\Phi^2g'^2B_\mu B^\mu\right)
+	\begin{pmatrix} 0 \\ v \end{pmatrix}
+\end{align}
+Using $\{\tau^a,\tau^b\}=\sfrac{1}{2}\cdot\delta_{ab}$ and replacing $\tau^a=\sfrac{\sigma^a}{2}$, we find for the last term
+\begin{align}
+	\mathcal{L}^{(\text{mass})} &= - \frac{v^2}{2}\left(g^2\frac{1}{4}\sum_{a=1}^3A_\mu^aA^{a\mu} + Y_\Phi^2g'^2B_\mu B^\mu - gg'Y_\Phi B^\mu A_\mu^3\right)\notag \\
+	&= - \frac{1}{2}\frac{v^2}{4}\left(g^2A_\mu^1A^{1\mu} + g^2A_\mu^2A^{2\mu} + (gA_\mu^3 - 2g'Y_\Phi B_\mu)^2\right)\notag \\
+	&= - \frac{1}{2}\frac{v^2}{4}\left(g^22W^+W^- + (g^2+4g'^2Y_\Phi^2)Z_0^2\right) \ .
+\end{align}
+Here we identified the known vector bosons
+\begin{align}
+	W_\mu^\pm &= \frac{1}{\sqrt{2}}(A_\mu^1\mp iA_\mu^2) \ , &&\quad &m_W &= \frac{v}{2}g \notag \\
+	Z_\mu^0 &= \frac{1}{\sqrt{g^2+4g'^2Y_\Phi^2}}(gA_\mu^3 - 2g'Y_\Phi B_\mu) \ , &&\quad &m_Z &= \frac{v}{2}\sqrt{g^2+4g'^2Y_\Phi^2} \ .
+\end{align}
+Since we are in a $SU(2)\times U(1)$ symmetry, there has to be a fourth gauge boson. As we have just derived, it is massless. We renounce giving an elaborate explanation for this, but we want to give a motivation. Therefore we need to remember that the masses arise through choosing a vacuum expectation value for $\Phi$ and thereby breaking the $SU(2)$ symmetry. Looking at the gauge transformation of $\Phi$
+\begin{align}
+	\Phi\rightarrow e^{i\sum_{a=1}^3\alpha^a\tau^a}e^{i\beta Y_\Phi}\Phi \ ,
+\end{align}
+we find that the choice $\alpha^1=\alpha^2=0$, $\alpha^3 = 2\beta Y_\Phi$ leaves the vacuum expectation value unchanged. Thus, parts of the symmetry are conserved and keep one gauge boson from acquiring mass. The fourth gauge boson is the photon, and it is orthogonal to $Z_\mu^0$:
+\begin{align}
+	A_\mu = \frac{1}{\sqrt{g^2 + 2g'^2Y_\Phi^2}}(2g'Y_\Phi A^3_\mu + gB_\mu) \ .
+\end{align}
+
+\section{Fermion Masses and Flavour Mixing}
+The electroweak interaction lagrangian for the standard model fermions is
+\begin{align}\label{eq:LFermion}
+%	\mathcal{L}^{(\text{int})} = &\sum_{i=1}^{3}\bar{E}_R^i(i\slashed{\partial}-g_1Y_E\slashed{B})E_R^i + \bar{D}_R^i(i\slashed{\partial}-g_1Y_D\slashed{B})D_R^i + \bar{U}_R^i(i\slashed{\partial}-g_1Y_U\slashed{B})U_R^i \notag \\
+%	+ &\sum_{i=1}^{3}\bar{L}_L^i(i\slashed{\partial}-g_1Y_L\slashed{B}-g_2\slashed{A})L_L^i + \bar{Q}_L^i(i\slashed{\partial}-g_1Y_Q\slashed{B}-g_2\slashed{A})Q_L^i \ ,
+	\mathcal{L}^{(\text{int})} = &\bar{E}_R(i\slashed{\partial}-g_1Y_E\slashed{B})E_R + \bar{D}_R(i\slashed{\partial}-g_1Y_D\slashed{B})D_R + \bar{U}_R(i\slashed{\partial}-g_1Y_U\slashed{B})U_R \notag \\
+	+ &\bar{L}_L(i\slashed{\partial}-g_1Y_L\slashed{B}-g_2\slashed{A})L_L + \bar{Q}_L(i\slashed{\partial}-g_1Y_Q\slashed{B}-g_2\slashed{A})Q_L \ ,
+\end{align}
+where $Y$ is the charge under $U(1)_Y$, or hypercharge. It is related to the electric charge and the third component of the weak isospin through the Gell-Mann–Nishijima formula: $Y = 2(Q-I_3)$. We already split the particle functions in their chiral components: $\psi = \psi_L+\psi_R$. For the leptons this means
+\begin{align}
+	E_R &= (e_R,\mu_R,\tau_R) \ , &&\quad &Y_E &= -1 \ ; \\
+	L_L &= \left(\begin{pmatrix} \nu_e \\ e \end{pmatrix}_L,
+	\begin{pmatrix} \nu_\mu \\ \mu \end{pmatrix}_L,
+	\begin{pmatrix} \nu_\tau \\ \tau \end{pmatrix}_L\right) \ , &&\quad &Y_L &= -\frac{1}{2} \ ;
+\end{align}
+and accordingly for the quarks
+\begin{align}
+	U_R &= (u_R,c_R,t_R) \ , &&\quad &Y_U &= \frac{2}{3} \ ; \\
+	D_R &= (d_R,s_R,b_R) \ , &&\quad &Y_D &= -\frac{1}{3} \ ; \\
+	Q_L &= \left(\begin{pmatrix} u \\ d \end{pmatrix}_L,
+	\begin{pmatrix} c \\ s \end{pmatrix}_L,
+	\begin{pmatrix} t \\ b \end{pmatrix}_L\right) \ , &&\quad &Y_Q &= \frac{1}{6} \ .	
+\end{align}
+The righthanded particles are singlets under $SU(2)$ and therefore $I_3=0$.
+
+The lagrangian in \eqref{eq:LFermion} describes massless particles. A fermion mass term couples the lefthanded and righthanded part of a particle. Since direct coupling between for example $e_R$ and $(\nu_e,e)_L$ would violate gauge invariance, a connecting field. To preserve invariance under Lorentz, $U(1)_Y$, and $SU(2)$ transformations this field must have spin 0, hypercharge $Y=\sfrac{1}{2}$, and be a doublet. We identify this field with $\Phi$ from the previous chapter and write the mass terms for the fermions
+\begin{align}
+%	\mathcal{L}^{(\text{mass})} = -\sum_{i,j=1}^{3}\left[\lambda^e_{ij} \bar{L}_L^i\Phi E_R^j  + \lambda_{ij}^d\bar{Q}_L^i\Phi D_R^j + \lambda_{ij}^u\sum_{a,b=1}^{2}\epsilon_{ab}\bar{Q}_{La}^{i}\Phi_b^\dagger U_R^j + \text{h.c.}\right] \ ,
+	\mathcal{L}^{(\text{mass})} = -\left[\lambda^e \bar{L}_L\Phi E_R  + \lambda^d\bar{Q}_L\Phi D_R + \lambda^u\bar{Q}_Li\sigma^2\Phi^\dagger U_R + \text{h.c.}\right] \ ,
+\end{align}
+with complex matrix coupling constants $\lambda^e,\lambda^d,\lambda^u$. Replacing $\Phi$ with its vacuum expectation value gives
+\begin{align}\label{eq:LMass}
+%	\mathcal{L}^{(\text{mass})} = -\frac{v}{\sqrt{2}}\sum_{i,j=1}^{3}\left[\lambda^e_{ij} \bar{E}_L^i E_R^j  + \lambda_{ij}^d\bar{D}_L^i D_R^j + \lambda_{ij}^u\bar{U}_L^{i} U_R^j + \text{h.c.}\right] \ ,
+	\mathcal{L}^{(\text{mass})} = -\frac{v}{\sqrt{2}}\left[\lambda^e \bar{E}_L E_R  + \lambda^d\bar{D}_L D_R + \lambda^u\bar{U}_L U_R + \text{h.c.}\right] \ ,
+\end{align}
+where $E_L = (e_L,\mu_L,\tau_L)$, $D_L = (d_L,s_L,b_L)$, and $U_L = (u_L,c_L,t_L)$.
+
+
+The interaction lagrangian \eqref{eq:LFermion} is invariant under unitary transformations
+\begin{align}
+	L_L &\rightarrow R_lL_L &&\quad &E_R &\rightarrow U_eE_R \ , \\
+	Q_L &\rightarrow R_qQ_L &&\quad &U_R &\rightarrow U_uU_R \ , \\
+	& && &D_R &\rightarrow U_dD_R \ .
+\end{align}
+Thus, we can diagonalize the interactions in \eqref{eq:LMass}. The diagonal lepton coupling is $\tilde{\lambda}^e = U_l\lambda^eU_e$ and parametrizes the lepton masses
+\begin{align}
+	m_e = \frac{v}{\sqrt{2}}\tilde{\lambda}_{11}^e \ , \quad m_\mu = \frac{v}{\sqrt{2}}\tilde{\lambda}_{22}^e \ , \quad m_\tau = \frac{v}{\sqrt{2}}\tilde{\lambda}_{33}^e \ .
+\end{align}
+
+
+
+\begin{align}
+	\mathcal{L}_l^{(\text{mass})} = -\frac{v}{\sqrt{2}}\tilde{\lambda}^e \bar{E}_L E_R + \text{h.c.} \ ,
+\end{align}
+and we identify the lepton masses
+\begin{align}
+	m^i = \frac{v\tilde{\lambda}^e_{ii}}{\sqrt{2}} \ .
+\end{align}
+The new diagonal coupling matrices $\tilde{\lambda}$ are
+\begin{align}
+	\tilde{\lambda}^e &= U_l\lambda^eU_e^\dagger \ , \\
+	\tilde{\lambda}^u &= U_l\lambda^eU_e^\dagger \ , \\
+	\tilde{\lambda}^d &= U_l\lambda^eU_e^\dagger
+\end{align}
+
+
+
+\section{Peskin \& Schroeder}
 Erklären:
 \begin{itemize}
 	\item Wieso braucht man ein neues Feld/ Symmetriebrechung?
@@ -31,18 +151,3 @@ Erklären:
 	\item Wie und wieso koppelt das an die Fermionen?
 	\item Wie ergibt sich aus der most general gauge-invariant coupling die CKM matrix?
 \end{itemize}
-fermion kinetic energy terms for $e,\nu,u,d$:
-\begin{align}
-	\mathcal{L} = \bar{E}_L(i\slashed{D})E_L + \bar{e}_R(i\slashed{D})e_R + \bar{Q}_L(i\slashed{D})Q_L + \bar{u}_R(i\slashed{D})u_R + \bar{d}_R(i\slashed{D})d_R
-\end{align}
-gauge invariant coupling linking $e_L,e_R$ (vev von $\phi=\frac{v}{\sqrt{2}}$)
-\begin{align}
-	\Delta\mathcal{L}_e &= -\lambda_e\bar{E}_L\phi e_R + \text{h.c.} \\
-	&= -\lambda_e\bar{E}_L\frac{v}{\sqrt{2}} e_R + \text{h.c.} + ... \\
-	\Rightarrow m_e &= \frac{\lambda_ev}{\sqrt{2}} \\
-	\Delta\mathcal{L}_q &= - \lambda_q\bar{Q}_L\phi d_R - \lambda_q\bar{Q}_L(i\sigma_2\phi^*) u_R + \text{h.c.}
-\end{align}
-most general renormalizable gauge-invariant coupling with this structure:
-\begin{align}
-	\mathcal{L}_m = -\lambda_d^{ij}\bar{Q}_L^i\phi d_R^j - \lambda_u^{ij}\bar{Q}_L^i(i\sigma_2\phi^*) u_R^j
-\end{align}
