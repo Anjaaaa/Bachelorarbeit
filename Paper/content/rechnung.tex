@@ -1,0 +1,129 @@
+\section{Chiral Effective Theory of Dark Matter Direct Detection}
+The model in \cite{ChiralEFT} bases on a set of dimension-five, -six, and -seven operators. We restrict our calculations to the dimension-six operators, which are
+\begin{align}\label{eq:normal}
+	R_{1,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu q) && &R_{3,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu\gamma_5q)\notag \\
+	R_{2,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu q) &&	&R_{4,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu\gamma_5q) \ .
+\end{align}
+Since the CKM mixing only applies to the lefthanded down-type quarks, we need to rewrite these operators in terms of the left- and righthanded particle functions to include the CKM matrix. These chiral operators are
+\begin{align}\label{eq:chiral}
+	Q_{1ij} &= (\bar{\chi}\gamma_\mu\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j) && &Q_{5ij} &= (\bar{\chi}\gamma_\mu\gamma_5\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j)\notag \\
+	Q_{2ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j) && &Q_{6ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j)\notag \\
+	Q_{3ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{u}_R^i\gamma^\mu u_R^j) && &Q_{7ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{u}_R^i\gamma^\mu u_R^j)\notag \\
+	Q_{4ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{d}_R^i\gamma^\mu d_R^j) && &Q_{8ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{d}_R^i\gamma^\mu d_R^j) \ ,
+\end{align}
+here $Q_L^i = (u_L^i, d_L^i)$ is the isospin doublet of the $i^\text{th}$ quark generation. The operators $\tilde{\tau}^a,\tau^a$ are the generators of the SU(2) in the corresponding spin-representation. So for the quarks, we use
+\begin{align}
+	\tau^a = \frac{\sigma_a}{2} \ ,
+\end{align}
+where $\sigma_a$ are the pauli matrices. Regarding the dark matter particle, we decide to only keep the terms with $\tilde{\tau}^a = \tilde{\tau}^3$ and get
+\begin{align}
+	\tilde{\tau}^3\chi = \tau_0\chi \ ,
+\end{align}
+with the weak isospin value $\tau_0$ of the dark matter particle.
+
+Including the CKM matrix in the fromalism follows these steps:
+\begin{enumerate}
+	\item Replace the pure lefthanded down-type quarks with the mixed quarks.
+	\item Rewrite the chiral particle functions in terms of the normal particle functions and projection operators.
+	\item Write down the entire interaction lagrangian in terms of \eqref{eq:normal} and \eqref{eq:chiral} and compare the coefficients.
+\end{enumerate}
+
+\subsection{Including the Flavour Mixing}
+The inclusion of the CKM matrix only affects the chiral operators $Q_{1ij},Q_{2ij},Q_{5ij},Q_{6ij}$. The quark part of the interaction with flavour mixing is therefore
+\begin{align*}
+	\bar{Q}_L^i\gamma^\mu Q_L^j &= \begin{pmatrix}
+	\bar{u}_L^i \\ \bar{d}_L^i
+	\end{pmatrix}
+	\gamma^\mu \begin{pmatrix}
+	u_L^j \\ d_L^j
+	\end{pmatrix}
+	= \bar{u}_L^i\gamma^\mu d_L^j + \bar{d}_L^i\gamma^\mu d_L^j \\
+	&= \bar{u}_L^i\gamma^\mu u_L^j + (V_{id}^*\bar{d}_L + V_{is}^*\bar{s}_L+V_{ib}^*\bar{b}_L)\gamma^\mu(V_{jd}d_L+V_{js}s_L+V_{jb}b_L)
+\end{align*}
+for $Q_{2ij}, Q_{6ij}$, respectively
+\begin{align*}
+	\bar{Q}_L^i\gamma^\mu\tau^a Q_L^j &=  \begin{pmatrix}
+	\bar{u}_L^i \\ \bar{d}_L^i
+	\end{pmatrix}
+	\gamma^\mu \begin{pmatrix}
+	u_L^j \\ d_L^j
+	\end{pmatrix}
+	= \frac{1}{2}\bar{u}_L^i\gamma^\mu \sigma_a d_L^j + \frac{1}{2}\bar{d}_L^i\gamma^\mu\sigma_a d_L^j \\
+	&= \frac{1}{2}\bar{u}_L^i\gamma^\mu \sigma_a u_L^j + \frac{1}{2}(V_{id}^*\bar{d}_L + V_{is}^*\bar{s}_L+V_{ib}^*\bar{b}_L)\gamma^\mu\sigma_a(V_{jd}d_L+V_{js}s_L+V_{jb}b_L)
+\end{align*}
+for $Q_{1ij}, Q_{5ij}$. For simplicity we only keep the light quarks $u,d,s$ and neglect mixed terms. So the whole set of quark interactions is
+\begin{align}
+	\bar{Q}_L^i\gamma^\mu\tau^a Q_L^j &\approx \frac{1}{2}\bar{u}_L\gamma^\mu u_L\delta_{ij}\delta_{iu}\delta_{a3} - \frac{1}{2}\delta_{a3}(V_{id}^*V_{jd}\bar{d}_L\gamma^\mu d_L + V_{is}^*V_{js}\bar{s}_L\gamma^\mu s_L)\notag \\
+	\bar{Q}_L^i\gamma^\mu Q_L^j &\approx \bar{u}_L\gamma^\mu u_L\delta_{ij}\delta_{iu} + V_{id}^*V_{jd}\bar{d}_L\gamma^\mu d_L + V_{is}^*V_{js}\bar{s}_L\gamma^\mu s_L\notag \\
+	\bar{u}_R^i\gamma^\mu u_R^j &\approx\bar{u}_R\gamma^\mu u_R\delta_{ij}\delta_{iu}\notag \\
+	\bar{d}_R^i\gamma^\mu d_R^j &\approx \bar{d}_R\gamma^\mu d_R\delta_{ij}\delta_{id} + \bar{s}_R\gamma^\mu s_R\delta_{ij}\delta_{is} \ .
+\end{align}
+
+\subsection{Replacing Chiral Particle Functions}
+The next step is rewriting the chiral particle functions in terms of the normal particle functions using the projection operators $P_L,P_R$. This leads us to
+\begin{align}
+	\bar{Q}_L^i\gamma^\mu\tau^a Q_L^j =&\frac{1}{4}(\bar{u}\gamma^\mu u\delta_{ij}\delta_{iu}\delta_{3a}
+	- V_{id}^*V_{jd}\bar{d}\gamma^\mu d\delta_{3a} - V_{is}^*V_{js}\bar{s}\gamma^\mu s\delta_{3a})\notag \\
+	-&\frac{1}{4} (\bar{u}\gamma^\mu \gamma_5u\delta_{ij}\delta_{iu}\delta_{3a} - V_{id}^*V_{jd}\bar{d}\gamma^\mu\gamma_5 d\delta_{3a} - V_{is}^*V_{js}\bar{s}\gamma^\mu\gamma_5 s\delta_{3a})\notag \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\bar{Q}_L^i\gamma^\mu Q_L^j =&\frac{1}{2}(
+	\bar{u}\gamma^\mu u\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}\bar{d}\gamma^\mu d
+	+ V_{is}^*V_{js}\bar{s}\gamma^\mu s)\notag \\
+	-&\frac{1}{2}(\bar{u}\gamma^\mu\gamma_5u\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}\bar{d}\gamma^\mu\gamma_5d + V_{is}^*V_{js}\bar{s}\gamma^\mu\gamma_5s)\notag \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\bar{u}_R^i\gamma^\mu u_R^j =&\frac{1}{2}(\bar{u}\gamma^\mu u\delta_{ij}\delta_{iu} + \bar{u}\gamma^\mu \gamma_5u\delta_{ij}\delta_{iu})\notag \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\bar{d}_R^i\gamma^\mu d_R^j =&\frac{1}{2}(\bar{d}\gamma^\mu d\delta_{ij}\delta_{id} + \bar{d}\gamma^\mu\gamma_5d\delta_{ij}\delta_{id} + \bar{s}\gamma^\mu s\delta_{ij}\delta_{is} + \bar{s}\gamma^\mu \gamma_5s\delta_{ij}\delta_{is}) \ .
+\end{align}
+At this point we can express the chiral operators in terms of the original operators from \eqref{eq:normal}:
+\begin{align}\label{eq:dependenciesoperators}
+	Q_{1ij} =&\frac{\delta_{3a}\tau_{0}}{4}(R_{1u}\delta_{ij}\delta_{iu} - V_{id}^*V_{jd}R_{1d} - V_{is}^*V_{js}R_{1s})\notag \\
+	-&\frac{\delta_{3a}\tau_{0}}{4} (R_{3u}\delta_{ij}\delta_{iu} - V_{id}^*V_{jd}R_{3d} - V_{is}^*V_{js}R_{3s})\notag \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	Q_{2ij} =&\frac{1}{2}(R_{1u}\delta_{iu}\delta_{ij}+ V_{id}^*V_{jd}R_{1d}+ V_{is}^*V_{js}R_{1s})\notag \\
+	-&\frac{1}{2}(R_{3u}\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}R_{3d} + V_{is}^*V_{js}R_{3s})\notag \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	Q_{3ij} =&\frac{1}{2}(R_{1u}\delta_{ij}\delta_{iu} + R_{3u}\delta_{ij}\delta_{iu})\notag \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	Q_{4ij} =&\frac{1}{2}(R_{1d}\delta_{ij}\delta_{id} + R_{3d}\delta_{ij}\delta_{id} + R_{1s}\delta_{ij}\delta_{is} + R_{3s}\delta_{ij}\delta_{is}) \ .
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Q_{5ij} &=\frac{\delta_{3a}\tau_{0}}{4}(R_{2u}\delta_{ij}\delta_{iu}
+%	- V_{id}^*V_{jd}R_{2d} - V_{is}^*V_{js}R_{2s})\notag \\
+%	&-\frac{\delta_{3a}\tau_{0}}{4} (R_{4u}\delta_{ij}\delta_{iu}
+%	- V_{id}^*V_{jd}R_{4d} - V_{is}^*V_{js}R_{4s})\notag \\
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Q_{6ij} &= \frac{1}{2}(R_{2u}\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}R_{2d} + V_{is}^*V_{js}R_{2s})\notag \\
+%	&- \frac{1}{2}(R_{4u}\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}R_{4d} + V_{is}^*V_{js}R_{4s})\notag \\
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Q_{7ij} &= \frac{1}{2}(R_{2u}\delta_{ij}\delta_{iu} + R_{4u}\delta_{ij}\delta_{iu})\notag \\
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Q_{8ij} &= \frac{1}{2}(R_{2d}\delta_{ij}\delta_{id} + R_{4d}\delta_{ij}\delta_{id} + R_{2s}\delta_{ij}\delta_{is} + R_{4s}\delta_{ij}\delta_{is}) \ .
+\end{align}
+The operators $Q_{5ij}-Q_{8ij}$ can be obtained from $Q_{1ij}-Q_{4ij}$ by replacing $R_{1q}\leftrightarrow R_{2q}$ and $R_{3q}\leftrightarrow R_{4q}$.
+
+\subsection{Comparing Coefficients}
+Our final step is expressing the coefficients $K_{l,q}$ of the original operators $R_{l,q}$ in \eqref{eq:normal} in terms of the coefficients $C_{lij}$ of the chiral operators $Q_{lij}$ in \eqref{eq:chiral}. To get there we look at the overall interaction. The interaction cannot depend on the representation of particle functions we choose, either normal or chiral, therefore
+\begin{align}
+	\sum_{l,q} K_{l,q}R_{l,q} \overset{!}{=} \sum_{l,i,j}C_{lij}Q_{lij} \ .
+\end{align}
+By putting the interactions \eqref{eq:dependenciesoperators} into the right side of the equation and rearranging the expression in terms of the $R_{l,q}$, we conclude that $K_{l,q}$ must be equal to the terms in front of $R_{l,q}$ on the right side. We get the dependencies
+\begin{align}\label{eq:CoeffNormal}
+	K_{1,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ 
+	C_{2ij} + C_{3ij}\right)\notag \\
+	K_{1,d} &= \sum_{i,j}\frac{1}{2}\left(-V_{id}^*V_{jd}C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ V_{id}^*V_{jd}C_{2ij} + \delta_{ij}\delta_{id}C_{4ij}\right)\notag \\
+	K_{1,s} &= \sum_{i,j}\frac{1}{2}\left(- V_{is}^*V_{js}C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ V_{is}^*V_{js}C_{2ij}+ \delta_{ij}\delta_{is}C_{4ij}\right)\notag \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	K_{2,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}+ 
+	C_{6ij} + C_{7ij}\right)\notag \\
+	K_{2,d} &= \sum_{i,j}\frac{1}{2}\left(- V_{id}^*V_{jd}\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} + C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right)\notag \\
+	K_{2,s} &= \sum_{i,j}\frac{1}{2}\left(- V_{is}^*V_{js}\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} + C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right)\notag \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	K_{3,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(- C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} - C_{2ij} + C_{3ij}\right)\notag \\
+	K_{3,d} &= \sum_{i,j}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} V_{id}^*V_{jd} - V_{id}^*V_{jd}C_{2ij} + \delta_{ij}\delta_{id}C_{4ij}\right)\notag \\
+	K_{3,s} &= \sum_{i,j}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} V_{is}^*V_{js} - V_{is}^*V_{js}C_{2ij} + \delta_{ij}\delta_{is}C_{4ij}\right)\notag \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	K_{4,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(-\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} - C_{6ij} + C_{7ij}\right)\notag \\
+	K_{4,d} &= \sum_{i,j}\frac{1}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}V_{id}^*V_{jd} - C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right)\notag \\
+	K_{4,s} &= \sum_{i,j}\frac{1}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}V_{is}^*V_{js} - C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right) \ .
+\end{align}
+To have a hermitian interaction the coefficients need to fulfil the relation $C_{lij} = C_{lji}^*$.

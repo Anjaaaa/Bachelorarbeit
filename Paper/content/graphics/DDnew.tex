@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+\tikzstyle{centerArrow}=[decoration={
+markings,
+mark=at position 0.5 with {\arrow{Triangle}}}]
+\begin{scope}[xshift=6cm,yshift=-4cm]
+\def\xmove{2}
+\def\ymove{1.25}
+\def\centerShift{2}
+\coordinate (tCenter1) at (0,0);
+\coordinate (tCenter2) at (0,-\centerShift cm);
+\node (upperLeft) at (-\xmove,\ymove) {$\chi$};
+\node (upperRight) at (\xmove,\ymove) {$\chi$};
+\node (lowerLeft) at (-\xmove,-\centerShift cm-\ymove cm) {$N$};
+\node (lowerRight) at (\xmove,-\centerShift cm-\ymove cm) {$N$};
+\node at (0.5,-\centerShift/2) {$Z'$};
+\draw [centerArrow,postaction={decorate}]  (upperLeft) -- (tCenter1) ;
+\draw [centerArrow,postaction={decorate}]  (tCenter1) -- (upperRight) ;
+\draw [centerArrow,postaction={decorate}]  (lowerLeft) -- (tCenter2) ;
+\draw [centerArrow,postaction={decorate}]  (tCenter2) -- (lowerRight) ;
+\draw [decoration={snake, segment length=1.5mm, amplitude=0.5mm},decorate] (tCenter1) -- (tCenter2) ;
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,47 @@
+\section{Cross Section}
+We are only interested in the interactions $Q_{2bs}$, therefore all coefficients $C_{lij}$ vanish except $C_{2sb} = C_{2bs}^*$. In terms of the coefficients in \eqref{eq:CoeffNormal} this means
+\begin{align}
+	K_{1,d} &= +\text{Re}(V_{cd}^*V_{td}C_{2sb})\notag \\
+	K_{1,s} &= +\text{Re}(V_{cs}^*V_{ts}C_{2sb})\notag \\
+	K_{3,d} &= -\text{Re}(V_{cd}^*V_{td}C_{2sb})\notag \\
+	K_{3,s} &= -\text{Re}(V_{cs}^*V_{ts}C_{2sb}) \ ,
+\end{align}
+and all the other $K_{l,q}$ are zero. \\
+We are interested in spin-independent cross sections, therefore we only use the interactions $(\bar{\chi}\gamma^\mu\chi)(\bar{q}\gamma_\mu q)$. Protons do not contain strange quarks, so the lagrangian only consists of one interaction:
+\begin{align}
+	\mathcal{L} = K_{1,d}(\bar{\chi}\gamma^\mu\chi)(\bar{d}\gamma_\mu d) + \text{h.c.} \ .
+\end{align}
+Since this operator only counts the number of down quarks in the nucleus, the matrix element is
+\begin{align}
+	M = Z\cdot 2K_{1,d} + (A-Z)\cdot K_{1,d} \ .
+\end{align}
+\begin{align}
+	\sigma_{0,\text{tree}}^\text{SI} &= \frac{\mu_{A\chi}^2}{A^2\pi}\left|ZC_p +(A-Z)C_n\right|^2 \ . \\
+	&= \frac{\mu_{A\chi}^2}{A^2\pi}K_{1,d}^2\times\mathcal{O}(10^2)
+\end{align}
+
+
+
+In case of the spin-dependent cross section we have
+\begin{align}
+	\sigma_{0,\text{tree}}^\text{SD} &= \frac{\mu_{A\chi}^2}{A^2\pi}32\Lambda^2J(J+1)64G_F^2 \\
+	&= \frac{\mu_{A\chi}^2}{A^2\pi}32\left(\frac{K_{3,d}}{J}\frac{\Delta d^{(n)}}{\sqrt{2}G_F}\frac{\mu}{3.826}\right)^2J(J+1)64G_F^2 \\
+	&= \frac{\mu_{A\chi}^2}{A^2\pi}2^{10}K_{3,d}^2(\Delta d^{(n)})^2\left(\frac{\mu}{3.826}\right)^2\frac{J(J+1)}{J^2} \\
+	&= \frac{\mu_{A\chi}^2}{A^2\pi}K_{3,d}^2\times\mathcal{O}(10^{3}10^{-2}10^{-2})
+\end{align}
+
+\begin{align}
+	&\langle N|K_{1,d}\bar{d}\gamma^\mu d|N\rangle + \langle N|K_{1,u}\bar{u}\gamma^\mu u|N\rangle\notag \\
+	= &Z\left(2K_{1,u}+K_{1,d}\right)(\bar{p}\gamma^\mu p) + (A-Z)\left(K_{1,u}+2K_{1,d}\right)(\bar{n}\gamma^\mu n)\notag \\
+	\notag \\
+	&\langle N|K_{3,d}\bar{d}\gamma^\mu\gamma_5 d|N\rangle + \langle N|K_{3,u}\bar{u}\gamma^\mu\gamma_5 u|N\rangle\notag \\
+	= &Z(K_{3,d}2s^\mu\Delta d^{(p)} + K_{3,u}2s^\mu\Delta u^{(p)})(\bar{p}\gamma^\mu\gamma_5 p)\notag \\
+	+ &(A-Z)(K_{3,d}2s^\mu\Delta d^{(n)} + K_{3,u}2s^\mu\Delta u^{(n)})(\bar{n}\gamma^\mu\gamma_5 n)\notag
+\end{align}
+\begin{figure}
+	\centering
+	\input{content/graphics/DDnew}
+	\caption{Direct detection tree level diagram}
+	\label{fig:DD}
+\end{figure}
+\todo{Wieso ist eigentlich $Q_L^2\gamma_\mu Q_L^3 = s_L\gamma_\mu b_L$?}

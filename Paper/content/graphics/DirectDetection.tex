@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+\tikzstyle{centerArrow}=[decoration={
+    markings,
+    mark=at position 0.5 with {\arrow{Triangle}}}]
+\begin{scope}
+\def\xmove{2.5}
+\def\ymove{1.25}
+\def\centerSize{0.15}
+\node [fill, circle,inner sep=\centerSize cm] (tCenter)  {};
+\node (upperLeft) at (-\xmove,\ymove) {$\chi$};
+\node (upperRight) at (\xmove,\ymove) {$\chi$};
+\node (lowerLeft) at (-\xmove,-\ymove) {$N$};
+\node (lowerRight) at (\xmove,-\ymove) {$N$};
+\draw [centerArrow,postaction={decorate}]  (upperLeft) -- (tCenter) ;
+\draw [centerArrow,postaction={decorate}]  (lowerLeft) -- (tCenter) ;
+\draw [centerArrow,postaction={decorate}]  (tCenter) -- (upperRight) ;
+\draw [centerArrow,postaction={decorate}]  (tCenter) -- (lowerRight) ;
+\end{scope}
+\end{tikzpicture}

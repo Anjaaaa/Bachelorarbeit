@@ -1,0 +1,190 @@
+% Erstellt von Maximilian Nöthe, <maximilian.noethe@tu-dortmund.de>
+% ausgelegt für lualatex und Biblatex mit biber
+
+% Kompilieren mit 
+% lualatex dateiname.tex
+% biber dateiname.bcf
+% lualatex dateiname.tex
+% lualatex dateiname.tex
+% oder einfach mit:
+% make
+
+\documentclass[
+  tucolor,
+  BCOR=12mm,     % 12mm binding corrections, adjust to fit your binding
+  parskip=half,  % new paragraphs start with half line vertical space
+  open=any,      % chapters start on both odd and even pages
+  cleardoublepage=plain,  % no header/footer on blank pages
+]{tudothesis}
+
+
+% Warning, if another latex run is needed
+\usepackage[aux]{rerunfilecheck}
+
+% just list chapters and sections in the toc, not subsections or smaller
+\setcounter{tocdepth}{1}
+
+%------------------------------------------------------------------------------
+%------------------------------ Sprache und Schrift: --------------------------
+%------------------------------------------------------------------------------
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}  % -- becomes en-dash etc.
+
+% german language
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+
+% for english abstract and english titles in the toc
+%\setotherlanguages{english}
+
+% intelligent quotation marks, language and nesting sensitive
+\usepackage[autostyle]{csquotes}
+
+% microtypographical features, makes the text look nicer on the small scale
+\usepackage{microtype}
+
+%------------------------------------------------------------------------------
+%------------------------ Für die Matheumgebung--------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{slashed}
+
+% Enable Unicode-Math and follow the ISO-Standards for typesetting math
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  sans-style=italic,
+  nabla=upright,
+  partial=upright,
+]{unicode-math}
+\setmathfont{Latin Modern Math}
+
+% nice, small fracs for the text with \sfrac{}{}
+\usepackage{xfrac}  
+
+
+%------------------------------------------------------------------------------
+%---------------------------- Numbers and Units -------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage[
+  locale=DE,
+  separate-uncertainty=true,
+  per-mode=symbol-or-fraction,
+]{siunitx}
+\sisetup{math-micro=\text{µ},text-micro=µ}
+
+%------------------------------------------------------------------------------
+%-------------------------------- tables  -------------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{booktabs}       % stellt \toprule, \midrule, \bottomrule
+
+%------------------------------------------------------------------------------
+%-------------------------------- graphics -------------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{tikz}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{arrows.meta}
+
+
+% allow figures to be placed in the running text by default:
+\usepackage{scrhack}
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+
+% keep figures and tables in the section
+\usepackage[section, below]{placeins}
+
+
+%------------------------------------------------------------------------------
+%---------------------- customize list environments ---------------------------
+%------------------------------------------------------------------------------
+
+\usepackage{enumitem}
+
+%------------------------------------------------------------------------------
+%------------------------------ Bibliographie ---------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage[
+  backend=biber,   % use modern biber backend
+  autolang=hyphen, % load hyphenation rules for if language of bibentry is not
+  sorting=none,    % german, has to be loaded with \setotherlanguages
+                   % in the references.bib use langid={en} for english sources
+]{biblatex}
+\addbibresource{references.bib}  % die Bibliographie einbinden
+\DefineBibliographyStrings{english}{andothers = {{et\,al\adddot}}} 
+
+%------------------------------------------------------------------------------
+%------------------------------ Sonstiges: ------------------------------------
+%------------------------------------------------------------------------------
+
+\usepackage[pdfusetitle,unicode,linkbordercolor=tugreen]{hyperref}
+\usepackage{bookmark}
+\usepackage[shortcuts]{extdash}
+\usepackage{todo}
+
+%------------------------------------------------------------------------------
+%-------------------------    Angaben zur Arbeit   ----------------------------
+%------------------------------------------------------------------------------
+
+\author{Anja Beck}
+\title{Flavour Mixing Effects in the Direct Detection of Dark Matter}
+\date{2017}
+\birthplace{Kempten (Allgäu)}
+\chair{Lehrstuhl für Theoretische Physik IV}
+\division{Fakultät Physik}
+\thesisclass{Bachelor of Science}
+\submissiondate{17. Juli 2017}
+\firstcorrector{Jun.-Prof.~Dr.~Joachim Brod}
+\secondcorrector{Prof.~Dr.~Heinrich Päs}
+
+% tu logo on top of the titlepage
+\titlehead{\includegraphics[height=1.5cm]{logos/tu-logo.pdf}}
+
+\begin{document}
+\frontmatter
+%\input{content/hints.tex}
+\maketitle
+
+% Gutachterseite
+\makecorrectorpage
+
+% hier beginnt der Vorspann, nummeriert in römischen Zahlen
+\input{content/abstract.tex}
+\tableofcontents
+
+\mainmatter
+% Hier beginnt der Inhalt mit Seite 1 in arabischen Ziffern
+\chapter{Introduction}
+\input{content/introduction.tex}
+\chapter{Introduction of the Flavour Mixing into an Existing Formalism}
+\input{content/ckm.tex}
+\input{content/rechnung.tex}
+\chapter{The \texorpdfstring{$L_\mu-L_\tau$}{TEXT} Model}
+\input{content/newinteraction.tex}
+\chapter{Comparison}
+\input{content/comparison.tex}
+\chapter{Conclusion}
+\input{content/conclusion.tex}
+
+\appendix
+% Hier beginnt der Anhang, nummeriert in lateinischen Buchstaben
+\input{content/appendix.tex}
+\todos
+\backmatter
+\printbibliography
+
+\cleardoublepage
+\input{content/eid_versicherung.tex}
+\end{document}

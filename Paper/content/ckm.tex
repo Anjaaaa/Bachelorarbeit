@@ -1,0 +1,48 @@
+\todo{Evtl. Bilder für direct vs. indirect detection.}
+
+In this chapter we include the flavour mixing into an existing formalism. We use the model described in \cite{ChiralEFT}. It provides a framework to calculate cross sections for the direct detection of dark matter. Before doing the calculations, we explain the theoretical foundations of the flavour mixing mechanism.
+
+\section{The Flavour Mixing Mechanism}
+\cite[Chapter 20]{Peskin}
+\cite[Chapter 1]{Tevatron}
+\subsection{Cabibbo / Historical}
+The origins of the flavour mixing go back to the 1960s, when there were strong contradictions in the weak decays. The Italian physicist Cabibbo resolved them by proposing that the lefthanded (because it only concerned weak decays) down-type quarks (down and strange at the time) mix in their flavours.
+\subsection{Theoretical Derivation}
+In other words: The quark mass eigenstates are not equal to the flavour eigenstates. Maskawa and Kobayashi later expanded the idea to three quark generations. The CKM matrix $V_{CKM}$ describes the mixing mathematically:
+\begin{align}
+	\begin{pmatrix}
+	d_L \\ s_L \\ b_L
+	\end{pmatrix}_\text{mixed} = \underbrace{\begin{pmatrix}
+	V_{ud} & V_{us} & V_{ub} \\
+	V_{cd} & V_{cs} & V_{cb} \\
+	V_{td} & V_{ts} & V_{tb}
+	\end{pmatrix}}_{V_{CKM}}\cdot\begin{pmatrix}
+	d_L \\ s_L \\ b_L
+	\end{pmatrix}_\text{pure} \ .
+\end{align}
+The CKM matrix is complex and unitary. Its complex values are the source of CP violations. Note that rotating the down-type quarks is an arbitrary choice, mixing the up-type quarks would be equally right.
+
+\todo{Hier könnten noch mehr good-to-know Infos über die CKM matrix stehen.}
+\subsection{Peskin \& Schroeder}
+Erklären:
+\begin{itemize}
+	\item Wieso braucht man ein neues Feld/ Symmetriebrechung?
+	\item Warum muss das die Eigenschaften xy haben?
+	\item Wie und wieso koppelt das an die Fermionen?
+	\item Wie ergibt sich aus der most general gauge-invariant coupling die CKM matrix?
+\end{itemize}
+fermion kinetic energy terms for $e,\nu,u,d$:
+\begin{align}
+	\mathcal{L} = \bar{E}_L(i\slashed{D})E_L + \bar{e}_R(i\slashed{D})e_R + \bar{Q}_L(i\slashed{D})Q_L + \bar{u}_R(i\slashed{D})u_R + \bar{d}_R(i\slashed{D})d_R
+\end{align}
+gauge invariant coupling linking $e_L,e_R$ (vev von $\phi=\frac{v}{\sqrt{2}}$)
+\begin{align}
+	\Delta\mathcal{L}_e &= -\lambda_e\bar{E}_L\phi e_R + \text{h.c.} \\
+	&= -\lambda_e\bar{E}_L\frac{v}{\sqrt{2}} e_R + \text{h.c.} + ... \\
+	\Rightarrow m_e &= \frac{\lambda_ev}{\sqrt{2}} \\
+	\Delta\mathcal{L}_q &= - \lambda_q\bar{Q}_L\phi d_R - \lambda_q\bar{Q}_L(i\sigma_2\phi^*) u_R + \text{h.c.}
+\end{align}
+most general renormalizable gauge-invariant coupling with this structure:
+\begin{align}
+	\mathcal{L}_m = -\lambda_d^{ij}\bar{Q}_L^i\phi d_R^j - \lambda_u^{ij}\bar{Q}_L^i(i\sigma_2\phi^*) u_R^j
+\end{align}
