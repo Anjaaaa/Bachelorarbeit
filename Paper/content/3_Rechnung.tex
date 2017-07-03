@@ -1,30 +1,34 @@
 In this chapter we include the flavour mixing into an existing formalism. We use the model described in \cite{ChiralEFT}. It provides a framework to calculate cross sections for the direct detection of dark matter. The model bases on a set of dimension-five, -six, and -seven operators. We restrict our calculations to the dimension-six operators, which are
 \begin{align}\label{eq:normal}
-	R_{1,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu q) && &R_{3,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu\gamma_5q)\notag \\
-	R_{2,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu q) &&	&R_{4,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu\gamma_5q) \ .
+	R_{1,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu q) \ , && &R_{3,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu\gamma_5q) \ , \notag \\
+	R_{2,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu q) \ , &&	&R_{4,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu\gamma_5q) \ ,
 \end{align}
+with the dark matter particle $\chi$ and a quark $q=(u,d,c,s,t,b)$.
+
+
 Since the CKM mixing only applies to the lefthanded down-type quarks, we need to rewrite these operators in terms of the left- and righthanded particle functions to include the CKM matrix. These chiral operators are
 \begin{align}\label{eq:chiral}
 	Q_{1ij} &= (\bar{\chi}\gamma_\mu\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j) && &Q_{5ij} &= (\bar{\chi}\gamma_\mu\gamma_5\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j)\notag \\
 	Q_{2ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j) && &Q_{6ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j)\notag \\
-	Q_{3ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{u}_R^i\gamma^\mu u_R^j) && &Q_{7ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{u}_R^i\gamma^\mu u_R^j)\notag \\
-	Q_{4ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{d}_R^i\gamma^\mu d_R^j) && &Q_{8ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{d}_R^i\gamma^\mu d_R^j) \ ,
+	Q_{3ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{U}_R^i\gamma^\mu U_R^j) && &Q_{7ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{U}_R^i\gamma^\mu U_R^j)\notag \\
+	Q_{4ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{D}_R^i\gamma^\mu D_R^j) && &Q_{8ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{D}_R^i\gamma^\mu D_R^j) \ .
 \end{align}
-here $Q_L^i = (u_L^i, d_L^i)$ is the isospin doublet of the $i^\text{th}$ quark generation. The operators $\tilde{\tau}^a,\tau^a$ are the generators of the SU(2) in the corresponding spin-representation. So for the quarks, we use
+The operators $\tilde{\tau}^a,\tau^a$ are the generators of the $SU(2)$ in the corresponding spin-representation. For the quarks, we use
 \begin{align}
 	\tau^a = \frac{\sigma_a}{2} \ ,
 \end{align}
-where $\sigma_a$ are the pauli matrices. Regarding the dark matter particle, we decide to only keep the terms with $\tilde{\tau}^a = \tilde{\tau}^3$ and get
+where $\sigma_a$ are the pauli matrices. For simplicity reasons we are only interested in interactions with only one kind of quark and therefore abolish $a=1,2$. Regarding the dark matter, we therby obtain
 \begin{align}
 	\tilde{\tau}^3\chi = \tau_0\chi \ ,
 \end{align}
 with the weak isospin value $\tau_0$ of the dark matter particle.
 
-Including the CKM matrix in the fromalism follows these steps:
+\clearpage
+In the following subchapters, we go through the steps of including the CKM matrix in the formalism:
 \begin{enumerate}
-	\item Replace the pure lefthanded down-type quarks with the mixed quarks.
-	\item Rewrite the chiral particle functions in terms of the normal particle functions and projection operators.
-	\item Write down the entire interaction lagrangian in terms of \eqref{eq:normal} and \eqref{eq:chiral} and compare the coefficients.
+	\item Replacing the pure lefthanded down-type quarks with the mixed quarks.
+	\item Rewriting the chiral particle functions in terms of the normal particle functions and projection operators.
+	\item Writing down the entire interaction lagrangian in terms of \eqref{eq:normal} and \eqref{eq:chiral} and comparing the coefficients.
 \end{enumerate}
 
 \section{Including the Flavour Mixing}

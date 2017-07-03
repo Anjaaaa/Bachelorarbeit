@@ -8,10 +8,19 @@ from sympy.tensor.array.mutable_ndim_array import MutableNDimArray
 #import cmath as cm
 from scipy.integrate import quad
 from scipy.special import erf
+import matplotlib
+matplotlib.colors.ColorConverter.colors['tu'] = (128/256,186/256,38/256,0.5)
 
-#########################################################################################################
-#########################################################################################################
-#########################################################################################################
+from table import (
+        make_table,
+        make_full_table,
+        make_SI,
+        write)
+
+
+##########################################################################
+##########################################################################
+##########################################################################
 ### Konstanten
 
 la = 0.225
@@ -34,9 +43,9 @@ Z = 54
 # Umrechnungsfaktor GeV^(-2) in cm^2
 K = 0.389379 * 10**(-27)
 
-#########################################################################################################
-#########################################################################################################
-#########################################################################################################
+##########################################################################
+##########################################################################
+##########################################################################
 ### Cross Sections
 
 # Mein Wirkungsquerschnitt
@@ -52,41 +61,28 @@ def PaperCS(mA,mX,A,Z,C2):
     return (Z/A)**2 * mRed**2/9/np.pi**3 * alpha**2 * C2**4 * np.log(mu**2/tau**2)**2
 
 
-#########################################################################################################
-#########################################################################################################
-#########################################################################################################
+##########################################################################
+##########################################################################
+##########################################################################
 ### Plotten 540 GeV < mZ/g < 4900 GeV
+# ql=qX=1
 mX = np.linspace(1,25, 1000)
 
 # Mein Wirkungsquerschnitt für Z'
-C = 8*10**(-9)*complex(1,1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'aqua', label = '$C = 8\cdot 10^{-9}\cdot$(1+i)')
-C = 8*10**(-9)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'steelblue', label = '$C = 8\cdot 10^{-9}$')
-C = 8*10**(-9)*complex(1,-1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'navy', label = '$C = 8\cdot 10^{-9}\cdot$(1$-$i)')
+C = np.array([10*complex(1,1), 10, 10*complex(1,-1), complex(1,1), 1, complex(1,-1)], dtype = complex)
+C = C*10**(-10)*8
+color = ['aqua', 'steelblue', 'navy', 'orange', 'r', 'brown']
+label = ['$C_{2bs} = 8\cdot 10^{-9}(1+i)$', '$C_{2bs} = 8\cdot 10^{-9}$', '$C_{2bs} = 8\cdot 10^{-9}(1-i)$','$C_{2bs} = 8\cdot 10^{-10}(1+i)$', '$C_{2bs} = 8\cdot 10^{-10}$', '$C_{2bs} = 8\cdot 10^{-10}(1-i)$']
 
-C = 8*10**(-10)*complex(1,1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'yellow', label = '$C = 8\cdot 10^{-10}\cdot$(1+i)')
-C = 8*10**(-10)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'lawngreen', label = '$C = 8\cdot 10^{-10}$')
-C = 8*10**(-10)*complex(1,-1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'forestgreen', label = '$C = 8\cdot 10^{-10}\cdot$(1$-$i)')
-
-
-C = 8*10**(-11)*complex(1,1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'chocolate', label = '$C = 8\cdot 10^{-11}\cdot$(1+i)')
-C = 8*10**(-11)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'r', label = '$C = 8\cdot 10^{-11}$')
-C = 8*10**(-11)*complex(1,-1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'darkred', label = '$C = 8\cdot 10^{-11}\cdot$(1$-$i)')
+for i in range(0,len(C)):
+    CS = myCS(mA,mX,A,Z,C[i])
+    plt.plot(mX, K*CS, color[i], label = label[i])
 
 PaperMin = PaperCS(mA,mX,A,Z,1/540)
 PaperMax = PaperCS(mA,mX,A,Z,1/4900)
-plt.fill_between(mX, K*PaperMin, K*PaperMax, color='red', alpha='0.5')
+plt.fill_between(mX,K*PaperMin, K*PaperMax, color = 'tu')
 
 plt.yscale('log')
-#plt.xscale('log')
 plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
 plt.ylabel(r'$\sigma_0$ in $\mathrm{cm}^{2}$')
@@ -94,44 +90,28 @@ plt.xlim(1,25)
 plt.savefig('Paper/content/graphics/Allgemein11.pdf')
 plt.show()
 
-
-
-#########################################################################################################
-#########################################################################################################
-#########################################################################################################
-### Plotten ql = 1, qX = 1/6, 540 GeV < mZ/g < 4900 GeV, mZ = 2mX
+##########################################################################
+# ql = 1, qX = 1/6
 
 mX = np.linspace(1,1000, 1000)
 
 # Mein Wirkungsquerschnitt für Z'
-C = 8/6*10**(-9)*complex(1,1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'aqua', label = '$C = 8 / 6 \cdot 10^{-9}\cdot$(1+i)')
-C = 8/6*10**(-9)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'steelblue', label = '$C = 8 / 6 \cdot 10^{-9}$')
-C = 8/6*10**(-9)*complex(1,-1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'navy', label = '$C = 8 / 6 \cdot 10^{-9}\cdot$(1$-$i)')
+C = np.array([10*complex(1,1), 10, 10*complex(1,-1), complex(1,1), 1, complex(1,-1)], dtype = complex)
+C = C*10**(-10)*8/6
+color = ['aqua', 'steelblue', 'navy', 'orange', 'r', 'brown']
+label = ['$C_{2bs} = 8/6\cdot 10^{-9}(1+i)$', '$C_{2bs} = 8/6\cdot 10^{-9}$', '$C_{2bs} = 8/6\cdot 10^{-9}(1-i)$','$C_{2bs} = 8/6\cdot 10^{-10}(1+i)$', '$C_{2bs} = 8/6\cdot 10^{-10}$', '$C_{2bs} = 8/6\cdot 10^{-10}(1-i)$']
 
-C = 8/6*10**(-10)*complex(1,1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'yellow', label = '$C = 8 / 6 \cdot 10^{-10}\cdot$(1+i)')
-C = 8/6*10**(-10)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'lawngreen', label = '$C = 8 / 6 \cdot 10^{-10}$')
-C = 8/6*10**(-10)*complex(1,-1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'forestgreen', label = '$C = 8 / 6 \cdot 10^{-10}\cdot$(1$-$i)')
+for i in range(0,len(C)):
+    CS = myCS(mA,mX,A,Z,C[i])
+    plt.plot(mX, K*CS, color[i], label = label[i])
 
-
-C = 8/6*10**(-11)*complex(1,1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'chocolate', label = '$C = 8 / 6 \cdot 10^{-11}\cdot$(1+i)')
-C = 8/6*10**(-11)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'r', label = '$C = 8 / 6 \cdot 10^{-11}$')
-C = 8/6*10**(-11)*complex(1,-1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'darkred', label = '$C = 8 / 6 \cdot 10^{-11}\cdot$(1$-$i)')
 
 # Wirkungsquerschnitt aus dem Paper
 Cmin = 1/4900/np.sqrt(6)
 Cmax = 1/540/np.sqrt(6)
 PaperMin = PaperCS(mA,mX,A,Z,Cmin)
 PaperMax = PaperCS(mA,mX,A,Z,Cmax)
-plt.fill_between(mX, K*PaperMin, K*PaperMax, color='red', alpha='0.5')
+plt.fill_between(mX, K*PaperMin, K*PaperMax, color='tu')
 
 plt.yscale('log')
 plt.xscale('log')
@@ -143,35 +123,30 @@ plt.savefig('Paper/content/graphics/Allgemein116.pdf')
 plt.show()
 
 
-
-
-
-#########################################################################################################
-#########################################################################################################
-#########################################################################################################
-### Plotten ql = 1, qX = 1
+##########################################################################
+##########################################################################
+##########################################################################
+### Plotten variierter Imaginärteil
+#ql = 1, qX = 1
 
 mX = np.linspace(1, 25,1000)
 
 # Mein Wirkungsquerschnitt für Z'
-C = 8*10**(-10)*complex(1,1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'g', label = 'Im(C) = $8\cdot 10^{-10} \mathrm{GeV}^{-2}$')
-C = 8*10**(-10)*complex(1,10)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'y', label = 'Im(C) = $8\cdot 10^{-9} \mathrm{GeV}^{-2}$')
-C = 8*10**(-10)*complex(1,100)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'b', label = 'Im(C) = $8\cdot 10^{-8} \mathrm{GeV}^{-2}$')
+C = np.array([complex(1,1), complex(1,10), complex(1,100)], dtype = complex)
+C = C*10**(-10)*8
+color = ['r', 'b', 'orange']
+label = ['Im$(C_{2bs}) = 8\cdot 10^{-10}$', 'Im$(C_{2bs}) = 8\cdot 10^{-9}$', 'Im$(C_{2bs}) = 8\cdot 10^{-8}$']
 
-
+for i in range(0,len(C)):
+    CS = myCS(mA,mX,A,Z,C[i])
+    plt.plot(mX, K*CS, color[i], label = label[i])
 
 # Wirkungsquerschnitt aus dem Paper
 PaperMin = PaperCS(mA,mX,A,Z,1/4900)
 PaperMax = PaperCS(mA,mX,A,Z,1/540)
-#plt.plot(mX, K*PaperMin, 'r', label = '$g = 2\cdot 10^{-3}$')
-#plt.plot(mX, K*PaperMax, 'b', label = '$g = 10^{-2}$')
-plt.fill_between(mX, K*PaperMin, K*PaperMax, color='red', alpha='0.5')
+plt.fill_between(mX, K*PaperMin, K*PaperMax, color='tu')
 
 plt.yscale('log')
-#plt.xscale('log')
 plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
 plt.ylabel(r'$\sigma_0$ in $\mathrm{cm}^{2}$')
@@ -179,28 +154,27 @@ plt.xlim(1,25)
 plt.savefig('Paper/content/graphics/Im11.pdf')
 plt.show()
 
-
-#########################################################################################################
-#########################################################################################################
-#########################################################################################################
-### Plotten ql = 1, qX = 1/6, 540 GeV < mZ/g < 4900 GeV, mZ = 2mX
+##########################################################################
+# ql = 1, qX = 1/6
 
 mX = np.linspace(1,1000, 1000)
 
 # Mein Wirkungsquerschnitt für Z'
-C = 8/6*10**(-10)*complex(1,1)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'g', label = 'Im(C) = $8/6\cdot 10^{-10} \mathrm{GeV}^{-2}$')
-C = 8/6*10**(-10)*complex(1,10)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'y', label = 'Im(C) = $8/6\cdot 10^{-9} \mathrm{GeV}^{-2}$')
-C = 8/6*10**(-10)*complex(1,100)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'b', label = 'Im(C) = $8/6\cdot 10^{-8} \mathrm{GeV}^{-2}$')
+C = np.array([complex(1,1), complex(1,10), complex(1,100)], dtype = complex)
+C = C*10**(-10)*8/6
+color = ['r', 'b', 'orange']
+label = ['Im$(C_{2bs}) = 8/6\cdot 10^{-10}$', 'Im$(C_{2bs}) = 8/6\cdot 10^{-9}$', 'Im$(C_{2bs}) = 8/6\cdot 10^{-8}$']
 
+for i in range(0,len(C)):
+    CS = myCS(mA,mX,A,Z,C[i])
+    plt.plot(mX, K*CS, color[i], label = label[i])
+    
 # Wirkungsquerschnitt aus dem Paper
 Cmin = 1/4900/np.sqrt(6)
 Cmax = 1/540/np.sqrt(6)
 PaperMin = PaperCS(mA,mX,A,Z,Cmin)
 PaperMax = PaperCS(mA,mX,A,Z,Cmax)
-plt.fill_between(mX, K*PaperMin, K*PaperMax, color='red', alpha='0.5')
+plt.fill_between(mX, K*PaperMin, K*PaperMax, color='tu')
 
 plt.yscale('log')
 plt.xscale('log')
@@ -212,41 +186,73 @@ plt.savefig('Paper/content/graphics/Im116.pdf')
 plt.show()
 
 
+##########################################################################
+##########################################################################
+##########################################################################
+### Plotten 2*10**-3 < g < 10**-2, mZ = 2mX
+# gl = gX = 1)
+
+mX = np.linspace(1,25, 1000)
+
+# Wirkungsquerschnitt Paper
+g = 2*10**(-3)
+PaperMax = PaperCS(mA,mX,A,Z,g/2/mX/0.7)
+PaperMin = PaperCS(mA,mX,A,Z,g/2/mX/1.3)
+plt.fill_between(mX, K*PaperMin, K*PaperMax, color = 'tu')
+
+# Mein Wirkungsquerschnitt für Z'
+C = np.array([8, 8*complex(1,1), 30], dtype = complex)
+C = C*10**(-10)
+color = ['r', 'b', 'orange']
+label = ['$8\cdot 10^{-10}$', '$8\cdot 10^{-10}(1+i)$', '$3\cdot 10^{-9}$']
+
+m = np.zeros(len(C))
+
+for i in range(0,len(C)):
+    CS = myCS(mA,mX,A,Z,C[i])
+    plt.plot(mX, K*CS, color[i], label = label[i])
+    idx = np.argwhere(np.diff(np.sign(K*CS - K*PaperMin)) != 0).reshape(-1) + 0
+    plt.vlines(mX[idx], linestyle = 'dashed', color = color[i], ymin = 0, ymax = K*PaperMin[idx])
+    m[i] = mX[idx]
 
 
-#########################################################################################################
-#########################################################################################################
-#########################################################################################################
-### Plotten ql = 1, qX = 1/6, 540 GeV < mZ/g < 4900 GeV, mZ = 2mX
+plt.yscale('log')
+#plt.xscale('log')
+plt.legend(loc = 'best')
+plt.xlabel(r'$m_\chi$ in GeV')
+plt.ylabel(r'$\sigma_0$ in $\mathrm{cm}^{2}$')
+plt.xlim(1,25)
+plt.savefig('Paper/content/graphics/Relic11.pdf')
+plt.show()
+#print('mX: ', m)
+
+#mZ = round(2*m*1.3, 0)
+#print('mZ: ', mZ)
+#print('mZ/g: ', round(mZ/g,0))
+
+##########################################################################
+# ql = 1, qX = 1/6
 
 mX = np.linspace(1,1000, 1000)
 
+# Wirkungsquerschnitt Paper
+g = 10**(-2)/np.sqrt(6)
+PaperMax = PaperCS(mA,mX,A,Z,g/2/mX/0.7)
+PaperMin = PaperCS(mA,mX,A,Z,g/2/mX/1.3)
+plt.fill_between(mX, K*PaperMin, K*PaperMax, color = 'tu')
+
 # Mein Wirkungsquerschnitt für Z'
-C = 8/6*10**(-10)
-plt.plot(mX, K*myCS(mA,mX,A,Z,C), 'g', label = '$C = 8 / 6 \cdot 10^{-10}$')
-
-
-# Wirkungsquerschnitt aus dem Paper
-g = 10**(-2)
-
-mZmax = mX*1.2
-mZmin = mX*0.8
-Cmin = g/mZmax/np.sqrt(6)
-Cmax = g/mZmin/np.sqrt(6)
-PaperMin = PaperCS(mA,mX,A,Z,Cmin)
-PaperMax = PaperCS(mA,mX,A,Z,Cmax)
-plt.fill_between(mX, K*PaperMin, K*PaperMax, color='red', alpha='0.5')
-
-g = 10**(-1)
-
-mZmax = mX*1.2
-mZmin = mX*0.8
-Cmin = g/mZmax/np.sqrt(6)
-Cmax = g/mZmin/np.sqrt(6)
-PaperMin = PaperCS(mA,mX,A,Z,Cmin)
-PaperMax = PaperCS(mA,mX,A,Z,Cmax)
-plt.fill_between(mX, K*PaperMin, K*PaperMax, color='blue', alpha='0.5')
-
+C = np.array([8, 8*complex(1,1), 30], dtype = complex)
+C = C*10**(-10)/6
+color = ['r', 'b', 'orange']
+label = ['$8/6\cdot 10^{-10}$', '$8/6\cdot 10^{-10}(1+i)$', '$3/6\cdot 10^{-9}$']
+m = np.zeros(len(C))
+for i in range(0,len(C)):
+    CS = myCS(mA,mX,A,Z,C[i])
+    plt.plot(mX, K*CS, color[i], label = label[i])
+    idx = np.argwhere(np.diff(np.sign(K*CS - K*PaperMin)) != 0).reshape(-1) + 0
+    plt.vlines(mX[idx], linestyle = 'dashed', color = color[i], ymin = 0, ymax = K*PaperMin[idx])
+    m[i] = mX[idx]
 
 
 plt.yscale('log')
@@ -254,9 +260,12 @@ plt.xscale('log')
 plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
 plt.ylabel(r'$\sigma_0$ in $\mathrm{cm}^{2}$')
-plt.xlim(0,1000)
-plt.savefig('Paper/content/graphics/Relic.pdf')
+plt.xlim(1,1000)
+plt.savefig('Paper/content/graphics/Relic116.pdf')
 plt.show()
 
-
+print('mX: ', m)
+mZ = round(2*m*1.3,0)
+print('mZ: ', mZ)
+print('mZ/g: ', round(mZ/g/np.sqrt(6)))
 

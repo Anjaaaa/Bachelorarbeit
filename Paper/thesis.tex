@@ -74,6 +74,7 @@
   locale=DE,
   separate-uncertainty=true,
   per-mode=symbol-or-fraction,
+  output-decimal-marker=., % . statt , für Dezimalzahlen
 ]{siunitx}
 \sisetup{math-micro=\text{µ},text-micro=µ}
 
@@ -132,7 +133,7 @@
 \usepackage[pdfusetitle,unicode,linkbordercolor=tugreen]{hyperref}
 \usepackage{bookmark}
 \usepackage[shortcuts]{extdash}
-\usepackage{todo}
+\usepackage[hide]{todo}
 
 %------------------------------------------------------------------------------
 %-------------------------    Angaben zur Arbeit   ----------------------------
@@ -167,17 +168,17 @@
 \mainmatter
 % Hier beginnt der Inhalt mit Seite 1 in arabischen Ziffern
 \chapter{Introduction}
-\input{content/introduction.tex}
+%\input{content/1_Introduction.tex}
 \chapter{The Flavour Mixing Mechanism}
-\input{content/ckm.tex}
+\input{content/2_CKMMatrix.tex}
 \chapter{Introduction of the Flavour Mixing into an Existing Formalism}
-\input{content/rechnung.tex}
-\chapter{The \texorpdfstring{$L_\mu-L_\tau$}{TEXT} Model}
-\input{content/newinteraction.tex}
+\input{content/3_Rechnung.tex}
+\chapter{The \texorpdfstring{$L_\mu-L_\tau$}{TEXT} Model\label{sec:NewInt}}
+\input{content/4_NewInteraction.tex}
 \chapter{Comparison}
-\input{content/comparison.tex}
+\input{content/5_Comparison.tex}
 \chapter{Conclusion}
-\input{content/conclusion.tex}
+\input{content/6_Conclusion.tex}
 
 \appendix
 % Hier beginnt der Anhang, nummeriert in lateinischen Buchstaben
@@ -186,6 +187,6 @@
 \backmatter
 \printbibliography
 
-\cleardoublepage
-\input{content/eid_versicherung.tex}
+%\cleardoublepage
+%\input{content/eid_versicherung.tex}
 \end{document}
