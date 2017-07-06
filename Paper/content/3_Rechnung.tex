@@ -1,33 +1,33 @@
 In this chapter we include the flavour mixing into an existing formalism. We use the model described in \cite{ChiralEFT}. It provides a framework to calculate cross sections for the direct detection of dark matter. The model bases on a set of dimension-five, -six, and -seven operators. We restrict our calculations to the dimension-six operators, which are
 \begin{align}\label{eq:normal}
-	R_{1,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu q) \ , && &R_{3,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu\gamma_5q) \ , \notag \\
-	R_{2,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu q) \ , &&	&R_{4,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu\gamma_5q) \ ,
+	R_{1,q} &= (\bar{\chi}_0\gamma_\mu\chi_0)(\bar{q}\gamma^\mu q) \ , && &R_{3,q} &= (\bar{\chi}_0\gamma_\mu\chi_0)(\bar{q}\gamma^\mu\gamma_5q) \ , \notag \\
+	R_{2,q} &= (\bar{\chi}_0\gamma_\mu\gamma_5\chi_0)(\bar{q}\gamma^\mu q) \ , &&	&R_{4,q} &= (\bar{\chi}_0\gamma_\mu\gamma_5\chi_0)(\bar{q}\gamma^\mu\gamma_5q) \ .
 \end{align}
-with the dark matter particle $\chi$ and a quark $q=(u,d,c,s,t,b)$.
+Here $q=(u,d,c,s,t,b)$ is a quark and $\chi_0$ is the component of the weak dark matter mutliplet that has no electric charge.
 
 
-Since the CKM mixing only applies to the lefthanded down-type quarks, we need to rewrite these operators in terms of the left- and righthanded particle functions to include the CKM matrix. These chiral operators are
+Since the CKM mixing only applies to the left-handed down-type quarks, we need to rewrite these operators in terms of the left- and righthanded particle functions to include the CKM matrix. These chiral operators are
 \begin{align}\label{eq:chiral}
 	Q_{1ij} &= (\bar{\chi}\gamma_\mu\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j) && &Q_{5ij} &= (\bar{\chi}\gamma_\mu\gamma_5\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j)\notag \\
 	Q_{2ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j) && &Q_{6ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j)\notag \\
 	Q_{3ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{U}_R^i\gamma^\mu U_R^j) && &Q_{7ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{U}_R^i\gamma^\mu U_R^j)\notag \\
 	Q_{4ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{D}_R^i\gamma^\mu D_R^j) && &Q_{8ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{D}_R^i\gamma^\mu D_R^j) \ .
 \end{align}
-The operators $\tilde{\tau}^a,\tau^a$ are the generators of the $SU(2)$ in the corresponding spin-representation. For the quarks, we use
+The operators $\tilde{\tau}^a,\tau^a$ are the generators of the $SU(2)$ in the corresponding spin-representation. The left-handed quarks come in doublets, therefore the generators are the Pauli matrices:
 \begin{align}
-	\tau^a = \frac{\sigma_a}{2} \ ,
+	\tau^a = \frac{\sigma_a}{2} \ .
 \end{align}
-where $\sigma_a$ are the pauli matrices. For simplicity reasons we are only interested in interactions with only one kind of quark and therefore abolish $a=1,2$. Regarding the dark matter, we therby obtain
+For simplicity reasons we are only interested in interactions with only one kind of quark and therefore abolish $a=1,2$. Regarding the dark matter, we are thus left with
 \begin{align}
-	\tilde{\tau}^3\chi = \tau_0\chi \ ,
+	\chi\tilde{\tau}^3\chi = \sum_{i=-J}^{J}\chi_iI_3^{(i)}\chi_i \ ,
 \end{align}
-with the weak isospin value $\tau_0$ of the dark matter particle.
+where the $\chi_i$ are the components of the dark matter multiplet and $I_3^{(i)}$ is the corresponding third component of the weak isospin. We only keep the uncharged $\chi_0$.
 
-\clearpage
-In the following subchapters, we go through the steps of including the CKM matrix in the formalism:
+
+In the following sections, we go through the steps of including the CKM matrix in the formalism:
 \begin{enumerate}
-	\item Replacing the pure lefthanded down-type quarks with the mixed quarks.
-	\item Rewriting the chiral particle functions in terms of the normal particle functions and projection operators.
+	\item Replacing the pure left-handed down-type quarks with the mixed quarks.
+	\item Rewriting the chiral particle functions in terms of the unchiral particle functions and projection operators.
 	\item Writing down the entire interaction lagrangian in terms of \eqref{eq:normal} and \eqref{eq:chiral} and comparing the coefficients.
 \end{enumerate}
 
@@ -103,6 +103,7 @@ At this point we can express the chiral operators in terms of the original opera
 %	Q_{8ij} &= \frac{1}{2}(R_{2d}\delta_{ij}\delta_{id} + R_{4d}\delta_{ij}\delta_{id} + R_{2s}\delta_{ij}\delta_{is} + R_{4s}\delta_{ij}\delta_{is}) \ .
 \end{align}
 The operators $Q_{5ij}-Q_{8ij}$ can be obtained from $Q_{1ij}-Q_{4ij}$ by replacing $R_{1q}\leftrightarrow R_{2q}$ and $R_{3q}\leftrightarrow R_{4q}$.
+
 
 \section{Comparing Coefficients}
 Our final step is expressing the coefficients $K_{l,q}$ of the original operators $R_{l,q}$ in \eqref{eq:normal} in terms of the coefficients $C_{lij}$ of the chiral operators $Q_{lij}$ in \eqref{eq:chiral}. To get there we look at the overall interaction. The interaction cannot depend on the representation of particle functions we choose, either normal or chiral, therefore
