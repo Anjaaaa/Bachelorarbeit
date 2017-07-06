@@ -121,7 +121,7 @@
   backend=biber,   % use modern biber backend
   autolang=hyphen, % load hyphenation rules for if language of bibentry is not
   sorting=none,    % german, has to be loaded with \setotherlanguages
-                   % in the references.bib use langid={en} for english sources
+  maxbibnames=4,   % in the references.bib use langid={en} for english sources
 ]{biblatex}
 \addbibresource{references.bib}  % die Bibliographie einbinden
 \DefineBibliographyStrings{english}{andothers = {{et\,al\adddot}}} 
