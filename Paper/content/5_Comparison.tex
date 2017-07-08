@@ -1,5 +1,5 @@
 We now assume that only $b,s,\mu,\tau$ and dark matter particles couple to $Z'$, and dark matter couples exclusively to $Z'$. Taking into account flavour mixing, a tree level interaction of dark matter particles and nucleons is then possible. We take a look at this option in the first section. Afterwards we compare the direct detection cross section of the tree level interaction with the one of the loop interaction presented in \ref{sec:ParamSpace}, respectively \cite{Z}.
-
+\todo{Der Text ist nicht so gut.}
 
 \section{Tree Level Interaction Cross Section}
 By considering flavour mixing, a dark matter particle can interact with the strange and bottom parts of a down quark in a nucleus through the tree level diagram shown in figure \ref{fig:Tree}. In terms of the operators in \eqref{eq:chiral}, the diagram corresponds to $Q_{2bs},Q_{2sb}$. The related coefficients are
@@ -10,18 +10,18 @@ for which \cite{InColour} gives the approximation
 \begin{align}\label{eq:BoundC}
 \text{Re}\left(C_{2bs}\right) \approx \SI{8e-10}{\giga\electronvolt}^{-2} \ .
 \end{align}
-This leads to the non-chiral coefficients \eqref{eq:CoeffNormal}
+This leads to the non-chiral coefficients (see \eqref{eq:CoeffNormal})
 \begin{align}
-	K_{1,d} &= +\text{Re}(V_{cd}^*V_{td}C_{2sb})\notag \\
-	K_{1,s} &= +\text{Re}(V_{cs}^*V_{ts}C_{2sb})\notag \\
-	K_{3,d} &= -\text{Re}(V_{cd}^*V_{td}C_{2sb})\notag \\
+	K_{1,d} &= +\text{Re}(V_{cd}^*V_{td}C_{2sb}) \ , \notag \\
+	K_{1,s} &= +\text{Re}(V_{cs}^*V_{ts}C_{2sb}) \ , \notag \\
+	K_{3,d} &= -\text{Re}(V_{cd}^*V_{td}C_{2sb}) \ , \notag \\
 	K_{3,s} &= -\text{Re}(V_{cs}^*V_{ts}C_{2sb}) \ ,
 \end{align}
-and all other $K_{l,q}$ vanish. These are the coefficients of the spin-dependent interaction $R_{3,q} = (\bar{\chi}\gamma^\mu\chi)(\bar{q}\gamma_\mu\gamma_5 q)$ and the spin-independent interaction $R_{1,q} = (\bar{\chi}\gamma^\mu\chi)(\bar{q}\gamma_\mu q)$. We neglect the former one because it is various orders of magnitude smaller than the spin-independent cross section. However, there is no interaction with strange quarks as they are only available as sea quarks. We are left with the spin-independent vector interaction
+and all other $K_{l,q}$ vanish. These are the coefficients of the spin-dependent interaction $R_{3,q} = (\bar{\chi}\gamma^\mu\chi)(\bar{q}\gamma_\mu\gamma_5 q)$ and the spin-independent interaction $R_{1,q} = (\bar{\chi}\gamma^\mu\chi)(\bar{q}\gamma_\mu q)$. We neglect the former one because it is various orders of magnitude smaller than the spin-independent cross section. However, there is no interaction with strange quarks as they are only available as sea quarks. Thus, we are left with the spin-independent vector interaction
 \begin{align}
 	\mathcal{L} = K_{1,d}(\bar{\chi}\gamma^\mu\chi)(\bar{d}\gamma_\mu d) \ .
 \end{align}
-As is explained in \cite[Chapter 7]{Supersymmetric}, this operator counts the number of down quarks in the nucleus. So the nucleon cross section is
+As explained in \cite[Chapter 7]{Supersymmetric}, this operator counts the number of down quarks. So the nucleon cross section is
 \begin{align}\label{eq:Tree}
 	\sigma_{0,\text{tree}}^\text{SI} &= \frac{\mu_{A\chi}^2}{A^2\pi}\left|ZC_p +(A-Z)C_n\right|^2 \ ,
 \end{align}
@@ -34,23 +34,19 @@ where $C_p = K_{1,d}$ and $C_n = 2K_{1,d}$ are the proton and neutron coefficien
 	\caption{Tree level diagram for direct detection considering flavour mixing.}
 	\label{fig:Tree}
 \end{figure}
-\todo{Wieso ist eigentlich $Q_L^2\gamma_\mu Q_L^3 = s_L\gamma_\mu b_L$?}
 
 \section{Results}
-We now compare the nucleon cross sections for the loop interaction $\sigma_{0,\text{loop}}$ (see \eqref{eq:Loop} and figure \ref{fig:Loop}) and the tree level interaction $\sigma_{0,\text{tree}}$ (see \eqref{eq:Tree} and figure \ref{fig:Tree}).
+We now compare the nucleon cross sections for the loop interaction $\sigma_{0,\text{loop}}$ (see equation \eqref{eq:Loop} and figure \ref{fig:Loop}) and the tree level interaction $\sigma_{0,\text{tree}}$ (see equation \eqref{eq:Tree} and figure \ref{fig:Tree}). We choose Xenon, which is used in the LUX and XENON100 experiments, as detection material. The most abundant isotope is Xenon-129, therefore $Z = 54, A=129$ \cite{DD}. For the CKM matrix elements we use the values given in \eqref{eq:Wolf}.
 
 
-In the following we show various plots, in which we follow \cite{Z} with the distinction of the cases $q_\chi= 1$ and $q_\chi=\sfrac{1}{6}$. Remember that for the former the dark matter mass cannot be much larger than $\SI{23}{\giga\electronvolt}$, but for the latter no restriction is made. Therefore we choose different $m_\chi$-axis scales in the plots. The shaded green area always corresponds to $\sigma_{0,\text{loop}}$, whereas the lines display $\sigma_{0,\text{tree}}$.
+In the following we show various plots, in which we follow \cite{Z} with the distinction of the cases $q_\chi= 1$ and $q_\chi=\sfrac{1}{6}$. Remember that for the former the dark matter mass cannot be much larger than $\SI{23}{\giga\electronvolt}$, but for the latter no restriction is made. Therefore we choose different $m_\chi$-axis scales in the plots. The shaded green area always corresponds to $\sigma_{0,\text{loop}}$, whereas the lines visualize $\sigma_{0,\text{tree}}$.
 
 
-First we consider the bound \eqref{eq:BoundBS} for $\sigma_{0,\text{loop}}$. Figure \ref{fig:Allgemein} shows $\sigma_{0,\text{loop}}$ (shaded green) within the bound and $\sigma_{0,\text{tree}}$ with various choices for $C_{2bs} = C$ that are in accordance with \eqref{eq:BoundC}. But even for quiet large values of $C_{2bs}$, the tree level cross section cannot reach the loop cross section. This is a strong hint that Altmannshofer et. al. correctly neglected the CKM mixing in their predictions for dark matter direct detection.
-
+First, we consider the bound \eqref{eq:BoundBS} for $\sigma_{0,\text{loop}}$. Figure \ref{fig:Allgemein} shows $\sigma_{0,\text{loop}}$ (shaded green) within this bound and $\sigma_{0,\text{tree}}$ with various choices for $C_{2bs} = C$ that are in accordance with \eqref{eq:BoundC}. But even for quiet large values of $C_{2bs}$, the tree level cross section cannot reach the loop cross section. This is a strong hint that Altmannshofer et. al. correctly neglected the CKM mixing in their predictions for dark matter direct detection.
 
 
 Since there are no restrictions concerning the imaginary part of $C_{2bs}$, we enlarged $\text{Im}(C_{2bs})$ until we reached $\sigma_{0,\text{loop}}$ in figure \ref{fig:Im}. But this was only achieved by imaginary parts that are two orders of magnitude larger than the real part of $C_{2bs}$, which we consider unreasonable.
-
-%Note that there is no qualitative difference between $q_\chi=1$ and $q_\chi=\sfrac{1}{6}$, due to $\sigma_{0,\text{loop}},\sigma_{0,\text{tree}}\propto q_\chi^2$.
-
+\todo{Warum ist das eigentlich blöd den Imaginärteil so hoch zu machen.}
 
 
 Second, we concentrate on the relic density condition in \eqref{eq:Relic}. Therefore we set $m_{Z'} = 2m_\chi$ but allow a $\SI{30}{\%}$ tolerance. For $q_\chi=1$, we set $g'$ to the lower bound in \eqref{eq:Boundg}: $g'=\SI{2e-3}{}$, and for $q_\chi=\sfrac{1}{6}$, we guess $g'=\SI{e-2}{}$. Figure \ref{fig:Relic} shows the corresponding loop cross section again as shaded green area. Regarding the tree level cross section we choose $C_{2bs}$ in strong accordance with \eqref{eq:BoundC}. We find that there are regions for $m_\chi$, where the tree level cross section reaches the loop cross section. The shaded lines show the lower bound of these regions. At the lower end of the green area $m_{Z'} = 2m_\chi\cdot 1.3$. The tables \ref{tab:Relic11} and \ref{tab:Relic116} show the obtained lower bounds (l.b.) for the dark matter mass, the resulting values for the $Z'$ mass, and the ratio of the $Z'$ mass and the coupling $g'$.

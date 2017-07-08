@@ -133,7 +133,9 @@
 \usepackage[pdfusetitle,unicode,linkbordercolor=tugreen]{hyperref}
 \usepackage{bookmark}
 \usepackage[shortcuts]{extdash}
-\usepackage[hide]{todo}
+\usepackage[
+%	hide
+	]{todo}
 
 %------------------------------------------------------------------------------
 %-------------------------    Angaben zur Arbeit   ----------------------------
@@ -163,6 +165,7 @@
 
 % hier beginnt der Vorspann, nummeriert in römischen Zahlen
 \input{content/abstract.tex}
+\cleardoublepage
 \tableofcontents
 
 \mainmatter
@@ -177,8 +180,8 @@
 \input{content/4_NewInteraction.tex}
 \chapter{Comparison}
 \input{content/5_Comparison.tex}
-\chapter{Conclusion}
-\input{content/6_Conclusion.tex}
+%\chapter{Conclusion}
+%\input{content/6_Conclusion.tex}
 
 \appendix
 % Hier beginnt der Anhang, nummeriert in lateinischen Buchstaben

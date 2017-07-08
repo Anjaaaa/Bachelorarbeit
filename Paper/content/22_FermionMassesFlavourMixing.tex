@@ -1,4 +1,4 @@
-Before we discuss fermion mass terms, we introduce the notation we use in this and the following chapters. The leptons and quark chiral particle multiplets are
+Hereinafter we describe how the standard model fermions get their masses and how this leads to quark flavour mixing. But beforehand, we introduce the notation we use in this and the following chapters. The leptons and quark chiral particle multiplets are
 \begin{align}
 	E_R &= (e_R,\mu_R,\tau_R) \ , &&\quad &Y_E &= -2 \ ; \\
 	L_L &= \left(\begin{pmatrix} \nu_e \\ e \end{pmatrix}_L,
@@ -14,9 +14,7 @@ where the hypercharge $Y$ is given. It is related to the electric charge $Q$ and
 \begin{align}\label{eq:GellMann}
 	Q = \frac{Y}{2} + I_3 \ .
 \end{align}
-The right-handed particles are singlets under $SU(2)$ and therefore $I^{(r.h.)}_3=0$. We also use the left-handed components $E_L = (e_L,\mu_L,\tau_L)$, $D_L = (d_L,s_L,b_L)$, and $U_L = (u_L,c_L,t_L)$.
-
-\todo{Die Ys nachschlagen.}
+The right-handed particles are singlets under $SU(2)$ and therefore $I^{(r.h.)}_3=0$. We later also use the left-handed components $E_L = (e_L,\mu_L,\tau_L)$, $D_L = (d_L,s_L,b_L)$, and $U_L = (u_L,c_L,t_L)$.
 
 
 The electroweak interaction lagrangian for the standard model fermions is
@@ -27,12 +25,12 @@ The electroweak interaction lagrangian for the standard model fermions is
 	+ &\bar{D}_R\gamma^\mu(i\partial_\mu-g_1Y_DB_\mu)D_R + \bar{U}_R\gamma^\mu(i\partial_\mu-g_1Y_UB_\mu)U_R \notag \\
 	+ &\bar{Q}_L\gamma^\mu(i\partial_\mu-g_1Y_QB_\mu-g_2\sum_{i=1}^{3}A_\mu^i\tau^i)Q_L \ ,
 \end{align}
-where $B_\mu, A_\mu^i$ are the gauge bosons corresponding to $U(1)_Y\times SU(2)$. The coupling constants are $g_1,g_2$, and $\tau^i$ are again the generators of $SU(2)$. This lagrangian describes massless particles. In order to get a fermion mass term, one has to couple the left- and right-handed part of a particle. Since a direct coupling between a $SU(2)$ singlet and a $SU(2)$ doublet violates gauge invariance, a connecting field is necessary. To preserve invariance under Lorentz, $U(1)_Y$, and $SU(2)$ transformations this field must have spin 0, hypercharge $Y=\sfrac{1}{2}$, and be a doublet. We identify this field with $\Phi$ from the previous chapter and write down the mass terms for the fermions
+where $B_\mu, A_\mu^i$ are the gauge bosons corresponding to $U(1)_Y\times SU(2)$. The coupling constants are $g_1$ and $g_2$, and the $\tau^i$ are again the $SU(2)$ generators. This lagrangian describes massless particles. In order to get a fermion mass term, one has to couple the left- and right-handed part of a particle. Since a direct coupling between a $SU(2)$ singlet and a $SU(2)$ doublet violates gauge invariance, a connecting field is necessary. To preserve invariance under Lorentz, $U(1)_Y$, and $SU(2)$ transformations this field must have spin 0, hypercharge $Y=\sfrac{1}{2}$, and be a doublet. We identify this field with $\Phi$ from the previous chapter and write down the mass terms for the fermions
 \begin{align}
 %	\mathcal{L}^{(\text{mass})} = -\sum_{i,j=1}^{3}\left[\lambda^e_{ij} \bar{L}_L^i\Phi E_R^j  + \lambda_{ij}^d\bar{Q}_L^i\Phi D_R^j + \lambda_{ij}^u\sum_{a,b=1}^{2}\epsilon_{ab}\bar{Q}_{La}^{i}\Phi_b^\dagger U_R^j + \text{h.c.}\right] \ ,
 	\mathcal{L}^{(\text{mass})} = -\left[\bar{L}_L\Phi\lambda^e  E_R  + \bar{Q}_L\Phi\lambda^d D_R + \bar{Q}_Li\sigma^2\Phi^\dagger\lambda^u U_R + \text{h.c.}\right] \ ,
 \end{align}
-with complex matrix coupling constants $\lambda^e,\lambda^d,\lambda^u$. Replacing $\Phi$ with its vacuum expectation value \eqref{eq:vev} gives
+with complex matrix coupling constants $\lambda^e,\lambda^d,\lambda^u$. Replacing $\Phi$ with its vacuum expectation value \eqref{eq:vev2} gives
 \begin{align}\label{eq:LMass}
 %	\mathcal{L}^{(\text{mass})} = -\frac{v}{\sqrt{2}}\sum_{i,j=1}^{3}\left[\lambda^e_{ij} \bar{E}_L^i E_R^j  + \lambda_{ij}^d\bar{D}_L^i D_R^j + \lambda_{ij}^u\bar{U}_L^{i} U_R^j + \text{h.c.}\right] \ ,
 	\mathcal{L}^{(\text{mass})} = -\frac{v}{\sqrt{2}}\left[ \bar{E}_L\lambda^e E_R  + \bar{D}_L \lambda^dD_R + \bar{U}_L\lambda^u U_R + \text{h.c.}\right] \ .
@@ -40,13 +38,13 @@ with complex matrix coupling constants $\lambda^e,\lambda^d,\lambda^u$. Replacin
 
 
 
-The interaction lagrangian \eqref{eq:LFermion} is invariant under unitary transformations
+The interaction lagrangian $\mathcal{L}^{(\text{int})}$ (see \eqref{eq:LFermion}) is invariant under unitary transformations
 \begin{align}
-	E_L &\rightarrow S_eE_L && &E_R &\rightarrow R_eE_R \ , \\
-	U_L &\rightarrow S_uU_L && &U_R &\rightarrow R_uU_R \ , \\
-	D_L &\rightarrow S_dD_L && &D_R &\rightarrow R_dD_R \ .
+	E_L &\rightarrow S_eE_L \ , && &E_R &\rightarrow R_eE_R \ , \\
+	U_L &\rightarrow S_uU_L \ , && &U_R &\rightarrow R_uU_R \ , \\
+	D_L &\rightarrow S_dD_L \ , && &D_R &\rightarrow R_dD_R \ .
 \end{align}
-Thus, we can diagonalize the interactions in \eqref{eq:LMass}. The diagonal lepton coupling is $\tilde{\lambda}^e = S_e\lambda^eR_e^\dagger$ and parametrizes the lepton masses
+Thus, we can diagonalize the interactions in \eqref{eq:LMass}, using these transformations. The diagonal lepton coupling is $\tilde{\lambda}^e = S_e\lambda^eR_e^\dagger$ and parametrizes the lepton masses
 \begin{align}
 	m_e = \frac{v}{\sqrt{2}}\tilde{\lambda}_{11}^e \ , \quad m_\mu = \frac{v}{\sqrt{2}}\tilde{\lambda}_{22}^e \ , \quad m_\tau = \frac{v}{\sqrt{2}}\tilde{\lambda}_{33}^e \ .
 \end{align}
@@ -68,4 +66,17 @@ the unitary transformations change the interaction to
 \begin{align}
 	\bar{U}_L\gamma^\mu S_u^\dagger S_d D_L \ ,
 \end{align}
-where we identify the CKM matrix $V = S_u^\dagger S_d$.
+where we identify the CKM matrix $V=S_u^\dagger S_d$. Because $S_u,S_d$ are already determined by the diagonalizations above, the CKM matrix is not equal to the identity matrix in general. In fact, it alters left-handed currents measurably. The most recent data by the Particle Data Group determines the parameters of the Wolfenstein parametrization
+\begin{align}
+	V = \begin{pmatrix}
+	1-\frac{\lambda^2}{2} & \lambda & A\lambda^3(\rho-i\eta) \\
+	-\lambda & 1-\frac{\lambda^2}{2} & A\lambda^2 \\
+	A\lambda^3(1-\rho-i\eta) & -A\lambda^2 & 1
+	\end{pmatrix}
+\end{align}
+to be (see \cite[Chapter 12]{PDG})
+\begin{align}\label{eq:Wolf}
+	\lambda &= \SI{0.22496(48)}{} \ , && &A &= \SI{0.823(13)}{} \ , \notag \\
+	\rho &= \SI{0.141(19)}{} \ , && &\eta &= \SI{0.349(12)}{} \ .\footnotemark
+\end{align}
+\footnotetext{The Particle Data Group actually suggests two different sets of parameters obtained by two different methods. We choose one arbitrarily, because they only differ in the second decimal position, which does not make any difference in our calculations later.}

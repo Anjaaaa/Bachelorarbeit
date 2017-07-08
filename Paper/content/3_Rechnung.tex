@@ -8,42 +8,33 @@ Here $q=(u,d,c,s,t,b)$ is a quark and $\chi_0$ is the component of the weak dark
 
 Since the CKM mixing only applies to the left-handed down-type quarks, we need to rewrite these operators in terms of the left- and righthanded particle functions to include the CKM matrix. These chiral operators are
 \begin{align}\label{eq:chiral}
-	Q_{1ij} &= (\bar{\chi}\gamma_\mu\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j) && &Q_{5ij} &= (\bar{\chi}\gamma_\mu\gamma_5\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j)\notag \\
-	Q_{2ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j) && &Q_{6ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j)\notag \\
-	Q_{3ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{U}_R^i\gamma^\mu U_R^j) && &Q_{7ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{U}_R^i\gamma^\mu U_R^j)\notag \\
-	Q_{4ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{D}_R^i\gamma^\mu D_R^j) && &Q_{8ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{D}_R^i\gamma^\mu D_R^j) \ .
+	Q_{1ij} &= (\bar{\chi}\gamma_\mu\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j) \ , && &Q_{5ij} &= (\bar{\chi}\gamma_\mu\gamma_5\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j) \ , \notag \\
+	Q_{2ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j) \ , && &Q_{6ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j) \ , \notag \\
+	Q_{3ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{U}_R^i\gamma^\mu U_R^j) \ , && &Q_{7ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{U}_R^i\gamma^\mu U_R^j) \ , \notag \\
+	Q_{4ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{D}_R^i\gamma^\mu D_R^j) \ , && &Q_{8ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{D}_R^i\gamma^\mu D_R^j) \ .
 \end{align}
-The operators $\tilde{\tau}^a,\tau^a$ are the generators of the $SU(2)$ in the corresponding spin-representation. The left-handed quarks come in doublets, therefore the generators are the Pauli matrices:
+The operators $\tilde{\tau}^a,\tau^a$ are the generators of the $SU(2)$ in the corresponding spin-representation. The left-handed quarks come in doublets, therefore the generators are the Pauli matrices $\sigma_a$:
 \begin{align}
-	\tau^a = \frac{\sigma_a}{2} \ .
+	\tau^a = \frac{\sigma_a}{2} \ . \notag
 \end{align}
-For simplicity reasons we are only interested in interactions with only one kind of quark and therefore abolish $a=1,2$. Regarding the dark matter, we are thus left with
+Regarding the dark matter, we do not know the size of the multiplet and thus use the general spin-representation
 \begin{align}
-	\chi\tilde{\tau}^3\chi = \sum_{i=-J}^{J}\chi_iI_3^{(i)}\chi_i \ ,
+	(\tilde{\tau}^1 \pm i\tilde{\tau}^2)_{\sigma'\sigma} &= \delta_{\sigma'\sigma\pm1}\sqrt{(j\mp\sigma)(j\pm\sigma+1)} \ , \notag \\
+	\tilde{\tau}^3_{\sigma'\sigma} &= \sigma\delta_{\sigma'\sigma} \ , \notag
 \end{align}
-where the $\chi_i$ are the components of the dark matter multiplet and $I_3^{(i)}$ is the corresponding third component of the weak isospin. We only keep the uncharged $\chi_0$.
-
+where $j$ is the spin value and $-j\leq\sigma,\sigma'\leq j$. However, we only keep the electrically uncharged component of the multiplet, $\chi_0$.
+\todo{Warum behält man eigentlich nur die ungeladene Komponente?}
 
 In the following sections, we go through the steps of including the CKM matrix in the formalism:
 \begin{enumerate}
-	\item Replacing the pure left-handed down-type quarks with the mixed quarks.
+	\item Inclusion of the Flavour Mixing by replacing the pure left-handed down-type quarks with the mixed quarks.
 	\item Rewriting the chiral particle functions in terms of the unchiral particle functions and projection operators.
-	\item Writing down the entire interaction lagrangian in terms of \eqref{eq:normal} and \eqref{eq:chiral} and comparing the coefficients.
+	\item Writing down the entire interaction lagrangians in terms of the operators in \eqref{eq:normal} and \eqref{eq:chiral} separately, and then comparing the coefficients.
 \end{enumerate}
+\todo{Der letzte Punkt ist schlecht formuliert.}
 
 \section{Including the Flavour Mixing}
-The inclusion of the CKM matrix only affects the chiral operators $Q_{1ij},Q_{2ij},Q_{5ij},Q_{6ij}$. The quark part of the interaction with flavour mixing is therefore
-\begin{align*}
-	\bar{Q}_L^i\gamma^\mu Q_L^j &= \begin{pmatrix}
-	\bar{u}_L^i \\ \bar{d}_L^i
-	\end{pmatrix}
-	\gamma^\mu \begin{pmatrix}
-	u_L^j \\ d_L^j
-	\end{pmatrix}
-	= \bar{u}_L^i\gamma^\mu d_L^j + \bar{d}_L^i\gamma^\mu d_L^j \\
-	&= \bar{u}_L^i\gamma^\mu u_L^j + (V_{id}^*\bar{d}_L + V_{is}^*\bar{s}_L+V_{ib}^*\bar{b}_L)\gamma^\mu(V_{jd}d_L+V_{js}s_L+V_{jb}b_L)
-\end{align*}
-for $Q_{2ij}, Q_{6ij}$, respectively
+The inclusion of the CKM matrix only affects the chiral operators with left-handed quarks: $Q_{1ij},Q_{2ij},Q_{5ij},Q_{6ij}$. Since the dark matter part of the interaction remains unchanged, we only look at the quark part of the interaction, which becomes
 \begin{align*}
 	\bar{Q}_L^i\gamma^\mu\tau^a Q_L^j &=  \begin{pmatrix}
 	\bar{u}_L^i \\ \bar{d}_L^i
@@ -54,16 +45,33 @@ for $Q_{2ij}, Q_{6ij}$, respectively
 	= \frac{1}{2}\bar{u}_L^i\gamma^\mu \sigma_a d_L^j + \frac{1}{2}\bar{d}_L^i\gamma^\mu\sigma_a d_L^j \\
 	&= \frac{1}{2}\bar{u}_L^i\gamma^\mu \sigma_a u_L^j + \frac{1}{2}(V_{id}^*\bar{d}_L + V_{is}^*\bar{s}_L+V_{ib}^*\bar{b}_L)\gamma^\mu\sigma_a(V_{jd}d_L+V_{js}s_L+V_{jb}b_L)
 \end{align*}
-for $Q_{1ij}, Q_{5ij}$. For simplicity we only keep the light quarks $u,d,s$ and neglect mixed terms. So the whole set of quark interactions is
+for $Q_{1ij}, Q_{5ij}$, respectively
+\begin{align*}
+	\bar{Q}_L^i\gamma^\mu Q_L^j &= \begin{pmatrix}
+	\bar{u}_L^i \\ \bar{d}_L^i
+	\end{pmatrix}
+	\gamma^\mu \begin{pmatrix}
+	u_L^j \\ d_L^j
+	\end{pmatrix}
+	= \bar{u}_L^i\gamma^\mu d_L^j + \bar{d}_L^i\gamma^\mu d_L^j \\
+	&= \bar{u}_L^i\gamma^\mu u_L^j + (V_{id}^*\bar{d}_L + V_{is}^*\bar{s}_L+V_{ib}^*\bar{b}_L)\gamma^\mu(V_{jd}d_L+V_{js}s_L+V_{jb}b_L)
+\end{align*}
+for $Q_{2ij}, Q_{6ij}$. For simplicity we only keep the light quarks $u,d,s$ and neglect mixed terms. So the whole set of quark interactions is
 \begin{align}
-	\bar{Q}_L^i\gamma^\mu\tau^a Q_L^j &\approx \frac{1}{2}\bar{u}_L\gamma^\mu u_L\delta_{ij}\delta_{iu}\delta_{a3} - \frac{1}{2}\delta_{a3}(V_{id}^*V_{jd}\bar{d}_L\gamma^\mu d_L + V_{is}^*V_{js}\bar{s}_L\gamma^\mu s_L)\notag \\
-	\bar{Q}_L^i\gamma^\mu Q_L^j &\approx \bar{u}_L\gamma^\mu u_L\delta_{ij}\delta_{iu} + V_{id}^*V_{jd}\bar{d}_L\gamma^\mu d_L + V_{is}^*V_{js}\bar{s}_L\gamma^\mu s_L\notag \\
-	\bar{u}_R^i\gamma^\mu u_R^j &\approx\bar{u}_R\gamma^\mu u_R\delta_{ij}\delta_{iu}\notag \\
+	\bar{Q}_L^i\gamma^\mu\tau^a Q_L^j &\approx \frac{1}{2}\bar{u}_L\gamma^\mu u_L\delta_{ij}\delta_{iu}\delta_{a3} - \frac{1}{2}\delta_{a3}(V_{id}^*V_{jd}\bar{d}_L\gamma^\mu d_L + V_{is}^*V_{js}\bar{s}_L\gamma^\mu s_L) \ , \notag \\
+	\bar{Q}_L^i\gamma^\mu Q_L^j &\approx \bar{u}_L\gamma^\mu u_L\delta_{ij}\delta_{iu} + V_{id}^*V_{jd}\bar{d}_L\gamma^\mu d_L + V_{is}^*V_{js}\bar{s}_L\gamma^\mu s_L \ , \notag \\
+	\bar{u}_R^i\gamma^\mu u_R^j &\approx\bar{u}_R\gamma^\mu u_R\delta_{ij}\delta_{iu} \ , \notag \\
 	\bar{d}_R^i\gamma^\mu d_R^j &\approx \bar{d}_R\gamma^\mu d_R\delta_{ij}\delta_{id} + \bar{s}_R\gamma^\mu s_R\delta_{ij}\delta_{is} \ .
 \end{align}
+Note that, by only keeping diagonal interactions, we abolish the expressions including $\tau^1,\tau^2$, respectively $\tilde{\tau}^1,\tilde{\tau}^2$. Therefore the dark matter part of the interactions $Q_{1ij},Q_{5ij}$ becomes
+\begin{align}
+	\bar{\chi}\gamma_\mu\tilde{\tau}^3\chi &= \sigma^0\bar{\chi}_0\gamma_\mu\chi_0 \ , \\
+	\bar{\chi}\gamma_\mu\gamma_5\tilde{\tau}^3\chi &= \sigma^0\bar{\chi}_0\gamma_\mu\gamma_5\chi_0 \ ,
+\end{align}
+because remember: we only want the electrically uncharged component of $\chi$.
 
 \section{Replacing Chiral Particle Functions}
-The next step is rewriting the chiral particle functions in terms of the normal particle functions using the projection operators $P_L,P_R$. This leads us to
+The next step is rewriting the chiral particle functions in terms of the unchiral particle functions using the projection operators $P_L,P_R$. This leads to
 \begin{align}
 	\bar{Q}_L^i\gamma^\mu\tau^a Q_L^j =&\frac{1}{4}(\bar{u}\gamma^\mu u\delta_{ij}\delta_{iu}\delta_{3a}
 	- V_{id}^*V_{jd}\bar{d}\gamma^\mu d\delta_{3a} - V_{is}^*V_{js}\bar{s}\gamma^\mu s\delta_{3a})\notag \\
@@ -106,7 +114,8 @@ The operators $Q_{5ij}-Q_{8ij}$ can be obtained from $Q_{1ij}-Q_{4ij}$ by replac
 
 
 \section{Comparing Coefficients}
-Our final step is expressing the coefficients $K_{l,q}$ of the original operators $R_{l,q}$ in \eqref{eq:normal} in terms of the coefficients $C_{lij}$ of the chiral operators $Q_{lij}$ in \eqref{eq:chiral}. To get there we look at the overall interaction. The interaction cannot depend on the representation of particle functions we choose, either normal or chiral, therefore
+\todo{Dieser Text ist nicht schön.}
+Our final step is expressing the coefficients $K_{l,q}$ of the original operators $R_{l,q}$ in \eqref{eq:normal} in terms of the coefficients $C_{lij}$ of the chiral operators $Q_{lij}$ in \eqref{eq:chiral}. To get there we look at the overall interaction. The interaction cannot depend on the choice of particle representation (chiral or non-chiral), therefore
 \begin{align}
 	\sum_{l,q} K_{l,q}R_{l,q} \overset{!}{=} \sum_{l,i,j}C_{lij}Q_{lij} \ .
 \end{align}
@@ -125,7 +134,9 @@ By putting the interactions \eqref{eq:dependenciesoperators} into the right side
 	K_{3,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(- C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} - C_{2ij} + C_{3ij}\right)\notag \\
 	K_{3,d} &= \sum_{i,j}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} V_{id}^*V_{jd} - V_{id}^*V_{jd}C_{2ij} + \delta_{ij}\delta_{id}C_{4ij}\right)\notag \\
 	K_{3,s} &= \sum_{i,j}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} V_{is}^*V_{js} - V_{is}^*V_{js}C_{2ij} + \delta_{ij}\delta_{is}C_{4ij}\right)\notag \\
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\end{align}
+%\begin{align}
 	K_{4,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(-\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} - C_{6ij} + C_{7ij}\right)\notag \\
 	K_{4,d} &= \sum_{i,j}\frac{1}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}V_{id}^*V_{jd} - C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right)\notag \\
 	K_{4,s} &= \sum_{i,j}\frac{1}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}V_{is}^*V_{js} - C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right) \ .
