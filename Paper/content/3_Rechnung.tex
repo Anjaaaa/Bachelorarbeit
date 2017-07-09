@@ -88,8 +88,8 @@ The next step is rewriting the chiral particle functions in terms of the unchira
 \end{align}
 At this point we can express the chiral operators in terms of the original operators from \eqref{eq:normal}:
 \begin{align}\label{eq:dependenciesoperators}
-	Q_{1ij} =&\frac{\delta_{3a}\tau_{0}}{4}(R_{1u}\delta_{ij}\delta_{iu} - V_{id}^*V_{jd}R_{1d} - V_{is}^*V_{js}R_{1s})\notag \\
-	-&\frac{\delta_{3a}\tau_{0}}{4} (R_{3u}\delta_{ij}\delta_{iu} - V_{id}^*V_{jd}R_{3d} - V_{is}^*V_{js}R_{3s})\notag \\
+	Q_{1ij} =&\frac{\delta_{3a}\sigma^0}{4}(R_{1u}\delta_{ij}\delta_{iu} - V_{id}^*V_{jd}R_{1d} - V_{is}^*V_{js}R_{1s})\notag \\
+	-&\frac{\delta_{3a}\sigma^0}{4} (R_{3u}\delta_{ij}\delta_{iu} - V_{id}^*V_{jd}R_{3d} - V_{is}^*V_{js}R_{3s})\notag \\
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	Q_{2ij} =&\frac{1}{2}(R_{1u}\delta_{iu}\delta_{ij}+ V_{id}^*V_{jd}R_{1d}+ V_{is}^*V_{js}R_{1s})\notag \\
 	-&\frac{1}{2}(R_{3u}\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}R_{3d} + V_{is}^*V_{js}R_{3s})\notag \\
@@ -98,9 +98,9 @@ At this point we can express the chiral operators in terms of the original opera
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	Q_{4ij} =&\frac{1}{2}(R_{1d}\delta_{ij}\delta_{id} + R_{3d}\delta_{ij}\delta_{id} + R_{1s}\delta_{ij}\delta_{is} + R_{3s}\delta_{ij}\delta_{is}) \ .
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	Q_{5ij} &=\frac{\delta_{3a}\tau_{0}}{4}(R_{2u}\delta_{ij}\delta_{iu}
+%	Q_{5ij} &=\frac{\delta_{3a}\sigma^0}{4}(R_{2u}\delta_{ij}\delta_{iu}
 %	- V_{id}^*V_{jd}R_{2d} - V_{is}^*V_{js}R_{2s})\notag \\
-%	&-\frac{\delta_{3a}\tau_{0}}{4} (R_{4u}\delta_{ij}\delta_{iu}
+%	&-\frac{\delta_{3a}\sigma^0}{4} (R_{4u}\delta_{ij}\delta_{iu}
 %	- V_{id}^*V_{jd}R_{4d} - V_{is}^*V_{js}R_{4s})\notag \\
 %	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	Q_{6ij} &= \frac{1}{2}(R_{2u}\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}R_{2d} + V_{is}^*V_{js}R_{2s})\notag \\
@@ -121,24 +121,24 @@ Our final step is expressing the coefficients $K_{l,q}$ of the original operator
 \end{align}
 By putting the interactions \eqref{eq:dependenciesoperators} into the right side of the equation and rearranging the expression in terms of the $R_{l,q}$, we conclude that $K_{l,q}$ must be equal to the terms in front of $R_{l,q}$ on the right side. We get the dependencies
 \begin{align}\label{eq:CoeffNormal}
-	K_{1,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ 
+	K_{1,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(C_{1ij}\frac{\delta_{3a}\sigma^0}{2}+ 
 	C_{2ij} + C_{3ij}\right)\notag \\
-	K_{1,d} &= \sum_{i,j}\frac{1}{2}\left(-V_{id}^*V_{jd}C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ V_{id}^*V_{jd}C_{2ij} + \delta_{ij}\delta_{id}C_{4ij}\right)\notag \\
-	K_{1,s} &= \sum_{i,j}\frac{1}{2}\left(- V_{is}^*V_{js}C_{1ij}\frac{\delta_{3a}\tau_{0}}{2}+ V_{is}^*V_{js}C_{2ij}+ \delta_{ij}\delta_{is}C_{4ij}\right)\notag \\
+	K_{1,d} &= \sum_{i,j}\frac{1}{2}\left(-V_{id}^*V_{jd}C_{1ij}\frac{\delta_{3a}\sigma^0}{2}+ V_{id}^*V_{jd}C_{2ij} + \delta_{ij}\delta_{id}C_{4ij}\right)\notag \\
+	K_{1,s} &= \sum_{i,j}\frac{1}{2}\left(- V_{is}^*V_{js}C_{1ij}\frac{\delta_{3a}\sigma^0}{2}+ V_{is}^*V_{js}C_{2ij}+ \delta_{ij}\delta_{is}C_{4ij}\right)\notag \\
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	K_{2,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}+ 
+	K_{2,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(\frac{\delta_{3a}\sigma^0}{2}C_{5ij}+ 
 	C_{6ij} + C_{7ij}\right)\notag \\
-	K_{2,d} &= \sum_{i,j}\frac{1}{2}\left(- V_{id}^*V_{jd}\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} + C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right)\notag \\
-	K_{2,s} &= \sum_{i,j}\frac{1}{2}\left(- V_{is}^*V_{js}\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} + C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right)\notag \\
+	K_{2,d} &= \sum_{i,j}\frac{1}{2}\left(- V_{id}^*V_{jd}\frac{\delta_{3a}\sigma^0}{2}C_{5ij} + C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right)\notag \\
+	K_{2,s} &= \sum_{i,j}\frac{1}{2}\left(- V_{is}^*V_{js}\frac{\delta_{3a}\sigma^0}{2}C_{5ij} + C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right)\notag \\
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	K_{3,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(- C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} - C_{2ij} + C_{3ij}\right)\notag \\
-	K_{3,d} &= \sum_{i,j}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} V_{id}^*V_{jd} - V_{id}^*V_{jd}C_{2ij} + \delta_{ij}\delta_{id}C_{4ij}\right)\notag \\
-	K_{3,s} &= \sum_{i,j}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\tau_{0}}{2} V_{is}^*V_{js} - V_{is}^*V_{js}C_{2ij} + \delta_{ij}\delta_{is}C_{4ij}\right)\notag \\
-%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\end{align}
-%\begin{align}
-	K_{4,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(-\frac{\delta_{3a}\tau_{0}}{2}C_{5ij} - C_{6ij} + C_{7ij}\right)\notag \\
-	K_{4,d} &= \sum_{i,j}\frac{1}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}V_{id}^*V_{jd} - C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right)\notag \\
-	K_{4,s} &= \sum_{i,j}\frac{1}{2}\left(\frac{\delta_{3a}\tau_{0}}{2}C_{5ij}V_{is}^*V_{js} - C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right) \ .
+	K_{3,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(- C_{1ij}\frac{\delta_{3a}\sigma^0}{2} - C_{2ij} + C_{3ij}\right)\notag \\
+	K_{3,d} &= \sum_{i,j}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\sigma^0}{2} V_{id}^*V_{jd} - V_{id}^*V_{jd}C_{2ij} + \delta_{ij}\delta_{id}C_{4ij}\right)\notag \\
+	K_{3,s} &= \sum_{i,j}\frac{1}{2}\left(C_{1ij}\frac{\delta_{3a}\sigma^0}{2} V_{is}^*V_{js} - V_{is}^*V_{js}C_{2ij} + \delta_{ij}\delta_{is}C_{4ij}\right)\notag %\\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{align}
+\begin{align}
+	K_{4,u} &= \sum_{i,j}\frac{\delta_{ij}\delta_{iu}}{2}\left(-\frac{\delta_{3a}\sigma^0}{2}C_{5ij} - C_{6ij} + C_{7ij}\right)\notag \\
+	K_{4,d} &= \sum_{i,j}\frac{1}{2}\left(\frac{\delta_{3a}\sigma^0}{2}C_{5ij}V_{id}^*V_{jd} - C_{6ij}V_{id}^*V_{jd} + \delta_{ij}\delta_{id}C_{8ij}\right)\notag \\
+	K_{4,s} &= \sum_{i,j}\frac{1}{2}\left(\frac{\delta_{3a}\sigma^0}{2}C_{5ij}V_{is}^*V_{js} - C_{6ij}V_{is}^*V_{js} + \delta_{ij}\delta_{is}C_{8ij}\right) \ .
 \end{align}
 To have a hermitian interaction the coefficients need to fulfil the relation $C_{lij} = C_{lji}^*$.
