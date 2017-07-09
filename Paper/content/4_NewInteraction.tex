@@ -1,4 +1,4 @@
-In this chapter we present an extension to the standard model proposed in \cite{InColour}. The authors originally aimed at explaining anomalies in the decay $B\rightarrow Kl\bar{l}$, but also obtained predictions for the direct detection of dark matter in the succeeding publication \cite{Z}. We will later compare their results with the formalism in the previous chapter that includes the CKM mixing.
+In this chapter, we present an extension to the standard model proposed by Altmannshofer et. al. in publication \cite{InColour}. The authors originally aimed at explaining anomalies in the decay $B\rightarrow Kl\bar{l}$, but also obtained predictions for the direct detection of dark matter in the succeeding publication \cite{Z}. We will later compare their results with the formalism in the previous chapter that includes the CKM mixing.
 
 \section{The New Interaction}
 The extension to the standard model in \cite{InColour} is a new $U(1)'$ gauge group. The related vector-boson is called $Z'$, and it couples to the muon and tau lepton families, and a new set of vector-like quarks $U,D,Q$. The standard model quarks indirectly couple to the $Z'$ as well, since they mix with the new quarks through a Yukawa coupling:
@@ -11,7 +11,7 @@ The extension to the standard model in \cite{InColour} is a new $U(1)'$ gauge gr
 where $\tilde{Q}_R = (\tilde{U}_R,\tilde{D}_R)$, $Q_L = (U_L,D_L)$ are the weak doublets, $Y_{ij}$ are the coupling constants, and $\Phi'$ is a Higgs-like field that gives mass to the $Z'$.
 
 
-In \cite{Z} also a coupling to a dark matter fermion $\chi$ is established. The full interaction lagrangian is:
+In publication \cite{Z}, a coupling to a dark matter fermion $\chi$ is additionally established. The full interaction lagrangian then is:
 \begin{align}
 	\mathcal{L}^{(\text{int})}_{Z'} = &g'Z_\alpha'\times q_l\left(\bar{L}_L^2\gamma^\alpha L_L^2 - \bar{L}_L^3\gamma^\alpha L_L^3 + \bar{\mu}_R\gamma^\alpha\mu_R-\bar{\tau}_R\gamma^\alpha\tau_R\right)\notag \\
 	+&g'Z_\alpha'\times v_\Phi^2\sum_{i,j}^3\left(-\frac{Y_{Di}Y^*_{Dj}}{2m_D^2}\bar{D}_R^i\gamma^\alpha D_R^j - \frac{Y_{Ui}Y^*_{Uj}}{2m_U^2}\bar{U}_R^i\gamma^\alpha U_R^j + \frac{Y_{Qi}Y_{Qj}^*}{2m_Q^2}\bar{Q}_L^i\gamma^\alpha Q_L^j\right)\notag \\
@@ -35,17 +35,19 @@ with $m_{Z'}\gtrapprox\SI{10}{\giga\electronvolt}$.
 	\begin{align}\label{eq:Relic}
 	m_{Z'}\approx 2m_\chi
 	\end{align}
-	leads to correct results. Since they neglect flavour mixing in the nucleus, direct detection has to occur through the loop diagram in figure \ref{fig:Loop}. The corresponding cross section at zero momentum transfer is
+	leads to correct results. Since they neglect flavour mixing in the nucleus, direct detection has to occur through the loop diagram in Figure \ref{fig:Loop}. The corresponding cross section at zero momentum transfer is
 	\begin{align}\label{eq:Loop}
 	\sigma_{0,\text{loop}} = \frac{\mu_{A\chi}^2}{A^2\pi}\left(\frac{\alpha_{em}Z}{3\pi}\ \frac{g'^2q_\chi q_l}{m_{Z'}^2}\log\left(\frac{m_\mu^2}{m_\tau^2}\right)\right)^2 \ ,
 	\end{align}
-	where $\mu_{A\chi}$ is the reduced mass of the nucleus and the dark matter particle $\chi$ and $A,Z$ are the nucleon and proton numbers.
+	where $\mu_{A\chi}$ is the reduced mass of the nucleus and the dark matter particle $\chi$, and $A,Z$ are the nucleon and proton numbers.
 \end{minipage} \hfill
-\begin{minipage}{0.32\textwidth}
+\begin{minipage}{0.28\textwidth}
 	\begin{figure}[H]
 		\centering
-		\input{content/graphics/Loop}
-		\captionsetup{width=.9\textwidth}
+		\resizebox{\textwidth}{!}{
+			\input{content/graphics/Loop}	
+		}
+		\captionsetup{width=\textwidth}
 		\caption{Direct detection loop diagram}
 		\label{fig:Loop}
 	\end{figure}

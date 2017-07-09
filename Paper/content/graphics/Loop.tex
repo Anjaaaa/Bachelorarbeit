@@ -1,7 +1,7 @@
 \begin{tikzpicture}
 \tikzstyle{centerArrow}=[decoration={
 	markings,
-	mark=at position 0.5 with {\arrow{Triangle}}}]
+	mark=at position 0.5 with {\fill (2pt,0)--(-2pt,2.31pt)--(-2pt,-2.31pt)--cycle;}}]
 
 \begin{scope}[xshift=6cm,yshift=5cm]
 \def\xmove{2}
@@ -23,7 +23,7 @@
 \draw [decoration={snake, segment length=1.5mm, amplitude=0.5mm},decorate] (tCenter1) -- (tCenter2) ;
 \node at (0.5,-\centerShift/2) {$Z'$};
 \draw [
-        decoration={markings, mark=at position 0.5 with {\arrow{Triangle}}, mark=at position 1 with {\arrow{Triangle}}},
+        decoration={markings, mark=at position 0.5 with {\fill (2pt,0)--(-2pt,2.31pt)--(-2pt,-2.31pt)--cycle;}, mark=at position 1 with {\fill (2pt,0)--(-2pt,2.31pt)--(-2pt,-2.31pt)--cycle;}},
         postaction={decorate}
 ] ([yshift=.5cm]tCenter3) ellipse(.45 and 0.5);
 \node at ([yshift=-\centerCircle/2,xshift=0.75cm]tCenter2) {$l$};

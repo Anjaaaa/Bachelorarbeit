@@ -29,7 +29,7 @@ rho = 0.14
 eta = 0.35
 
 Vcd = complex(-la,0)                                     # V21 = V2d = Vcd
-Vtd = complex(A*la**3*(1-rho),-A*la**3*eta)              # V31 = V3d = Vtd
+Vtd = A*la**3*complex((1-rho),-eta)              # V31 = V3d = Vtd
 
 
 mP = 0.938
@@ -40,8 +40,8 @@ alpha = 1/137
 mA = 129*mN
 A = 129
 Z = 54
-# Umrechnungsfaktor GeV^(-2) in cm^2
-K = 0.389379 * 10**(-27)
+# Umrechnungsfaktor GeV^(-2) in barn
+K = 0.389379 * 10**(-3)
 
 ##########################################################################
 ##########################################################################
@@ -71,7 +71,7 @@ mX = np.linspace(1,25, 1000)
 # Mein Wirkungsquerschnitt für Z'
 C = np.array([10*complex(1,1), 10, 10*complex(1,-1), complex(1,1), 1, complex(1,-1)], dtype = complex)
 C = C*10**(-10)*8
-color = ['aqua', 'steelblue', 'navy', 'orange', 'r', 'brown']
+color = ['aqua', 'dodgerblue', 'navy', 'gold', 'red', 'maroon']
 label = ['$C_{2bs} = 8\cdot 10^{-9}(1+i)$', '$C_{2bs} = 8\cdot 10^{-9}$', '$C_{2bs} = 8\cdot 10^{-9}(1-i)$','$C_{2bs} = 8\cdot 10^{-10}(1+i)$', '$C_{2bs} = 8\cdot 10^{-10}$', '$C_{2bs} = 8\cdot 10^{-10}(1-i)$']
 
 for i in range(0,len(C)):
@@ -85,7 +85,7 @@ plt.fill_between(mX,K*PaperMin, K*PaperMax, color = 'tu')
 plt.yscale('log')
 plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
-plt.ylabel(r'$\sigma_0$ in $\mathrm{cm}^{2}$')
+plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(1,25)
 plt.savefig('Paper/content/graphics/Allgemein11.pdf')
 plt.show()
@@ -98,7 +98,7 @@ mX = np.linspace(1,1000, 1000)
 # Mein Wirkungsquerschnitt für Z'
 C = np.array([10*complex(1,1), 10, 10*complex(1,-1), complex(1,1), 1, complex(1,-1)], dtype = complex)
 C = C*10**(-10)*8/6
-color = ['aqua', 'steelblue', 'navy', 'orange', 'r', 'brown']
+color = ['aqua', 'dodgerblue', 'navy', 'gold', 'red', 'maroon']
 label = ['$C_{2bs} = 8/6\cdot 10^{-9}(1+i)$', '$C_{2bs} = 8/6\cdot 10^{-9}$', '$C_{2bs} = 8/6\cdot 10^{-9}(1-i)$','$C_{2bs} = 8/6\cdot 10^{-10}(1+i)$', '$C_{2bs} = 8/6\cdot 10^{-10}$', '$C_{2bs} = 8/6\cdot 10^{-10}(1-i)$']
 
 for i in range(0,len(C)):
@@ -117,7 +117,7 @@ plt.yscale('log')
 plt.xscale('log')
 plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
-plt.ylabel(r'$\sigma_0$ in $\mathrm{cm}^{2}$')
+plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(0,1000)
 plt.savefig('Paper/content/graphics/Allgemein116.pdf')
 plt.show()
@@ -132,10 +132,10 @@ plt.show()
 mX = np.linspace(1, 25,1000)
 
 # Mein Wirkungsquerschnitt für Z'
-C = np.array([complex(1,1), complex(1,10), complex(1,100)], dtype = complex)
+C = np.array([complex(1,100), complex(1,10), complex(1,1)], dtype = complex)
 C = C*10**(-10)*8
-color = ['r', 'b', 'orange']
-label = ['Im$(C_{2bs}) = 8\cdot 10^{-10}$', 'Im$(C_{2bs}) = 8\cdot 10^{-9}$', 'Im$(C_{2bs}) = 8\cdot 10^{-8}$']
+color = ['b', 'r', 'gold']
+label = ['Im$(C_{2bs}) = 8\cdot 10^{-8}$', 'Im$(C_{2bs}) = 8\cdot 10^{-9}$', 'Im$(C_{2bs}) = 8\cdot 10^{-10}$']
 
 for i in range(0,len(C)):
     CS = myCS(mA,mX,A,Z,C[i])
@@ -149,7 +149,7 @@ plt.fill_between(mX, K*PaperMin, K*PaperMax, color='tu')
 plt.yscale('log')
 plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
-plt.ylabel(r'$\sigma_0$ in $\mathrm{cm}^{2}$')
+plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(1,25)
 plt.savefig('Paper/content/graphics/Im11.pdf')
 plt.show()
@@ -160,10 +160,10 @@ plt.show()
 mX = np.linspace(1,1000, 1000)
 
 # Mein Wirkungsquerschnitt für Z'
-C = np.array([complex(1,1), complex(1,10), complex(1,100)], dtype = complex)
+C = np.array([complex(1,100), complex(1,10), complex(1,1)], dtype = complex)
 C = C*10**(-10)*8/6
-color = ['r', 'b', 'orange']
-label = ['Im$(C_{2bs}) = 8/6\cdot 10^{-10}$', 'Im$(C_{2bs}) = 8/6\cdot 10^{-9}$', 'Im$(C_{2bs}) = 8/6\cdot 10^{-8}$']
+color = ['b', 'r', 'gold']
+label = ['Im$(C_{2bs}) = 8/6\cdot 10^{-8}$', 'Im$(C_{2bs}) = 8/6\cdot 10^{-9}$', 'Im$(C_{2bs}) = 8/6\cdot 10^{-10}$']
 
 for i in range(0,len(C)):
     CS = myCS(mA,mX,A,Z,C[i])
@@ -180,7 +180,7 @@ plt.yscale('log')
 plt.xscale('log')
 plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
-plt.ylabel(r'$\sigma_0$ in $\mathrm{cm}^{2}$')
+plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(0,1000)
 plt.savefig('Paper/content/graphics/Im116.pdf')
 plt.show()
@@ -201,10 +201,10 @@ PaperMin = PaperCS(mA,mX,A,Z,g/2/mX/1.3)
 plt.fill_between(mX, K*PaperMin, K*PaperMax, color = 'tu')
 
 # Mein Wirkungsquerschnitt für Z'
-C = np.array([8, 8*complex(1,1), 30], dtype = complex)
+C = np.array([30, 8*complex(1,1), 8], dtype = complex)
 C = C*10**(-10)
-color = ['r', 'b', 'orange']
-label = ['$8\cdot 10^{-10}$', '$8\cdot 10^{-10}(1+i)$', '$3\cdot 10^{-9}$']
+color = ['b', 'r', 'gold']
+label = ['$3\cdot 10^{-9}$', '$8\cdot 10^{-10}(1+i)$', '$8\cdot 10^{-10}$']
 
 m = np.zeros(len(C))
 
@@ -220,7 +220,7 @@ plt.yscale('log')
 #plt.xscale('log')
 plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
-plt.ylabel(r'$\sigma_0$ in $\mathrm{cm}^{2}$')
+plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(1,25)
 plt.savefig('Paper/content/graphics/Relic11.pdf')
 plt.show()
@@ -242,10 +242,10 @@ PaperMin = PaperCS(mA,mX,A,Z,g/2/mX/1.3)
 plt.fill_between(mX, K*PaperMin, K*PaperMax, color = 'tu')
 
 # Mein Wirkungsquerschnitt für Z'
-C = np.array([8, 8*complex(1,1), 30], dtype = complex)
+C = np.array([30, 8*complex(1,1), 8], dtype = complex)
 C = C*10**(-10)/6
-color = ['r', 'b', 'orange']
-label = ['$8/6\cdot 10^{-10}$', '$8/6\cdot 10^{-10}(1+i)$', '$3/6\cdot 10^{-9}$']
+color = ['b', 'r', 'gold']
+label = ['$3/6\cdot 10^{-9}$', '$8/6\cdot 10^{-10}(1+i)$', '$8/6\cdot 10^{-10}$']
 m = np.zeros(len(C))
 for i in range(0,len(C)):
     CS = myCS(mA,mX,A,Z,C[i])
@@ -259,7 +259,7 @@ plt.yscale('log')
 plt.xscale('log')
 plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
-plt.ylabel(r'$\sigma_0$ in $\mathrm{cm}^{2}$')
+plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(1,1000)
 plt.savefig('Paper/content/graphics/Relic116.pdf')
 plt.show()
