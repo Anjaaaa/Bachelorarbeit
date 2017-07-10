@@ -23,10 +23,10 @@ from table import (
 ##########################################################################
 ### Konstanten
 
-la = 0.225
-A = 0.82
-rho = 0.14
-eta = 0.35
+la = 0.22496
+A = 0.823
+rho = 0.141
+eta = 0.349
 
 Vcd = complex(-la,0)                                     # V21 = V2d = Vcd
 Vtd = A*la**3*complex((1-rho),-eta)              # V31 = V3d = Vtd

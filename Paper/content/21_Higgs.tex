@@ -1,31 +1,31 @@
 We consider a complex scalar field $\Phi$ that interacts with itself through a potential
-\begin{align}
+\begin{align*}
 	V(\Phi) = -\mu^2\Phi^\dagger\Phi + \frac{\lambda}{2}(\Phi^\dagger\Phi)^2 \ , \quad \mu^2 > 0 \ .
-\end{align}
-If $\lambda>0$, this potential has two two minima, which occur at
+\end{align*}
+If $\lambda>0$ and $\Phi$ is a singlet, this potential has two two minima, which occur at
 \begin{align}\label{eq:vev1}
 	\langle\Phi\rangle =  \pm\sqrt{\frac{\mu^2}{\lambda}} \ .
 \end{align}
 These are the vacuum expectation values of $\Phi$.
 
 To show how symmetry breaking leads to massive particles, we now introduce a symmetry, for example $SU(2)$, coupled to $\Phi$. In order to couple to $SU(2)$, $\Phi$ has to be a doublet $(\Phi_1,\Phi_2)$ with covariant derivative
-\begin{align}
+\begin{align*}
 	D_\mu\Phi = (\partial_\mu - ig\sum_{a=1}^3A_\mu^a\tau^a)\Phi \ ,
-\end{align}
+\end{align*}
 where the $\tau^a$ are the generators of $SU(2)$. Since condition \eqref{eq:vev1} still holds for the absolute value of $\Phi$, there now is an infinite number of vacuum expectation values, arranged in a circle. We are free to choose one and make the simple choice
 \begin{align}\label{eq:vev2}
 	\langle\Phi\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix} 0 \\ v \end{pmatrix} \ , \qquad v = \sqrt{\frac{2\mu^2}{\lambda}} \ .
 \end{align}
 The kinetic energy of $\Phi$ is then
 \begin{align}\label{eq:Ekin}
-	(D_\mu\Phi)^2 = &\frac{1}{2}(\partial_\mu v)(\partial^\mu v)\notag \\
-	- &ig(\partial^\mu\begin{pmatrix} 0 & v \end{pmatrix}) \left(\sum_{a=1}^3A_\mu^a\tau^a\begin{pmatrix} 0 \\ v \end{pmatrix}\right)\notag \\
-	- &\frac{1}{2}g^2\begin{pmatrix} 0 & v \end{pmatrix}\sum_{a,b=1}^{3}\tau^a\tau^b\begin{pmatrix} 0 \\ v \end{pmatrix}A_\mu^aA^{b\mu} \ .
+	(D_\mu\Phi)^2 &= \frac{1}{2}(\partial_\mu v)(\partial^\mu v)\notag \\
+	&- ig(\partial^\mu\begin{pmatrix} 0 & v \end{pmatrix}) \left(\sum_{a=1}^3A_\mu^a\tau^a\begin{pmatrix} 0 \\ v \end{pmatrix}\right)\notag \\
+	&- \frac{1}{2}g^2\begin{pmatrix} 0 & v \end{pmatrix}\sum_{a,b=1}^{3}\tau^a\tau^b\begin{pmatrix} 0 \\ v \end{pmatrix}A_\mu^aA^{b\mu} \ .
 \end{align}
 Using the anticommutator $\{\tau^a,\tau^b\}=\sfrac{\delta_{ab}}{2}$, we can simplify the last expression in \eqref{eq:Ekin} to
-\begin{align}
+\begin{align*}
 	- \frac{1}{2}g^2\begin{pmatrix} 0 & v \end{pmatrix}\sum_{a,b=1}^{3}\tau^a\tau^b\begin{pmatrix} 0 \\ v \end{pmatrix}A_\mu^aA^{b\mu} &= - \frac{g^2v^2}{8}\sum_{a=1}^{3}A_\mu^aA^{a\mu} \ ,
-\end{align}
+\end{align*}
 which is a mass term $\mathcal{L}_m = -\frac{1}{2}m_A^2A_\mu A^\mu$ that assigns the mass $m_A = \sfrac{gv}{2}$ to all three gauge bosons that are needed in a $SU(2)$ symmetry. By expanding the system with an additional $U(1)$ symmetry, the kinetic energy would again provide three gauge boson masses, leaving the fourth gauge boson massless. The massive bosons can be identified as $W^\pm,Z^0$, and the massless one as the photon.
 
 
