@@ -6,14 +6,14 @@ In this chapter we incorporate flavour mixing into an existing formalism. We use
 Here $q=(u,d,c,s,t,b)$ is a quark and $\chi_0$ is the component of the weak dark matter mutliplet that has no electric charge.
 
 
-Since the CKM mixing only applies to the left-handed down-type quarks, we need to rewrite these operators in terms of the left- and righthanded particle functions to include the CKM matrix. These chiral operators are
+Since the CKM mixing only applies to the left-handed down-type quarks, we need to rewrite these operators in terms of the left- and righthanded particle multiplets to include the CKM matrix. These chiral operators are
 \begin{align}\label{eq:chiral}
 	Q_{1ij} &= (\bar{\chi}\gamma_\mu\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j) \ , && &Q_{5ij} &= (\bar{\chi}\gamma_\mu\gamma_5\tilde{\tau}^a\chi)(\bar{Q}_L^i\gamma^\mu \tau^aQ_L^j) \ , \notag \\
 	Q_{2ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j) \ , && &Q_{6ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j) \ , \notag \\
 	Q_{3ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{U}_R^i\gamma^\mu U_R^j) \ , && &Q_{7ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{U}_R^i\gamma^\mu U_R^j) \ , \notag \\
 	Q_{4ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{D}_R^i\gamma^\mu D_R^j) \ , && &Q_{8ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{D}_R^i\gamma^\mu D_R^j) \ .
 \end{align}
-The operators $\tilde{\tau}^a,\tau^a$ are the generators of $SU(2)$ in the corresponding spin-\-representation. The left-handed quarks come in doublets, therefore the generators are the Pauli matrices $\sigma_a$:
+The operators $\tilde{\tau}^a$ and $\tau^a$ are the generators of $SU(2)$ in the corresponding spin-\-representation. The left-handed quarks come in doublets, therefore the generators are the Pauli matrices $\sigma_a$:
 \begin{align}
 	\tau^a = \frac{\sigma_a}{2} \ . \notag
 \end{align}
@@ -22,14 +22,14 @@ Since the size of the dark matter multiplet is unknown, we use the general spin-
 	(\tilde{\tau}^1 \pm i\tilde{\tau}^2)_{\sigma'\sigma} &= \delta_{\sigma'\sigma\pm1}\sqrt{(j\mp\sigma)(j\pm\sigma+1)} \ , \notag \\
 	\tilde{\tau}^3_{\sigma'\sigma} &= \sigma\delta_{\sigma'\sigma} \ , \notag
 \end{align}
-where $j$ is the spin value and $-j\leq\sigma\leq j$, $-j\leq\sigma'\leq j$. However, we only keep the electrically uncharged component of the multiplet, $\chi_0$.
+where $j$ is the spin value with $-j\leq\sigma\leq j$ and $-j\leq\sigma'\leq j$. However, we only keep the electrically uncharged component $\chi_0$ of the multiplet.
 \todo{Warum behält man eigentlich nur die ungeladene Komponente?}
 
 In the following sections, we go through the steps of including the CKM matrix in the formalism:
 \begin{enumerate}
 	\item Incorporation of flavour mixing by replacing the pure left-handed down-type quarks with the mixed quarks.
-	\item Rewriting the chiral particle functions in terms of the unchiral particle functions and projection operators.
-	\item Writing down the entire interaction lagrangians in terms of the operators in \eqref{eq:normal} and \eqref{eq:chiral} separately, and then comparing the coefficients.
+	\item Rewriting the chiral particle multiplets in terms of the unchiral particle multiplets and projection operators.
+	\item Writing down the interaction lagrangian in terms of the operators in \eqref{eq:normal} and \eqref{eq:chiral} separately, and then comparing the coefficients.
 \end{enumerate}
 \todo{Der letzte Punkt ist schlecht formuliert.}
 
@@ -71,7 +71,7 @@ Note that, by only keeping diagonal interactions, we abolish the expressions inc
 because, as mentioned before, we are only interested in the electrically uncharged component $\chi_0$ of $\chi$.
 
 \section{Replacing Chiral Particle Functions}
-The next step is rewriting the chiral particle functions in terms of the unchiral particle functions using the projection operators $P_L,P_R$. This leads to
+The next step is rewriting the chiral particle multiplets in terms of the unchiral particle multiplets using the projection operators $P_L,P_R$. This leads to
 \begin{align*}
 	\bar{Q}_L^i\gamma^\mu\tau^a Q_L^j &= \frac{1}{4}(\bar{u}\gamma^\mu u\delta_{ij}\delta_{iu}\delta_{3a}
 	- V_{id}^*V_{jd}\bar{d}\gamma^\mu d\delta_{3a} - V_{is}^*V_{js}\bar{s}\gamma^\mu s\delta_{3a}) \\
