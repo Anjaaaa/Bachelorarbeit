@@ -1,0 +1,55 @@
+\definecolor{craneorange}{rgb}{0.68,1,1}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamerfont{caption}{size=\scriptsize}
+\beamertemplatenavigationsymbolsempty 
+\usefonttheme[onlymath]{serif}
+
+\usepackage{pgfpages}
+\setbeameroption{show notes}
+\setbeameroption{show notes on second screen=right}
+
+\usetheme{Hannover}
+\usecolortheme{crane}
+
+
+\def\swidth{1.6cm}
+\setbeamertemplate{sidebar left}
+{
+	{\usebeamerfont{title in sidebar}%
+		\vskip1.5em%
+		\usebeamercolor[fg]{title in sidebar}%
+		\insertshorttitle[width=\swidth,center,respectlinebreaks]\par%
+		\vskip1.25em%
+	}%
+	{%
+		\usebeamercolor[fg]{author in sidebar}%
+		\usebeamerfont{author in sidebar}%
+		\insertshortauthor[width=\swidth,center,respectlinebreaks]\par%
+		\vskip1.25em%
+	}%
+	\hbox to2cm{\hss\insertlogo\hss}
+	\vskip1.25em%
+	\insertverticalnavigation{\swidth}%
+	\vfill
+	\hbox to2cm{\hskip0.6cm\insertframenumber/\inserttotalframenumber\hfill}%
+	\vskip3pt%
+}%
+
+
+\usepackage{tikz}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{arrows.meta}
+
+\usepackage{pgf-pie}
+\usepackage[
+locale=DE,
+separate-uncertainty=true,
+per-mode=symbol-or-fraction,
+output-decimal-marker=., % . statt , für Dezimalzahlen
+]{siunitx}
+\usepackage{graphicx}
+\usepackage{subfig}
+
+\usepackage{xfrac}  

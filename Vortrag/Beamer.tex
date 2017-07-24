@@ -1,26 +1,50 @@
 \documentclass{beamer}
-\usepackage[ngerman]{babel}
-\title{Bachelorvortrag}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+
+\input{Header.txt}
+
+\usepackage[
+	backend=biber,   % use modern biber backend
+	autolang=hyphen, % load hyphenation rules for if language of bibentry is not
+	sorting=none,    % german, has to be loaded with \setotherlanguages
+	maxbibnames=4,   % in the references.bib use langid={en} for english sources
+]{biblatex}
+\addbibresource{Literatur.bib}
+\DefineBibliographyStrings{english}{andothers = {{et\,al\adddot}}} 
+
+\title{Flavour Mixing Effects in the Direct Detection of Dark Matter}
 \author{Anja Beck}
-\date{\today}
-\institute{Fakultät Physik}
+\date{1. August 2017}
+\institute{Lehrstuhl für Theoretische Physik IV \\ Fakultät Physik \\ Technische Universität Dortmund}
+
+
 \begin{document}
-\begin{frame}
-	\titlepage
+
+\begin{frame}[plain,noframenumbering]
+\hspace*{-0.75cm}\parbox[t]{\textwidth}{
+	\titlepage}
 \end{frame}
-\begin{frame}
-	\frametitle{Inhaltsverzeichnis}
-	\tableofcontents
+
+\begin{frame}[noframenumbering]{Inhalt}
+	\tableofcontents{}
 \end{frame}
-\begin{frame}
-	A
-	\pause
-	B
-	\pause
-	C
-	\pause
-	\structure{Structure}
-	\pause
-	\alert{Alert}
+
+\section{Einführung}
+\input{Einfuhrung.tex}
+\section{Flavour-Mischung}
+\input{Mischung.tex}
+\section{Verwendeter Formalismus}
+\input{Formalismus.tex}
+\section{Neue Wechselwirkung}
+\input{NeueWechselwirkung.tex}
+\section{Ergebnisse}
+\input{Ergebnisse.tex}
+
+\section{Bibliographie}
+\begin{frame}{Bibliographie}
+	\printbibliography
 \end{frame}
 \end{document}
+
+
