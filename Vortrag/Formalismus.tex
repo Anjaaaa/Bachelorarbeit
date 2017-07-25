@@ -1,2 +1,56 @@
 \begin{frame}{Formalismus}
+\framesubtitle{Operatoren}
+Unchirale Operatoren:
+\begin{align*}
+	R_{1,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu q) && &R_{3,q} &= (\bar{\chi}\gamma_\mu\chi)(\bar{q}\gamma^\mu\gamma_5q) \\
+	R_{2,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu q) &&	&R_{4,q} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{q}\gamma^\mu\gamma_5q)
+\end{align*}
+Chirale Operatoren:
+\begin{align*}
+	Q_{1ij} &= (\bar{\chi}\gamma_\mu\tilde{\tau}^3\chi)(\bar{Q}_L^i\gamma^\mu \tau^3Q_L^j) && &Q_{5ij} &= (\bar{\chi}\gamma_\mu\gamma_5\tilde{\tau}^3\chi)(\bar{Q}_L^i\gamma^\mu \tau^3Q_L^j) \\
+	Q_{2ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j) && &Q_{6ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^i\gamma^\mu Q_L^j) \\
+	Q_{3ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{U}_R^i\gamma^\mu U_R^j) && &Q_{7ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{U}_R^i\gamma^\mu U_R^j) \\
+	Q_{4ij} &= (\bar{\chi}\gamma_\mu\chi)(\bar{D}_R^i\gamma^\mu D_R^j) && &Q_{8ij} &= (\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{D}_R^i\gamma^\mu D_R^j)
+\end{align*}
+\textbf{Ziel:} Drücke die Koeffizienten der unchiralen Operatoren in Abhängigkeit der Koeffizienten der chiralen Operatoren aus.
+\end{frame}
+
+
+\begin{frame}{Formalismus}
+\framesubtitle{Rechnung: Schritt 1}
+Einfügen der CKM-Matrix:
+\begin{align*}
+	\bar{Q}_L^i\gamma^\mu Q_L^j &= \bar{U}_L^i\gamma^\mu U_L^j + \bar{D}_L^i\gamma^\mu D_L^j \\
+	&= \bar{U}_L^i\gamma^\mu U_L^j \\
+	&+ (V_{id}^*\bar{d}_L + V_{is}^*\bar{s}_L+V_{ib}^*\bar{b}_L)\gamma^\mu(V_{jd}d_L+V_{js}s_L+V_{jb}b_L) \\
+	&= \bar{u}_L\gamma^\mu u_L\delta_{ij}\delta_{iu} + V_{id}^*V_{jd}\bar{d}_L\gamma^\mu d_L + V_{is}^*V_{js}\bar{s}_L\gamma^\mu s_L
+\end{align*}
+\end{frame}
+
+
+\begin{frame}{Formalismus}
+\framesubtitle{Rechnung: Schritt 2}
+Umschreiben der chiralen Teilchen-Multipletts mit den links- und rechtshändigen Projektoren:
+\begin{align*}
+	\bar{Q}_L^i\gamma^\mu Q_L^j &=\frac{1}{2}(
+	\bar{u}\gamma^\mu u\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}\bar{d}\gamma^\mu d
+	+ V_{is}^*V_{js}\bar{s}\gamma^\mu s) \\
+	&- \frac{1}{2}(\bar{u}\gamma^\mu\gamma_5u\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}\bar{d}\gamma^\mu\gamma_5d + V_{is}^*V_{js}\bar{s}\gamma^\mu\gamma_5s)
+\end{align*}
+Identifikation der nicht-chiralen Operatoren:
+\begin{align*}
+	Q_{2ij} &= \frac{1}{2}(R_{1u}\delta_{iu}\delta_{ij}+ V_{id}^*V_{jd}R_{1d}+ V_{is}^*V_{js}R_{1s}) \notag \\
+	&- \frac{1}{2}(R_{3u}\delta_{iu}\delta_{ij} + V_{id}^*V_{jd}R_{3d} + V_{is}^*V_{js}R_{3s})
+\end{align*}
+\end{frame}
+
+
+\begin{frame}{Formalismus}
+\framesubtitle{Rechnung: Schritt 3}
+Aufstellen des Lagrangian:
+\begin{align*}
+	\sum_{l,q} K_{l,q}R_{l,q} \overset{!}{=} \sum_{m,i,j}C_{mij}Q_{mij}
+\end{align*}
+Nach dem Umsortieren der rechten Seite nach $R_{l,q}$ liefert ein Koeffizienten-Vergleich die Abhängigkeiten $K_{l,q}(C_{mij})$.
+\note{Warum ist die Abhängigkeit interessant?}
 \end{frame}

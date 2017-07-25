@@ -4,12 +4,6 @@
 
 \input{Header.txt}
 
-\usepackage[
-	backend=biber,   % use modern biber backend
-	autolang=hyphen, % load hyphenation rules for if language of bibentry is not
-	sorting=none,    % german, has to be loaded with \setotherlanguages
-	maxbibnames=4,   % in the references.bib use langid={en} for english sources
-]{biblatex}
 \addbibresource{Literatur.bib}
 \DefineBibliographyStrings{english}{andothers = {{et\,al\adddot}}} 
 
@@ -26,12 +20,13 @@
 	\titlepage}
 \end{frame}
 
-\begin{frame}[noframenumbering]{Inhalt}
-	\tableofcontents{}
-\end{frame}
-
 \section{Einführung}
 \input{Einfuhrung.tex}
+
+\begin{frame}{Inhalt}
+\tableofcontents
+\end{frame}
+
 \section{Flavour-Mischung}
 \input{Mischung.tex}
 \section{Verwendeter Formalismus}
@@ -41,7 +36,6 @@
 \section{Ergebnisse}
 \input{Ergebnisse.tex}
 
-\section{Bibliographie}
 \begin{frame}{Bibliographie}
 	\printbibliography
 \end{frame}

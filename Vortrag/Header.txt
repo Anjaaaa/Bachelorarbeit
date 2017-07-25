@@ -2,7 +2,8 @@
 \setbeamertemplate{blocks}[rounded][shadow=false]
 \setbeamerfont{caption}{size=\scriptsize}
 \beamertemplatenavigationsymbolsempty 
-\usefonttheme[onlymath]{serif}
+%\usefonttheme[onlymath]{serif}
+
 
 \usepackage{pgfpages}
 \setbeameroption{show notes}
@@ -43,13 +44,26 @@
 \usetikzlibrary{arrows.meta}
 
 \usepackage{pgf-pie}
+
+
 \usepackage[
-locale=DE,
-separate-uncertainty=true,
-per-mode=symbol-or-fraction,
-output-decimal-marker=., % . statt , für Dezimalzahlen
-]{siunitx}
+	locale=DE,
+	separate-uncertainty=true,
+	per-mode=symbol-or-fraction,
+	output-decimal-marker=., % . statt , für Dezimalzahlen
+	]{siunitx}
+
+
 \usepackage{graphicx}
 \usepackage{subfig}
 
-\usepackage{xfrac}  
+
+\usepackage{xfrac}
+
+
+\usepackage[
+	backend=biber,   % use modern biber backend
+	autolang=hyphen, % load hyphenation rules for if language of bibentry is not
+	sorting=none,    % german, has to be loaded with \setotherlanguages
+	maxbibnames=4,   % in the references.bib use langid={en} for english sources
+	]{biblatex}
