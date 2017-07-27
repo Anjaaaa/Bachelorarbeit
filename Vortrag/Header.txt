@@ -59,6 +59,7 @@
 
 
 \usepackage{xfrac}
+\usepackage{color}
 
 
 \usepackage[

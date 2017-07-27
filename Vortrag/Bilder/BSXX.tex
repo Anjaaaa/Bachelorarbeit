@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+\tikzstyle{centerArrow}=[decoration={
+	markings,
+	mark=at position 0.5 with {\fill (2pt,0)--(-2pt,2.31pt)--(-2pt,-2.31pt)--cycle;}}]
+\begin{scope}%[xshift=-8cm]
+\def\xmove{2.5}
+\def\ymove{0.5}
+\def\centerSize{0.08}
+
+\node [fill, circle, inner sep=\centerSize cm] (tCenter1)  {};
+\coordinate (tCenter2) at (1,-1cm);
+\node (Left) at (-\xmove,0) {$b$};
+\node (upperRight) at (\xmove,0) {$s$};
+\node (middleRight) at ([xshift=1.5cm,yshift=\ymove cm] tCenter2) {$\mu$};
+\node (lowerRight) at ([xshift=1.5cm,yshift=-\ymove cm] tCenter2) {$\bar{\mu}$};
+
+
+\draw [centerArrow,postaction={decorate}]  (Left) -- (tCenter1) ;
+\draw [centerArrow,postaction={decorate}]  (tCenter1) -- (upperRight) ;
+\draw [centerArrow,postaction={decorate}]  (tCenter2) -- (middleRight) ;
+\draw [centerArrow,postaction={decorate}]  (lowerRight) -- (tCenter2) ;
+\draw [decoration={snake, segment length=1.5mm, amplitude=0.5mm},decorate] (tCenter1) -- (tCenter2) ;
+\end{scope}
+\end{tikzpicture}

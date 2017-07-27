@@ -72,7 +72,7 @@ mX = np.linspace(1,25, 1000)
 C = np.array([10*complex(1,1), 10, 10*complex(1,-1), complex(1,1), 1, complex(1,-1)], dtype = complex)
 C = C*10**(-10)*8
 color = ['aqua', 'dodgerblue', 'navy', 'gold', 'red', 'maroon']
-label = ['$C_{2bs} = 8\cdot 10^{-9}(1+i)$', '$C_{2bs} = 8\cdot 10^{-9}$', '$C_{2bs} = 8\cdot 10^{-9}(1-i)$','$C_{2bs} = 8\cdot 10^{-10}(1+i)$', '$C_{2bs} = 8\cdot 10^{-10}$', '$C_{2bs} = 8\cdot 10^{-10}(1-i)$']
+label = ['$C = 8\cdot 10^{-9}(1+i)$', '$C = 8\cdot 10^{-9}$', '$C = 8\cdot 10^{-9}(1-i)$','$C = 8\cdot 10^{-10}(1+i)$', '$C = 8\cdot 10^{-10}$', '$C = 8\cdot 10^{-10}(1-i)$']
 
 for i in range(0,len(C)):
     CS = myCS(mA,mX,A,Z,C[i])
@@ -87,7 +87,7 @@ plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
 plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(1,25)
-plt.savefig('Paper/content/graphics/Allgemein11.pdf')
+plt.savefig('Vortrag/Bilder/Allgemein11.pdf', bbox_inches='tight')
 plt.show()
 
 ##########################################################################
@@ -99,7 +99,7 @@ mX = np.linspace(1,1000, 1000)
 C = np.array([10*complex(1,1), 10, 10*complex(1,-1), complex(1,1), 1, complex(1,-1)], dtype = complex)
 C = C*10**(-10)*8/6
 color = ['aqua', 'dodgerblue', 'navy', 'gold', 'red', 'maroon']
-label = ['$C_{2bs} = 8/6\cdot 10^{-9}(1+i)$', '$C_{2bs} = 8/6\cdot 10^{-9}$', '$C_{2bs} = 8/6\cdot 10^{-9}(1-i)$','$C_{2bs} = 8/6\cdot 10^{-10}(1+i)$', '$C_{2bs} = 8/6\cdot 10^{-10}$', '$C_{2bs} = 8/6\cdot 10^{-10}(1-i)$']
+label = ['$C = 8/6\cdot 10^{-9}(1+i)$', '$C = 8/6\cdot 10^{-9}$', '$C = 8/6\cdot 10^{-9}(1-i)$','$C = 8/6\cdot 10^{-10}(1+i)$', '$C = 8/6\cdot 10^{-10}$', '$C = 8/6\cdot 10^{-10}(1-i)$']
 
 for i in range(0,len(C)):
     CS = myCS(mA,mX,A,Z,C[i])
@@ -119,7 +119,7 @@ plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
 plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(0,1000)
-plt.savefig('Paper/content/graphics/Allgemein116.pdf')
+plt.savefig('Vortrag/Bilder/Allgemein116.pdf', bbox_inches='tight')
 plt.show()
 
 
@@ -135,7 +135,7 @@ mX = np.linspace(1, 25,1000)
 C = np.array([complex(1,100), complex(1,10), complex(1,1)], dtype = complex)
 C = C*10**(-10)*8
 color = ['b', 'r', 'gold']
-label = ['Im$(C_{2bs}) = 8\cdot 10^{-8}$', 'Im$(C_{2bs}) = 8\cdot 10^{-9}$', 'Im$(C_{2bs}) = 8\cdot 10^{-10}$']
+label = ['Im$(C) = 8\cdot 10^{-8}$', 'Im$(C) = 8\cdot 10^{-9}$', 'Im$(C) = 8\cdot 10^{-10}$']
 
 for i in range(0,len(C)):
     CS = myCS(mA,mX,A,Z,C[i])
@@ -151,7 +151,7 @@ plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
 plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(1,25)
-plt.savefig('Paper/content/graphics/Im11.pdf')
+plt.savefig('Vortrag/Bilder/Im11.pdf', bbox_inches='tight')
 plt.show()
 
 ##########################################################################
@@ -163,7 +163,7 @@ mX = np.linspace(1,1000, 1000)
 C = np.array([complex(1,100), complex(1,10), complex(1,1)], dtype = complex)
 C = C*10**(-10)*8/6
 color = ['b', 'r', 'gold']
-label = ['Im$(C_{2bs}) = 8/6\cdot 10^{-8}$', 'Im$(C_{2bs}) = 8/6\cdot 10^{-9}$', 'Im$(C_{2bs}) = 8/6\cdot 10^{-10}$']
+label = ['Im$(C) = 8/6\cdot 10^{-8}$', 'Im$(C) = 8/6\cdot 10^{-9}$', 'Im$(C) = 8/6\cdot 10^{-10}$']
 
 for i in range(0,len(C)):
     CS = myCS(mA,mX,A,Z,C[i])
@@ -182,7 +182,7 @@ plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
 plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(0,1000)
-plt.savefig('Paper/content/graphics/Im116.pdf')
+plt.savefig('Vortrag/Bilder/Im116.pdf', bbox_inches='tight')
 plt.show()
 
 
@@ -204,7 +204,7 @@ plt.fill_between(mX, K*PaperMin, K*PaperMax, color = 'tu')
 C = np.array([30, 8*complex(1,1), 8], dtype = complex)
 C = C*10**(-10)
 color = ['b', 'r', 'gold']
-label = ['$3\cdot 10^{-9}$', '$8\cdot 10^{-10}(1+i)$', '$8\cdot 10^{-10}$']
+label = ['$C = 3\cdot 10^{-9}$', '$C = 8\cdot 10^{-10}(1+i)$', '$C = 8\cdot 10^{-10}$']
 
 m = np.zeros(len(C))
 
@@ -222,7 +222,7 @@ plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
 plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(1,25)
-plt.savefig('Paper/content/graphics/Relic11.pdf')
+plt.savefig('Vortrag/Bilder/Relic11.pdf', bbox_inches='tight')
 plt.show()
 #print('mX: ', m)
 
@@ -245,7 +245,7 @@ plt.fill_between(mX, K*PaperMin, K*PaperMax, color = 'tu')
 C = np.array([30, 8*complex(1,1), 8], dtype = complex)
 C = C*10**(-10)/6
 color = ['b', 'r', 'gold']
-label = ['$3/6\cdot 10^{-9}$', '$8/6\cdot 10^{-10}(1+i)$', '$8/6\cdot 10^{-10}$']
+label = ['$C = 3/6\cdot 10^{-9}$', '$C = 8/6\cdot 10^{-10}(1+i)$', '$C = 8/6\cdot 10^{-10}$']
 m = np.zeros(len(C))
 for i in range(0,len(C)):
     CS = myCS(mA,mX,A,Z,C[i])
@@ -261,7 +261,7 @@ plt.legend(loc = 'best')
 plt.xlabel(r'$m_\chi$ in GeV')
 plt.ylabel(r'$\sigma_0$ in $\mathrm{b}$')
 plt.xlim(1,1000)
-plt.savefig('Paper/content/graphics/Relic116.pdf')
+plt.savefig('Vortrag/Bilder/Relic116.pdf', bbox_inches='tight')
 plt.show()
 
 print('mX: ', m)

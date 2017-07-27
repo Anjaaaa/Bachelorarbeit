@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+\tikzstyle{centerArrow}=[decoration={
+	markings,
+	mark=at position 0.5 with {\fill (2pt,0)--(-2pt,2.31pt)--(-2pt,-2.31pt)--cycle;}}]
+\begin{scope}%[yshift=5cm]
+\def\xmove{2.5}
+\def\ymove{1.25}
+\def\centerSize{0.18}
+
+\node [fill, circle,inner sep=\centerSize cm] (tCenter) {};
+\node (Left) at (-\xmove,0) {$b$};
+\node (upperRight) at (\xmove,0.5*\ymove) {$s$};
+\node (middleRight) at (\xmove,0) {$\mu$};
+\node (lowerRight) at (\xmove,-0.5*\ymove) {$\bar{\mu}$};
+
+\draw [centerArrow,postaction={decorate}]  (Left) -- (tCenter) ;
+\draw [centerArrow,postaction={decorate}]  (tCenter) -- (upperRight) ;
+\draw [centerArrow,postaction={decorate}]  (tCenter) -- (middleRight) ;
+\draw [centerArrow,postaction={decorate}]  (lowerRight) -- (tCenter) ;
+
+\node (indep1) at (-\xmove, \ymove) {$\bar{u},\bar{d},\bar{s}$};
+\node (indep2) at (\xmove, \ymove) {$\bar{u},\bar{d},\bar{s}$};
+\draw [centerArrow,postaction={decorate}] (indep2) -- (indep1);
+
+\end{scope}
+\end{tikzpicture}

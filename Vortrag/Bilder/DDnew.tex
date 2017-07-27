@@ -2,16 +2,17 @@
 \tikzstyle{centerArrow}=[decoration={
 markings,
 mark=at position 0.5 with {\fill (2pt,0)--(-2pt,2.31pt)--(-2pt,-2.31pt)--cycle;}}]
-\begin{scope}[xshift=6cm,yshift=-4cm]
+\begin{scope}[xshift=3cm,yshift=-2cm]
 \def\xmove{2}
 \def\ymove{1.25}
 \def\centerShift{2}
+\def\centerSize{0.08cm}
 \coordinate (tCenter1) at (0,0);
-\coordinate (tCenter2) at (0,-\centerShift cm);
+\coordinate[fill, circle,inner sep=\centerSize] (tCenter2) at (0,-\centerShift cm);
 \node (upperLeft) at (-\xmove,\ymove) {$\chi$};
 \node (upperRight) at (\xmove,\ymove) {$\chi$};
-\node (lowerLeft) at (-\xmove,-\centerShift cm-\ymove cm) {$b,s$};
-\node (lowerRight) at (\xmove,-\centerShift cm-\ymove cm) {$s,b$};
+\node (lowerLeft) at (-\xmove,-\centerShift cm-\ymove cm) {$b_L,s_L$};
+\node (lowerRight) at (\xmove,-\centerShift cm-\ymove cm) {$s_L,b_L$};
 \node at (0.5,-\centerShift/2) {$Z'$};
 \draw [centerArrow,postaction={decorate}]  (upperLeft) -- (tCenter1) ;
 \draw [centerArrow,postaction={decorate}]  (tCenter1) -- (upperRight) ;
