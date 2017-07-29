@@ -1,35 +1,36 @@
 \begin{frame}{Direct Detection mit Flavour-Mischung}
-\begin{minipage}{.35\textwidth}
+\begin{columns}[c]
+\begin{column}{.35\textwidth}
 \begin{figure}[H]
 	\resizebox{\textwidth}{!}{
 		\input{Bilder/DDnew}
 	}
 	\caption{Tree-Wechselwirkung zur Streuung DM am Atomkern.}
 \end{figure}
-\end{minipage}
-\hfill
-\begin{minipage}{.6\textwidth}
-	Mögliche chirale Wechselwirkungen ($C=q_\chi\frac{Y_{Qb}Y_{Qs}^*}{2m_Q}$):
+\end{column}
+\begin{column}{.65\textwidth}
+	\only<2->{Mögliche chirale Wechselwirkungen ($C=q_\chi\frac{Y_{Qb}Y_{Qs}^*}{2m_Q^2}$):}
 	\begin{align*}
-		&Q_{2sb} = C(\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^2\gamma^\mu Q_L^3) \\
-		\only<1>{&Q_{6sb} = C(\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^2\gamma^\mu Q_L^3)}
-		\only<2->{&\textcolor{black!50}{Q_{6sb} = C(\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^2\gamma^\mu Q_L^3)}}
+		\only<2->{&Q_{2sb} = C(\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^2\gamma^\mu Q_L^3)} \\
+		\only<2>{&Q_{6sb} = C(\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^2\gamma^\mu Q_L^3)}
+		\only<3->{&\textcolor{black!40}{Q_{6sb} = C(\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^2\gamma^\mu Q_L^3)}}
 	\end{align*}
-	Nicht-chirale Wechselwirkungen:
+	\only<4->{Nicht-chirale Wechselwirkungen:}
 	\begin{align*}
-		+&\text{Re}(V_{cd}^*V_{td}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu d) \\
+		\only<4->{+&\text{Re}(V_{cd}^*V_{td}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu d)} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\only<1>{+&\text{Re}(V_{cs}^*V_{ts}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu s)}
-		\only<2->{\textcolor{black!50}{+}&\textcolor{black!50}{\text{Re}(V_{cs}^*V_{ts}C)}&&\textcolor{black!50}{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu s)}} \\
+		\only<4>{+&\text{Re}(V_{cs}^*V_{ts}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu s)}
+		\only<5->{\textcolor{black!40}{+}&\textcolor{black!40}{\text{Re}(V_{cs}^*V_{ts}C)}&&\textcolor{black!40}{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu s)}} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\only<1-2>{-&\text{Re}(V_{cd}^*V_{td}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu\gamma_5 d)}
-		\only<3->{\textcolor{black!50}{-}&\textcolor{black!50}{\text{Re}(V_{cd}^*V_{td}C)}&&\textcolor{black!50}{(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu\gamma_5 d)}} \\
+		\only<4-5>{-&\text{Re}(V_{cd}^*V_{td}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu\gamma_5 d)}
+		\only<6->{\textcolor{black!40}{-}&\textcolor{black!40}{\text{Re}(V_{cd}^*V_{td}C)}&&\textcolor{black!40}{(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu\gamma_5 d)}} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\only<1>{-&\text{Re}(V_{cs}^*V_{ts}C)&&{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu\gamma_5 s)}}
-		\only<2->{\textcolor{black!50}{-}&\textcolor{black!50}{\text{Re}(V_{cs}^*V_{ts}C)}&&\textcolor{black!50}{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu\gamma_5 s)}}
+		\only<4>{-&\text{Re}(V_{cs}^*V_{ts}C)&&{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu\gamma_5 s)}}
+		\only<5->{\textcolor{black!40}{-}&\textcolor{black!40}{\text{Re}(V_{cs}^*V_{ts}C)}&&\textcolor{black!40}{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu\gamma_5 s)}}
 	\end{align*}
-\end{minipage}
-\[ \sigma_\text{0,tree} = \frac{\mu_{A\chi}^2}{A^2\pi}\Bigl|Z\cdot\text{Re}(V_{cd}^*V_{td}C) + (A-Z)\cdot2\cdot\text{Re}(V_{cd}^*V_{td}C)\Bigr|^2 \]
+\end{column}
+\end{columns}
+\[ \uncover<7->{\sigma_\text{0,tree} = \frac{\mu_{A\chi}^2}{A^2\pi}\Bigl|Z\cdot\text{Re}(V_{cd}^*V_{td}C) + (A-Z)\cdot2\cdot\text{Re}(V_{cd}^*V_{td}C)\Bigr|^2} \]
 \end{frame}
 
 \begin{frame}{Vergleich}
@@ -52,25 +53,26 @@ Loop-Wechselwirkung:
 \framesubtitle{Real- und Imaginärteil von $C$ variabel}
 \includegraphics[width=\textwidth]{Bilder/Allgemein11.pdf}
 \end{frame}
-\begin{frame}[noframenumbering]{Einschränkung aus den $B$-Zerfällen 1}
-\framesubtitle{Real- und Imaginärteil von $C$ variabel}
-\includegraphics[width=\textwidth]{Bilder/Allgemein116.pdf}
-\end{frame}
+%\begin{frame}[noframenumbering]{Einschränkung aus den $B$-Zerfällen 1}
+%\framesubtitle{Real- und Imaginärteil von $C$ variabel}
+%\includegraphics[width=\textwidth]{Bilder/Allgemein116.pdf}
+%\end{frame}
 
 
 \begin{frame}{Einschränkung aus den $B$-Zerfällen 2}
 \framesubtitle{Fester Realteil, variabler Imaginärteil}
 \includegraphics[width=\textwidth]{Bilder/Im11.pdf}
 \end{frame}
-\begin{frame}[noframenumbering]{Einschränkung aus den $B$-Zerfällen 2}
-\framesubtitle{Fester Realteil, variabler Imaginärteil}
-\includegraphics[width=\textwidth]{Bilder/Im116.pdf}
-\end{frame}
+%\begin{frame}[noframenumbering]{Einschränkung aus den $B$-Zerfällen 2}
+%\framesubtitle{Fester Realteil, variabler Imaginärteil}
+%\includegraphics[width=\textwidth]{Bilder/Im116.pdf}
+%\end{frame}
 
 
 \begin{frame}{Einschränkung aus der Relic Density}
+\framesubtitle{$g'=\SI{2e-3}{}$}
 \includegraphics[width=\textwidth]{Bilder/Relic11.pdf}
 \end{frame}
-\begin{frame}[noframenumbering]{Einschränkung aus der Relic Density}
-\includegraphics[width=\textwidth]{Bilder/Relic116.pdf}
-\end{frame}
+%\begin{frame}[noframenumbering]{Einschränkung aus der Relic Density}
+%\includegraphics[width=\textwidth]{Bilder/Relic116.pdf}
+%\end{frame}
