@@ -1,6 +1,7 @@
 \begin{frame}{Direct Detection mit Flavour-Mischung}
+\vspace*{0.2cm}
 \begin{columns}[c]
-\begin{column}{.35\textwidth}
+\begin{column}{.4\textwidth}
 \begin{figure}[H]
 	\resizebox{\textwidth}{!}{
 		\input{Bilder/DDnew}
@@ -8,29 +9,28 @@
 	\caption{Tree-Wechselwirkung zur Streuung DM am Atomkern.}
 \end{figure}
 \end{column}
-\begin{column}{.65\textwidth}
-	\only<2->{Mögliche chirale Wechselwirkungen ($C=q_\chi\frac{Y_{Qb}Y_{Qs}^*}{2m_Q^2}$):}
+\begin{column}{.6\textwidth}
+	\uncover<2->{Mögliche chirale Wechselwirkungen (Kopplungsstärke $C=q_\chi\frac{Y_{Qb}Y_{Qs}^*}{2m_Q^2}$):}
 	\begin{align*}
-		\only<2->{&Q_{2sb} = C(\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^2\gamma^\mu Q_L^3)} \\
-		\only<2>{&Q_{6sb} = C(\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^2\gamma^\mu Q_L^3)}
-		\only<3->{&\textcolor{black!40}{Q_{6sb} = C(\bar{\chi}\gamma_\mu\gamma_5\chi)(\bar{Q}_L^2\gamma^\mu Q_L^3)}}
+		\only<2->{&Q_{2sb} = (\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^2\gamma^\mu Q_L^3)} \\
+		\only<2->{&Q_{2bs} = (\bar{\chi}\gamma_\mu\chi)(\bar{Q}_L^3\gamma^\mu Q_L^2)}
 	\end{align*}
-	\only<4->{Nicht-chirale Wechselwirkungen:}
+	\uncover<3->{Nicht-chirale Wechselwirkungen:}
 	\begin{align*}
-		\only<4->{+&\text{Re}(V_{cd}^*V_{td}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu d)} \\
+		\only<3->{+&\text{Re}(V_{cd}^*V_{td}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu d)} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\only<4>{+&\text{Re}(V_{cs}^*V_{ts}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu s)}
-		\only<5->{\textcolor{black!40}{+}&\textcolor{black!40}{\text{Re}(V_{cs}^*V_{ts}C)}&&\textcolor{black!40}{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu s)}} \\
+		\only<3>{+&\text{Re}(V_{cs}^*V_{ts}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu s)}
+		\only<4->{\textcolor{black!40}{+}&\textcolor{black!40}{\text{Re}(V_{cs}^*V_{ts}C)}&&\textcolor{black!40}{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu s)}} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\only<4-5>{-&\text{Re}(V_{cd}^*V_{td}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu\gamma_5 d)}
-		\only<6->{\textcolor{black!40}{-}&\textcolor{black!40}{\text{Re}(V_{cd}^*V_{td}C)}&&\textcolor{black!40}{(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu\gamma_5 d)}} \\
+		\only<3-4>{-&\text{Re}(V_{cd}^*V_{td}C)&&(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu\gamma_5 d)}
+		\only<5->{\textcolor{black!40}{-}&\textcolor{black!40}{\text{Re}(V_{cd}^*V_{td}C)}&&\textcolor{black!40}{(\bar{\chi}\gamma_\mu\chi)(\bar{d}\gamma^\mu\gamma_5 d)}} \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\only<4>{-&\text{Re}(V_{cs}^*V_{ts}C)&&{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu\gamma_5 s)}}
-		\only<5->{\textcolor{black!40}{-}&\textcolor{black!40}{\text{Re}(V_{cs}^*V_{ts}C)}&&\textcolor{black!40}{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu\gamma_5 s)}}
+		\only<3>{-&\text{Re}(V_{cs}^*V_{ts}C)&&{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu\gamma_5 s)}}
+		\only<4->{\textcolor{black!40}{-}&\textcolor{black!40}{\text{Re}(V_{cs}^*V_{ts}C)}&&\textcolor{black!40}{(\bar{\chi}\gamma_\mu\chi)(\bar{s}\gamma^\mu\gamma_5 s)}}
 	\end{align*}
 \end{column}
 \end{columns}
-\[ \uncover<7->{\sigma_\text{0,tree} = \frac{\mu_{A\chi}^2}{A^2\pi}\Bigl|Z\cdot\text{Re}(V_{cd}^*V_{td}C) + (A-Z)\cdot2\cdot\text{Re}(V_{cd}^*V_{td}C)\Bigr|^2} \]
+\[ \uncover<6->{\sigma_\text{0,tree} = \frac{\mu_{A\chi}^2}{A^2\pi}\Bigl|Z\cdot\text{Re}(V_{cd}^*V_{td}C) + (A-Z)\cdot2\cdot\text{Re}(V_{cd}^*V_{td}C)\Bigr|^2} \]
 \end{frame}
 
 \begin{frame}{Vergleich}
@@ -44,14 +44,14 @@ Loop-Wechselwirkung:
 \begin{itemize}
 	\item $B$-Zerfälle: Einschränkung von $\sfrac{m_{Z'}}{g'}$
 	\item Relic Density: $m_{Z'}\approx 2m_\chi$
-	\item Direct Detection mit $q_\chi=q_l$: Einschränkung von $m_{Z'},m_\chi,g'$
+	\item Direct Detection: Einschränkung von $m_{Z'},g'$
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}{Einschränkung aus den $B$-Zerfällen 1}
-\framesubtitle{Real- und Imaginärteil von $C$ variabel}
-\includegraphics[width=\textwidth]{Bilder/Allgemein11.pdf}
+\framesubtitle{$\SI{540}{\giga\electronvolt}\lessapprox\sfrac{m_{Z'}}{g'}\lessapprox\SI{4.9}{\tera\electronvolt}$, Real- und Imaginärteil von $C$ variabel}
+\includegraphics[width=.87\textwidth]{Bilder/Allgemein11.pdf}
 \end{frame}
 %\begin{frame}[noframenumbering]{Einschränkung aus den $B$-Zerfällen 1}
 %\framesubtitle{Real- und Imaginärteil von $C$ variabel}
@@ -60,8 +60,8 @@ Loop-Wechselwirkung:
 
 
 \begin{frame}{Einschränkung aus den $B$-Zerfällen 2}
-\framesubtitle{Fester Realteil, variabler Imaginärteil}
-\includegraphics[width=\textwidth]{Bilder/Im11.pdf}
+\framesubtitle{$\SI{540}{\giga\electronvolt}\lessapprox\sfrac{m_{Z'}}{g'}\lessapprox\SI{4.9}{\tera\electronvolt}$, $\text{Re}(C) = \SI{8e-10}{\giga\electronvolt}^{-2}$, $\text{Im}(C)$ variabel}
+\includegraphics[width=.87\textwidth]{Bilder/Im11.pdf}
 \end{frame}
 %\begin{frame}[noframenumbering]{Einschränkung aus den $B$-Zerfällen 2}
 %\framesubtitle{Fester Realteil, variabler Imaginärteil}
@@ -69,9 +69,9 @@ Loop-Wechselwirkung:
 %\end{frame}
 
 
-\begin{frame}{Einschränkung aus der Relic Density}
-\framesubtitle{$g'=\SI{2e-3}{}$}
-\includegraphics[width=\textwidth]{Bilder/Relic11.pdf}
+\begin{frame}{Einschränkung aus der Relic Density und Direct Detection}
+\framesubtitle{$m_{Z'} \approx 2m_\chi$, $g'=\SI{2e-3}{}$}
+\includegraphics[width=.87\textwidth]{Bilder/Relic11.pdf}
 \end{frame}
 %\begin{frame}[noframenumbering]{Einschränkung aus der Relic Density}
 %\includegraphics[width=\textwidth]{Bilder/Relic116.pdf}
